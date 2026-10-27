@@ -63,6 +63,31 @@ def test_health_y_panel_con_los_picks_de_la_jornada(tmp_path, monkeypatch):
     assert cuerpo["backtest"]["log_loss_modelo"] == 0.68
 
 
+def test_panel_publica_el_elo_de_los_partidos_jugados(tmp_path, monkeypatch):
+    monkeypatch.setenv("QUANTIUM_DATOS", str(tmp_path))
+    pd.DataFrame(
+        [
+            {
+                "id": 1,
+                "temporada": 20252026,
+                "tipo": 2,
+                "fecha": "2025-10-01",
+                "inicio_utc": "2025-10-01T23:00:00Z",
+                "visita": "MTL",
+                "local": "BOS",
+                "neutral": 0,
+                "goles_visita": 1,
+                "goles_local": 5,
+                "periodo": "REG",
+                "gano_local": 1,
+            }
+        ]
+    ).to_csv(tmp_path / "games.csv", index=False)
+    ranking = {fila["abbr"]: fila["elo"] for fila in TestClient(app).get("/api/panel").json()["ranking"]}
+    assert ranking["BOS"] > 1500 > ranking["MTL"]
+    assert ranking["BOS"] > ranking["MTL"]
+
+
 def test_panel_vacio_no_revienta(tmp_path, monkeypatch):
     monkeypatch.setenv("QUANTIUM_DATOS", str(tmp_path))
     cliente = TestClient(app)

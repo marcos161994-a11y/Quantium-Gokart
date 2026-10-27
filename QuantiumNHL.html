@@ -1,240 +1,531 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Quantium NHL</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@380;500;640&display=swap" rel="stylesheet" />
-<style>
-  :root {
-    --ink: #141611;
-    --paper: #efe7d2;
-    --paper-2: #f6f1e2;
-    --line: #d9d0b8;
-    --ice: #1f6f78;
-    --ice-2: #d5efe8;
-    --signal: #c2412d;
-    --gold: #8a5a12;
-    --good: #2c6b32;
-    --muted: #5e5a4e;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background:
-      radial-gradient(1200px 500px at 10% -10%, #f7f3e6 0%, transparent 50%),
-      var(--paper);
-    color: var(--ink);
-    font-family: Outfit, "Segoe UI", sans-serif;
-    font-weight: 380;
-  }
-  header, main { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
-  header { padding: 28px 0 8px; }
-  .marca {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    align-items: flex-end;
-    border-bottom: 1px solid var(--ink);
-    padding-bottom: 14px;
-  }
-  h1 {
-    font-family: Fraunces, Georgia, serif;
-    font-weight: 560;
-    font-size: clamp(40px, 7vw, 68px);
-    line-height: 0.85;
-    margin: 0;
-    letter-spacing: -0.03em;
-  }
-  h1 span { color: var(--ice); }
-  .fecha {
-    text-align: right;
-    font-size: 13px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .fecha strong { display: block; color: var(--ink); font-size: 16px; letter-spacing: 0.02em; margin-top: 4px; }
-  .lede { max-width: 46rem; font-size: 17px; line-height: 1.45; margin: 16px 0; }
-  .cintillo {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-    margin: 8px 0 22px;
-  }
-  .chip {
-    background: var(--paper-2);
-    border: 1px solid var(--line);
-    padding: 10px 12px;
-  }
-  .chip .k { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-  .chip .v { font-family: Fraunces, Georgia, serif; font-size: 28px; line-height: 1.1; margin-top: 2px; }
-  .chip .s { color: var(--muted); font-size: 12px; }
-  .aviso, .estado {
-    border: 1px dashed var(--gold);
-    background: #f8f1dc;
-    padding: 14px 16px;
-    margin: 12px 0 20px;
-  }
-  .error { border-color: var(--signal); background: #fbe8e4; }
-  h2 {
-    font-family: Fraunces, Georgia, serif;
-    font-weight: 560;
-    font-size: 28px;
-    margin: 8px 0 12px;
-  }
-  .partido {
-    display: grid;
-    grid-template-columns: 1.4fr 0.9fr 0.9fr;
-    gap: 12px;
-    padding: 16px 0;
-    border-top: 1px solid var(--line);
-  }
-  .equipos { font-size: 18px; line-height: 1.25; }
-  .equipos .vs { color: var(--muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
-  .hora { color: var(--muted); font-size: 13px; margin-top: 6px; }
-  .pick .quien {
-    font-family: Fraunces, Georgia, serif;
-    font-size: 26px;
-    line-height: 1;
-  }
-  .nivel {
-    display: inline-block;
-    margin-top: 6px;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 3px 6px;
-    border: 1px solid var(--ink);
-  }
-  .nivel.alta { background: #dceccf; }
-  .nivel.media { background: #f3e6c2; }
-  .nivel.baja { background: transparent; color: var(--muted); }
-  .barra {
-    height: 8px;
-    margin-top: 10px;
-    background: #e4dcc6;
-    display: flex;
-  }
-  .barra i { display: block; height: 100%; background: var(--ice); }
-  .mercado .linea {
-    font-family: Fraunces, Georgia, serif;
-    font-size: 22px;
-  }
-  .porteros { color: var(--muted); font-size: 13px; margin-top: 8px; line-height: 1.35; }
-  .meta { margin-top: 28px; color: var(--muted); font-size: 13px; line-height: 1.45; }
-  .final { color: var(--good); }
-  .fallo { color: var(--signal); }
-  @media (max-width: 800px) {
-    .cintillo { grid-template-columns: 1fr 1fr; }
-    .partido { grid-template-columns: 1fr; gap: 6px; }
-    .marca { flex-direction: column; align-items: flex-start; }
-    .fecha { text-align: left; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quantium NHL</title>
+    <style>
+        :root {
+            --bg: #050a0f;
+            --panel: #101a26;
+            --card: #111b27;
+            --border: #1e2f44;
+            --cyan: #00f2ff;
+            --gold: #ffbc00;
+            --green: #00ff88;
+            --red: #ff4466;
+            --muted: #8899aa;
+        }
+        * { box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--cyan);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0 auto;
+            padding: 16px;
+            line-height: 1.4;
+            max-width: 1180px;
+        }
+        h1, h2, h3, p { overflow-wrap: anywhere; }
+        .header {
+            background: var(--panel);
+            border: 2px solid var(--cyan);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        h1 { margin: 0; font-size: 1.8rem; letter-spacing: 0.04em; }
+        .sub { color: var(--muted); margin: 6px 0 0; font-size: 0.92rem; }
+        .badge {
+            display: inline-block;
+            background: rgba(255, 188, 0, 0.15);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-top: 10px;
+        }
+        .aviso {
+            background: rgba(255, 188, 0, 0.1);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+        }
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+        @media (min-width: 800px) {
+            .stats-row { grid-template-columns: repeat(4, 1fr); }
+        }
+        .stat-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 8px;
+            text-align: center;
+        }
+        .stat-box .label { font-size: 0.65rem; color: var(--muted); text-transform: uppercase; line-height: 1.2; }
+        .stat-box .val { font-size: 1.2rem; font-weight: bold; margin-top: 4px; }
+        .section-title {
+            margin: 18px 2px 10px;
+            color: var(--cyan);
+            font-size: 0.92rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .grid-juegos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 14px;
+            border: 1px solid var(--border);
+        }
+        .card.valor { border-color: var(--green); box-shadow: 0 0 12px rgba(0, 255, 136, 0.12); }
+        .card.pick-dia { border-color: var(--gold); box-shadow: 0 0 16px rgba(255, 188, 0, 0.16); }
+        .card.no-apostar { border-style: dashed; }
+        .card.pick-dia.valor { border-color: var(--green); }
+        .equipos { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+        .lado { display: flex; align-items: center; gap: 8px; min-width: 0; }
+        .lado.der { flex-direction: row-reverse; text-align: right; }
+        .lado img { width: 36px; height: 36px; object-fit: contain; }
+        .lado .nm { font-weight: 700; font-size: 0.92rem; }
+        .lado .meta { color: var(--muted); font-size: 0.72rem; }
+        .vs { color: var(--muted); font-size: 0.75rem; }
+        .marcador { font-size: 1.15rem; font-weight: 800; }
+        .estado { color: var(--gold); font-size: 0.75rem; font-weight: bold; margin-top: 8px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        .tag.pre { background: rgba(255, 188, 0, 0.18); color: var(--gold); }
+        .tag.dia { background: rgba(255, 188, 0, 0.28); color: var(--gold); }
+        .tag.no { background: rgba(136, 153, 170, 0.28); color: #c5d0dc; }
+        .tag.valor { background: rgba(0, 255, 136, 0.2); color: var(--green); }
+        .tag.contra { background: rgba(255, 68, 102, 0.15); color: var(--red); }
+        .tag.neutro { background: rgba(136, 153, 170, 0.2); color: var(--muted); }
+        .pick-box {
+            padding: 10px;
+            margin-top: 10px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .pick-box.pick-dia {
+            background: rgba(255, 188, 0, 0.1);
+            border: 1px solid var(--gold);
+        }
+        .pick-box.no-apostar {
+            background: transparent;
+            border: 1px dashed var(--muted);
+        }
+        .pick-box strong { font-size: 1.05rem; }
+        .barra {
+            display: flex;
+            height: 8px;
+            border-radius: 99px;
+            overflow: hidden;
+            margin-top: 8px;
+            background: #1a2838;
+        }
+        .barra span:first-child { background: var(--cyan); }
+        .barra span:last-child { background: #3d5168; }
+        .fila {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            font-size: 0.78rem;
+            padding: 3px 0;
+            color: var(--muted);
+        }
+        .fila b { color: var(--cyan); font-weight: 650; }
+        .lesion { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
+        .ajuste { font-size: 0.78rem; color: var(--cyan); margin-top: 6px; }
+        .vacio {
+            background: var(--card);
+            border: 1px dashed var(--border);
+            border-radius: 12px;
+            padding: 22px;
+            text-align: center;
+            color: var(--muted);
+        }
+        table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+        th { text-align: left; color: var(--muted); font-size: 0.68rem; text-transform: uppercase; padding: 4px; }
+        td { padding: 6px 4px; border-top: 1px solid var(--border); }
+        td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+        .panel {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 14px;
+        }
+        details > summary { cursor: pointer; color: var(--muted); font-weight: 700; }
+        .nota { color: var(--muted); font-size: 0.78rem; line-height: 1.45; }
+        .lideres { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+        footer { color: var(--muted); font-size: 0.75rem; margin: 22px 0 8px; }
+        button {
+            background: rgba(0, 242, 255, 0.12);
+            border: 1px solid var(--cyan);
+            color: var(--cyan);
+            padding: 8px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-<header>
-  <div class="marca">
-    <h1>Quantium <span>NHL</span></h1>
-    <div class="fecha" id="fecha">Cargando la jornada…</div>
-  </div>
-  <p class="lede">Solo el ganador del partido, prórroga y shootout incluidos. La probabilidad sale del Elo y de una logística; la línea de al lado es el moneyline del mercado, sin vigorish.</p>
-</header>
-<main>
-  <section class="cintillo" id="cintillo" hidden></section>
-  <div id="estado" class="estado">Cargando la cartelera…</div>
-  <section id="lista"></section>
-  <section id="proxima"></section>
-  <p class="meta" id="meta"></p>
-</main>
-<script>
-function pct(x) {
-  if (x === null || x === undefined || Number.isNaN(Number(x))) return "—";
-  return Math.round(Number(x) * 1000) / 10 + "%";
-}
-function temporada(t) {
-  const s = String(t || "");
-  if (s.length !== 8) return s;
-  return s.slice(0, 4) + "–" + s.slice(6);
-}
-function portero(p) {
-  if (!p || !p.nombre) return "titular sin confirmar";
-  const sv = p.sv == null ? "" : " · sv% " + (p.sv * 100).toFixed(1);
-  const gs = p.gsax == null ? "" : " · GSAx " + (p.gsax > 0 ? "+" : "") + p.gsax.toFixed(1);
-  const estado = p.estado ? " (" + p.estado + ")" : "";
-  return p.nombre + estado + sv + gs;
-}
-function chip(k, v, s) {
-  return '<article class="chip"><div class="k">' + k + '</div><div class="v">' + v + '</div><div class="s">' + (s || "") + '</div></article>';
-}
-function partido(p) {
-  const marca = p.acierto === 1 ? '<div class="final">acertó</div>' : (p.acierto === 0 ? '<div class="fallo">falló</div>' : "");
-  const mercado = p.prob_mercado_local == null ? "sin línea" : "implícita local " + pct(p.prob_mercado_local);
-  return '<article class="partido">'
-    + '<div><div class="vs">' + (p.hora || "") + " · Puerto Rico</div>"
-    + '<div class="equipos">' + p.nombre_visita + "<br>" + p.nombre_local + "</div>"
-    + '<div class="porteros">Visita: ' + portero(p.portero_visita) + "<br>Local: " + portero(p.portero_local) + "</div></div>"
-    + '<div class="pick"><div class="vs">pick</div><div class="quien">' + p.ganador + " " + pct(p.probabilidad) + "</div>"
-    + '<span class="nivel ' + p.nivel + '">' + p.nivel + "</span>"
-    + '<div class="barra" title="probabilidad del local"><i style="width:' + Math.round(p.probabilidad_local * 100) + '%"></i></div>'
-    + marca + "</div>"
-    + '<div class="mercado"><div class="vs">mercado' + (p.casa ? " · " + p.casa : "") + '</div>'
-    + '<div class="linea">' + (p.linea || "—") + "</div>"
-    + '<div class="porteros">' + mercado + "</div></div>"
-    + "</article>";
-}
-function pintar(data) {
-  const estado = document.getElementById("estado");
-  const fecha = document.getElementById("fecha");
-  fecha.innerHTML = "America/Puerto Rico<strong>" + data.fecha + (data.en_madrugada ? " · madrugada" : "") + "</strong>";
-  const examen = (data.record && data.record.examen) || {};
-  const bt = data.backtest || {};
-  const mercado = bt.mercado || {};
-  const cintillo = document.getElementById("cintillo");
-  const umbral = Math.round((data.umbral_alta || 0.62) * 100);
-  cintillo.hidden = false;
-  cintillo.innerHTML = [
-    chip("Alta ≥ " + umbral + "%", pct(examen.alta && examen.alta.pct), examen.alta ? examen.alta.aciertos + "/" + examen.alta.total : ""),
-    chip("Media", pct(examen.media && examen.media.pct), examen.media ? examen.media.aciertos + "/" + examen.media.total : ""),
-    chip("Baja", pct(examen.baja && examen.baja.pct), examen.baja ? examen.baja.aciertos + "/" + examen.baja.total : ""),
-    chip("Log loss", bt.log_loss_modelo == null ? "—" : Number(bt.log_loss_modelo).toFixed(3),
-      mercado.log_loss_mercado == null ? "" : "mercado " + Number(mercado.log_loss_mercado).toFixed(3))
-  ].join("");
-  const lista = document.getElementById("lista");
-  if (!data.picks || !data.picks.length) {
-    estado.className = "aviso";
-    estado.hidden = false;
-    estado.textContent = "No hay partidos en la jornada del " + data.fecha + ". Lo que empieza de madrugada en Puerto Rico sigue contando para la noche anterior.";
-    lista.innerHTML = "";
-  } else {
-    estado.hidden = true;
-    lista.innerHTML = "<h2>Jornada " + data.fecha + "</h2>" + data.picks.map(partido).join("");
-  }
-  const prox = document.getElementById("proxima");
-  if (data.proxima && data.proxima.length) {
-    prox.innerHTML = "<h2>Siguiente jornada " + data.proxima_fecha + "</h2>" + data.proxima.map(partido).join("");
-  } else {
-    prox.innerHTML = "";
-  }
-  const partes = [];
-  if (examen.temporada) partes.push("El récord de arriba es la temporada de examen " + temporada(examen.temporada) + ", fuera de muestra. El umbral se eligió con las temporadas anteriores.");
-  if (bt.n) partes.push("Backtest: " + bt.n + " partidos. Brier del modelo " + (bt.brier_modelo == null ? "—" : Number(bt.brier_modelo).toFixed(3)) + (mercado.brier_mercado == null ? "" : " frente a " + Number(mercado.brier_mercado).toFixed(3) + " del mercado (" + mercado.n + " con cuota)."));
-  if (bt.g0) partes.push("Las probabilidades se encogen hacia 50% hasta el partido " + bt.g0 + " de cada equipo.");
-  else partes.push("El backtest no justificó encoger las probabilidades hacia 50%.");
-  document.getElementById("meta").textContent = partes.join(" ");
-}
-fetch("/api/panel")
-  .then((r) => { if (!r.ok) throw new Error("panel " + r.status); return r.json(); })
-  .then(pintar)
-  .catch(() => {
-    const estado = document.getElementById("estado");
-    estado.className = "estado error";
-    estado.hidden = false;
-    estado.textContent = "No se pudo cargar el panel. Revisa que el servidor esté en marcha y vuelve a intentar.";
-  });
-</script>
+    <header class="header">
+        <h1>QUANTIUM NHL</h1>
+        <p class="sub" id="subtitulo">Cargando cartelera…</p>
+        <div class="badge" id="badge">NHL · jornada de Puerto Rico</div>
+    </header>
+    <div id="avisos"></div>
+    <div class="stats-row" id="metricas"></div>
+    <h2 class="section-title">Historial de picks</h2>
+    <div class="panel" id="historial"></div>
+    <h2 class="section-title">Anoche</h2>
+    <div id="anoche"></div>
+    <h2 class="section-title">Hoy</h2>
+    <div id="hoy"></div>
+    <h2 class="section-title">Próximos</h2>
+    <div id="proximos"></div>
+    <h2 class="section-title">Fuerza Elo</h2>
+    <div class="panel" id="ranking"></div>
+    <h2 class="section-title">Cómo se midió</h2>
+    <div class="panel" id="metodo"></div>
+    <footer>
+        Quantium NHL no es una casa de apuestas ni un consejo para jugar.
+        Cada pick es el ganador del partido, prórroga y shootout incluidos. No hay puck line.
+        El backtest es walk-forward; el modelo en producción se reentrenó después.
+    </footer>
+    <script>
+        const pct = (x) => x == null || Number.isNaN(Number(x)) ? "—" : (Number(x) * 100).toFixed(1) + "%";
+        const n3 = (x) => x == null || Number.isNaN(Number(x)) ? "—" : Number(x).toFixed(3);
+        const n1 = (x) => x == null || Number.isNaN(Number(x)) ? "—" : Number(x).toFixed(1);
+        const pp = (x) => x == null || Number.isNaN(Number(x)) ? "—" : (x >= 0 ? "+" : "") + (x * 100).toFixed(1) + " pp";
+
+        function el(tag, cls, text) {
+            const n = document.createElement(tag);
+            if (cls) n.className = cls;
+            if (text != null) n.textContent = text;
+            return n;
+        }
+
+        function stat(label, val) {
+            const box = el("div", "stat-box");
+            box.append(el("div", "label", label), el("div", "val", val));
+            return box;
+        }
+
+        function temporada(t) {
+            const s = String(t || "");
+            if (s.length !== 8) return s || "—";
+            return s.slice(0, 4) + "-" + s.slice(6);
+        }
+
+        function fechaCorta(iso) {
+            const meses = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+            const [y, m, d] = String(iso || "").split("-");
+            if (!y || !m || !d) return iso || "";
+            return Number(d) + " " + meses[Number(m) - 1] + " " + y;
+        }
+
+        function periodo(p) {
+            if (p === "OT") return "prórroga";
+            if (p === "SO") return "shootout";
+            if (p === "REG") return "reglamento";
+            return "";
+        }
+
+        function estadoPortero(e) {
+            if (e === "confirmed") return "confirmado";
+            if (e === "expected") return "probable";
+            if (!e) return "sin confirmar";
+            return e;
+        }
+
+        function textoPortero(p) {
+            if (!p || !p.nombre) return "titular sin confirmar";
+            const bits = [p.nombre, estadoPortero(p.estado)];
+            if (p.sv != null) bits.push("sv% " + (p.sv * 100).toFixed(1));
+            if (p.gsax != null) bits.push("GSAx " + (p.gsax > 0 ? "+" : "") + Number(p.gsax).toFixed(1));
+            return bits.join(" · ");
+        }
+
+        function momio(v) {
+            if (v == null || v === "") return "—";
+            const n = Number(v);
+            if (Number.isNaN(n)) return String(v);
+            return (n > 0 ? "+" : "") + n.toFixed(0);
+        }
+
+        function ventajaPick(p) {
+            if (p.prob_mercado_local == null || p.probabilidad_local == null) return null;
+            const local = p.ganador === p.equipo_local;
+            const modelo = local ? Number(p.probabilidad_local) : 1 - Number(p.probabilidad_local);
+            const mercado = local ? Number(p.prob_mercado_local) : 1 - Number(p.prob_mercado_local);
+            return modelo - mercado;
+        }
+
+        function esAlta(p) { return p.nivel === "alta"; }
+
+        function lado(abbr, nombre, derecha) {
+            const box = el("div", "lado" + (derecha ? " der" : ""));
+            const txt = el("div");
+            txt.append(el("div", "nm", abbr || "—"));
+            if (nombre) txt.append(el("div", "meta", nombre));
+            box.append(txt);
+            return box;
+        }
+
+        function fila(k, v) {
+            const row = el("div", "fila");
+            row.append(el("span", null, k), el("b", null, v == null || v === "" ? "—" : String(v)));
+            return row;
+        }
+
+        function tarjeta(p) {
+            const alta = esAlta(p);
+            const card = el("article", "card " + (alta ? "pick-dia" : "no-apostar"));
+            const top = el("div", "equipos");
+            top.append(
+                lado(p.equipo_visita, p.nombre_visita, false),
+                el("div", "vs", "@"),
+                lado(p.equipo_local, p.nombre_local, true)
+            );
+            card.append(top);
+            const per = periodo(p.periodo);
+            const final = p.estado === "final" || p.acierto === 0 || p.acierto === 1;
+            const detalle = final
+                ? "Final" + (per ? " · " + per : "") + (p.hora ? " · " + p.hora : "")
+                : (p.hora || "Programado");
+            card.append(el("div", "estado", detalle));
+            const tags = el("div", "tags");
+            if (per === "prórroga") tags.append(el("span", "tag pre", "PRÓRROGA"));
+            if (per === "shootout") tags.append(el("span", "tag pre", "SHOOTOUT"));
+            if (alta) tags.append(el("span", "tag dia", "PICK DEL DÍA"));
+            else tags.append(el("span", "tag no", (p.nivel || "sin nivel").toUpperCase()));
+            card.append(tags);
+
+            const box = el("div", "pick-box " + (alta ? "pick-dia" : "no-apostar"));
+            box.append(el("div", "nota", "Ganador, prórroga y shootout incluidos"));
+            box.append(el("strong", null, (p.nombre_ganador || p.ganador || "—") + "  " + pct(p.probabilidad)));
+            box.append(el("div", "nota", "Confianza " + (p.nivel || "—")));
+            if (p.prob_mercado_local != null) {
+                box.append(el("div", "nota", "Mercado " + pct(p.prob_mercado_local) + " local · modelo " + pct(p.probabilidad_local)));
+            }
+            if (p.acierto === 1 || p.acierto === 0) {
+                const marca = p.acierto === 1 ? "Acierto" : "Fallo";
+                const real = p.ganador_real ? " · ganó " + p.ganador_real : "";
+                box.append(el("div", "nota", marca + (per ? " · " + per : "") + real));
+            }
+            const visita = p.probabilidad_local == null ? 0.5 : 1 - Number(p.probabilidad_local);
+            const local = p.probabilidad_local == null ? 0.5 : Number(p.probabilidad_local);
+            const barra = el("div", "barra");
+            const izq = el("span");
+            izq.style.width = (visita * 100).toFixed(1) + "%";
+            const der = el("span");
+            der.style.width = (local * 100).toFixed(1) + "%";
+            barra.append(izq, der);
+            box.append(barra);
+            box.append(el("div", "nota", pct(visita) + " visita  ·  " + pct(local) + " local"));
+            card.append(box);
+
+            if (p.cuota_local != null || p.cuota_visita != null) {
+                card.append(fila("Momio", momio(p.cuota_visita) + " / " + momio(p.cuota_local)));
+            }
+            if (p.linea) card.append(fila("Moneyline", p.linea));
+            const ventaja = ventajaPick(p);
+            if (ventaja != null) card.append(fila("Ventaja del pick", pp(ventaja)));
+            if (p.casa) card.append(fila("Casa", p.casa));
+            card.append(el("div", "lesion", "Portero visita: " + textoPortero(p.portero_visita)));
+            card.append(el("div", "lesion", "Portero local: " + textoPortero(p.portero_local)));
+            return card;
+        }
+
+        function lista(nodo, juegos, vacio) {
+            nodo.replaceChildren();
+            if (!juegos || !juegos.length) {
+                nodo.append(el("div", "vacio", vacio));
+                return;
+            }
+            const grid = el("div", "grid-juegos");
+            juegos.forEach((j) => grid.append(tarjeta(j)));
+            nodo.append(grid);
+        }
+
+        function listaDelDia(nodo, juegos, vacio) {
+            nodo.replaceChildren();
+            if (!juegos || !juegos.length) {
+                nodo.append(el("div", "vacio", vacio));
+                return;
+            }
+            const altos = juegos.filter(esAlta);
+            const resto = juegos.filter((j) => !esAlta(j));
+            function bloque(titulo, filas) {
+                if (!filas.length) return;
+                nodo.append(el("h3", "section-title", titulo));
+                const grid = el("div", "grid-juegos");
+                filas.forEach((j) => grid.append(tarjeta(j)));
+                nodo.append(grid);
+            }
+            bloque("Picks del día", altos);
+            bloque("Confianza media y baja", resto);
+        }
+
+        function lineaRecord(cubo) {
+            const partes = ["alta", "media", "baja"].map((k) => (cubo && cubo[k]) || {});
+            const total = partes.reduce((s, n) => s + (n.total || 0), 0);
+            const aciertos = partes.reduce((s, n) => s + (n.aciertos || 0), 0);
+            if (!total) return "sin picks cerrados";
+            return aciertos + "-" + (total - aciertos) + " · " + pct(aciertos / total);
+        }
+
+        function bloqueRecord(nodo, titulo, cubo) {
+            cubo = cubo || {};
+            nodo.append(el("p", "nota", titulo + ": " + lineaRecord(cubo)));
+            const table = document.createElement("table");
+            const head = document.createElement("tr");
+            ["Confianza", "Récord", "Uso"].forEach((t, i) => head.append(el("th", i === 1 ? "num" : "", t)));
+            table.append(head);
+            const uso = { alta: "Pick del día", media: "Se publica", baja: "Se publica" };
+            ["alta", "media", "baja"].forEach((k) => {
+                const n = cubo[k] || {};
+                const tr = document.createElement("tr");
+                tr.append(el("td", "", k));
+                tr.append(el("td", "num", n.total ? (n.aciertos + "-" + (n.total - n.aciertos) + " (" + pct(n.pct) + ")") : "—"));
+                tr.append(el("td", "", uso[k]));
+                table.append(tr);
+            });
+            nodo.append(table);
+        }
+
+        function finalizado(p) {
+            return p.estado === "final" || p.acierto === 0 || p.acierto === 1;
+        }
+
+        function pintar(data) {
+            const examen = (data.record && data.record.examen) || {};
+            const bt = data.backtest || {};
+            const mercado = bt.mercado || {};
+            document.getElementById("subtitulo").textContent =
+                "Examen " + temporada(examen.temporada || bt.temporada_examen) +
+                " · " + fechaCorta(data.fecha) + " · " + String(data.zona || "").replaceAll("_", " ");
+            const umbral = Math.round((data.umbral_alta || 0.62) * 100);
+            document.getElementById("badge").textContent =
+                "Umbral alta " + umbral + "%" + (data.actualizado ? " · " + String(data.actualizado).slice(0, 16).replace("T", " ") : "");
+
+            const avisos = document.getElementById("avisos");
+            avisos.replaceChildren();
+            if (data.en_madrugada) {
+                avisos.append(el("div", "aviso",
+                    "Madrugada en Puerto Rico. La jornada vigente sigue siendo el " + fechaCorta(data.fecha) +
+                    ". Lo que empieza de madrugada cuenta para la noche anterior."
+                ));
+            }
+
+            const met = document.getElementById("metricas");
+            met.replaceChildren();
+            met.append(
+                stat("Acierto walk-forward", pct(bt.acierto_modelo)),
+                stat("Log loss modelo", n3(bt.log_loss_modelo)),
+                stat("Log loss mercado", n3(mercado.log_loss_mercado)),
+                stat("Brier modelo", n3(bt.brier_modelo))
+            );
+
+            const hist = document.getElementById("historial");
+            hist.replaceChildren();
+            bloqueRecord(hist, "Temporada de examen " + temporada(examen.temporada), examen);
+            bloqueRecord(hist, "Fuera de muestra", (data.record && data.record.oos) || {});
+            const vivo = (data.record && data.record.vivo) || {};
+            const vivoN = ["alta", "media", "baja"].reduce((s, k) => s + ((vivo[k] && vivo[k].total) || 0), 0);
+            if (vivoN) bloqueRecord(hist, "En vivo", vivo);
+
+            const recientes = (data.picks || []).filter(finalizado);
+            if (recientes.length) {
+                hist.append(el("p", "nota", "Últimos resultados"));
+                recientes.forEach((r) => {
+                    const marca = r.acierto === 1 ? "acierto" : (r.acierto === 0 ? "fallo" : "pendiente");
+                    const per = periodo(r.periodo);
+                    hist.append(el(
+                        "div", "fila",
+                        r.fecha + "  " + r.equipo_visita + " @ " + r.equipo_local + "  →  " +
+                        r.ganador + " " + pct(r.probabilidad) + "  " + marca + (per ? " · " + per : "")
+                    ));
+                });
+            } else {
+                hist.append(el("p", "nota", "Todavía no hay picks calificados en esta jornada."));
+            }
+
+            const deHoy = data.picks || [];
+            lista(document.getElementById("anoche"), deHoy.filter(finalizado), "Sin finales de anoche en la cartelera.");
+            listaDelDia(document.getElementById("hoy"), deHoy.filter((p) => !finalizado(p)), "No hay juegos hoy.");
+            listaDelDia(document.getElementById("proximos"), data.proxima || [], "No hay juegos en la siguiente jornada.");
+
+            const rank = document.getElementById("ranking");
+            rank.replaceChildren();
+            if (!data.ranking || !data.ranking.length) {
+                rank.append(el("p", "nota", "El ranking aparece cuando el modelo está entrenado."));
+            } else {
+                const table = document.createElement("table");
+                const head = document.createElement("tr");
+                ["#", "Equipo", "Elo"].forEach((t, i) => head.append(el("th", i === 2 ? "num" : "", t)));
+                table.append(head);
+                data.ranking.forEach((r) => {
+                    const tr = document.createElement("tr");
+                    tr.append(el("td", "", String(r.puesto)));
+                    tr.append(el("td", "", r.abbr + "  " + r.nombre));
+                    tr.append(el("td", "num", n1(r.elo)));
+                    table.append(tr);
+                });
+                rank.append(table);
+                rank.append(el("p", "nota", "Elo de franquicia, con encogimiento del 30% hacia 1500 al abrir temporada. Arizona y Utah son el mismo club. No es un margen de puntos."));
+            }
+
+            const metodo = document.getElementById("metodo");
+            metodo.replaceChildren();
+            if (!bt || bt.n == null) {
+                metodo.append(el("p", "nota", "Todavía no hay backtest en el repositorio."));
+            } else {
+                metodo.append(el("p", "nota", "Walk-forward de " + bt.n + " partidos. Log loss " + n3(bt.log_loss_modelo) + " · Brier " + n3(bt.brier_modelo) + " · acierto " + pct(bt.acierto_modelo) + "."));
+                if (mercado.n) {
+                    metodo.append(el("p", "nota",
+                        "Mismos partidos con momio (" + mercado.n + "): mercado log loss " + n3(mercado.log_loss_mercado) +
+                        " · Brier " + n3(mercado.brier_mercado) + ". Modelo en esa muestra: log loss " + n3(mercado.log_loss_modelo) +
+                        " · Brier " + n3(mercado.brier_modelo) + "."
+                    ));
+                }
+                metodo.append(el("p", "nota", bt.g0
+                    ? "Las probabilidades se encogen hacia 50% hasta el partido " + bt.g0 + " de cada equipo."
+                    : "El backtest no justificó encoger las probabilidades hacia 50%."
+                ));
+                metodo.append(el("p", "nota", "La alta confianza empieza en " + umbral + "%. El pick es siempre el ganador, con prórroga y shootout. No hay puck line."));
+            }
+            document.documentElement.dataset.listo = "1";
+        }
+
+        fetch("/api/panel").then((r) => {
+            if (!r.ok) throw new Error(String(r.status));
+            return r.json();
+        }).then(pintar).catch(() => {
+            document.getElementById("subtitulo").textContent = "No se pudo cargar el panel.";
+            document.documentElement.dataset.listo = "error";
+        });
+    </script>
 </body>
 </html>
