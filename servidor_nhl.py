@@ -12,12 +12,13 @@ from datetime import timedelta
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
 
-from comun_nhl import RAIZ, directorio_datos, en_puerto_rico, fecha_de_hoy, iniciar_sentry, leer_json
+from comun_nhl import NOMBRES, RAIZ, directorio_datos, en_puerto_rico, fecha_de_hoy, iniciar_sentry, leer_json
 
 iniciar_sentry()
 
 app = FastAPI(title="Quantium NHL", version="1.0.0")
 HTML = RAIZ / "QuantiumNHL.html"
+_RANKING: dict = {}
 
 
 def _compactar_backtest(back: dict) -> dict:
@@ -45,6 +46,66 @@ def _compactar_backtest(back: dict) -> dict:
         "por_nivel_examen": back.get("por_nivel_examen") or {},
         "por_nivel_oos": back.get("por_nivel_oos") or {},
     }
+
+
+def _numero(valor):
+    if valor is None or valor == "":
+        return None
+    try:
+        numero = float(valor)
+    except (TypeError, ValueError):
+        return None
+    if numero != numero:
+        return None
+    return numero
+
+
+def _ranking_elo() -> list[dict]:
+    """Elo de franquicia con los partidos ya jugados. Sin games.csv, lista vacía."""
+    ruta = directorio_datos() / "games.csv"
+    if not ruta.exists() or ruta.stat().st_size == 0:
+        return []
+    marca = (str(ruta.resolve()), ruta.stat().st_mtime_ns, ruta.stat().st_size)
+    if _RANKING.get("marca") == marca:
+        return _RANKING["filas"]
+    import pandas as pd
+
+    from elo_nhl import EloNHL
+
+    juegos = pd.read_csv(ruta)
+    if juegos.empty:
+        return []
+    elo = EloNHL()
+    orden = juegos.sort_values(["inicio_utc", "id"], kind="mergesort")
+    for partido in orden.to_dict(orient="records"):
+        tipo = _numero(partido.get("tipo"))
+        if tipo not in (2, 3):
+            continue
+        temporada = _numero(partido.get("temporada"))
+        if temporada is None:
+            continue
+        elo.abrir_temporada(int(temporada))
+        goles_local = _numero(partido.get("goles_local"))
+        goles_visita = _numero(partido.get("goles_visita"))
+        if _numero(partido.get("gano_local")) is None or goles_local is None or goles_visita is None:
+            continue
+        neutral = _numero(partido.get("neutral")) or 0
+        elo.actualizar(
+            str(partido.get("local") or ""),
+            str(partido.get("visita") or ""),
+            int(goles_local),
+            int(goles_visita),
+            str(partido.get("periodo") or "REG"),
+            neutral=bool(int(neutral)),
+        )
+    ordenados = sorted(elo.rating.items(), key=lambda par: (-par[1], par[0]))
+    filas = [
+        {"puesto": i, "abbr": eq, "nombre": NOMBRES.get(eq, eq), "elo": round(valor, 1)}
+        for i, (eq, valor) in enumerate(ordenados, start=1)
+    ]
+    _RANKING["marca"] = marca
+    _RANKING["filas"] = filas
+    return filas
 
 
 @app.get("/api/health")
@@ -77,6 +138,7 @@ def panel() -> dict:
         "record": documento.get("record") or {},
         "backtest": back,
         "actualizado": documento.get("actualizado"),
+        "ranking": _ranking_elo(),
     }
 
 
