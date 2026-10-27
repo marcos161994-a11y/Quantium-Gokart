@@ -9,16 +9,16 @@
   "encogimiento_justificado": false,
   "delta_log_loss_encogido": 0.004137,
   "mercado": {
-    "n": 5746,
-    "log_loss_modelo": 0.673638,
-    "log_loss_mercado": 0.662825,
-    "brier_modelo": 0.240288,
-    "brier_mercado": 0.235333,
-    "n_draftkings": 3904,
-    "log_loss_modelo_dk": 0.673912,
-    "log_loss_mercado_dk": 0.662595,
-    "brier_modelo_dk": 0.24027,
-    "brier_mercado_dk": 0.235231
+    "n": 5777,
+    "log_loss_modelo": 0.673385,
+    "log_loss_mercado": 0.662531,
+    "brier_modelo": 0.240168,
+    "brier_mercado": 0.235191,
+    "n_draftkings": 3935,
+    "log_loss_modelo_dk": 0.673538,
+    "log_loss_mercado_dk": 0.662164,
+    "brier_modelo_dk": 0.240094,
+    "brier_mercado_dk": 0.235023
   },
   "por_nivel_oos": {
     "alta": {
