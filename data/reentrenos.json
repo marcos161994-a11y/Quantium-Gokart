@@ -1,0 +1,26 @@
+{
+  "reentrenos": [
+    {
+      "fecha": "2026-10-27T05:05:16Z",
+      "promovido": true,
+      "log_loss_nuevo": 0.675781,
+      "log_loss_anterior": null,
+      "n_examen": 400,
+      "g0": 40,
+      "umbral_alta": 0.68,
+      "log_loss_backtest": 0.675067,
+      "n_backtest": 5779
+    },
+    {
+      "fecha": "2026-10-27T05:06:42Z",
+      "promovido": true,
+      "log_loss_nuevo": 0.665077,
+      "log_loss_anterior": 0.675274,
+      "n_examen": 400,
+      "g0": null,
+      "umbral_alta": 0.68,
+      "log_loss_backtest": 0.673323,
+      "n_backtest": 5779
+    }
+  ]
+}
