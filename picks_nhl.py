@@ -9,7 +9,7 @@ hay muestra suficiente, 62%.
 from __future__ import annotations
 
 import argparse
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 
 import pandas as pd
 
@@ -48,6 +48,109 @@ def cubeta(picks: list[dict]) -> dict:
         if grupo["total"]:
             grupo["pct"] = round(grupo["aciertos"] / grupo["total"], 4)
     return grupos
+
+
+def inicio_del_record() -> str | None:
+    """Fecha ISO (jornada AST) desde la que cuenta el récord. Sin archivo, no hay corte."""
+    bruto = str(leer_json(directorio_datos() / "record.json", {}).get("desde") or "").strip()
+    if not bruto:
+        return None
+    date.fromisoformat(bruto)
+    return bruto
+
+
+def _fecha_de_pick(pick: dict) -> str:
+    return str(pick.get("fecha") or "")[:10]
+
+
+def _fuentes_de_picks(documento: dict) -> list[dict]:
+    fuentes: list[dict] = []
+    fuentes.extend(documento.get("vivo") or [])
+    por_fecha = documento.get("por_fecha") or {}
+    for fecha in sorted(por_fecha):
+        fuentes.extend(por_fecha[fecha] or [])
+    if not por_fecha:
+        fuentes.extend(documento.get("picks") or [])
+    return fuentes
+
+
+def picks_del_record(documento: dict, desde: str | None) -> list[dict]:
+    """Picks con fecha de jornada >= desde. Los anteriores no entran al récord."""
+    vistos: set[str] = set()
+    salida: list[dict] = []
+    for pick in _fuentes_de_picks(documento):
+        ident = str(pick.get("id") or "")
+        if ident and ident in vistos:
+            continue
+        fecha = _fecha_de_pick(pick)
+        if desde and fecha and fecha < desde:
+            continue
+        if ident:
+            vistos.add(ident)
+        salida.append(pick)
+    return salida
+
+
+def record_desde(documento: dict, desde: str | None = None) -> dict:
+    """Ganados y perdidos por confianza, solo con picks calificados desde `desde`."""
+    if desde is None:
+        desde = inicio_del_record()
+    cubo = cubeta(picks_del_record(documento, desde))
+    cubo["desde"] = desde
+    return cubo
+
+
+def archivar_picks(documento: dict, desde: str | None = None) -> tuple[dict, int]:
+    """Pasa a data/picks_archivo.json los picks anteriores al inicio del récord.
+
+    No borra el modelo, el Elo, games.csv ni backtest.json. Los de la fecha
+    de inicio (hayan empezado o no) se quedan en picks.json.
+    """
+    if desde is None:
+        desde = inicio_del_record()
+    if not desde:
+        documento["record"] = record_desde(documento, None)
+        return documento, 0
+    ruta = directorio_datos() / "picks_archivo.json"
+    previo = leer_json(ruta, {"desde": desde, "picks": []})
+    archivo = list(previo.get("picks") or [])
+    ids = {str(pick.get("id")) for pick in archivo if pick.get("id") is not None}
+    nuevos: list[dict] = []
+
+    def conservar(pick: dict) -> bool:
+        fecha = _fecha_de_pick(pick)
+        if not fecha or fecha >= desde:
+            return True
+        ident = str(pick.get("id") or "")
+        if ident and ident in ids:
+            return False
+        archivo.append(pick)
+        if ident:
+            ids.add(ident)
+        nuevos.append(pick)
+        return False
+
+    documento["vivo"] = [pick for pick in (documento.get("vivo") or []) if conservar(pick)]
+    por_fecha = {}
+    for fecha, lista in (documento.get("por_fecha") or {}).items():
+        quedaron = [pick for pick in (lista or []) if conservar(pick)]
+        if quedaron:
+            por_fecha[fecha] = quedaron
+    documento["por_fecha"] = por_fecha
+    if documento.get("picks") is not None:
+        documento["picks"] = [pick for pick in (documento.get("picks") or []) if conservar(pick)]
+    documento["record"] = record_desde(documento, desde)
+    if nuevos:
+        guardar_json(
+            ruta,
+            {
+                "desde": desde,
+                "zona": "America/Puerto_Rico",
+                "n": len(archivo),
+                "picks": archivo,
+            },
+        )
+    return documento, len(nuevos)
 
 
 def _doc() -> dict:
@@ -333,19 +436,6 @@ def generar_picks(en_vivo: bool = True, ahora: datetime | None = None, eventos: 
     for fecha, lista in por_fecha.items():
         calificar_lista(lista, resultados)
 
-    backtest = leer_json(directorio_datos() / "backtest.json", {})
-    record = {
-        "examen": {
-            "temporada": backtest.get("temporada_examen"),
-            **(backtest.get("por_nivel_examen") or _vacio()),
-        },
-        "oos": backtest.get("por_nivel_oos") or _vacio(),
-        "vivo": cubeta(vivos),
-    }
-    # El examen trae las cubetas en la raíz si así se guardó el backtest.
-    if "alta" not in record["examen"] and backtest.get("por_nivel_examen"):
-        record["examen"].update(backtest["por_nivel_examen"])
-
     documento = {
         "actualizado": en_puerto_rico(ahora).isoformat(),
         "zona": "America/Puerto_Rico",
@@ -355,8 +445,8 @@ def generar_picks(en_vivo: bool = True, ahora: datetime | None = None, eventos: 
         "por_fecha": por_fecha,
         "picks": por_fecha.get(hoy.isoformat(), []),
         "vivo": vivos,
-        "record": record,
     }
+    documento, _ = archivar_picks(documento)
     guardar_json(directorio_datos() / "picks.json", documento)
     n = len(documento["picks"])
     print(f"picks {hoy.isoformat()}: {n}", flush=True)
