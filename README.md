@@ -43,7 +43,7 @@ Esas features se calculan antes del partido. La pretemporada no mueve el Elo ni 
 
 ## Encogimiento
 
-Si la validación interna de un pliegue mejora el log loss acercando las probabilidades a 50% durante los primeros partidos, se guarda ese horizonte (`g0`). Si no mejora, no se encoge. En pretemporada el peso es cero, así que un `g0` activo deja el partido en 50%.
+En cada pliegue, la validación interna prueba acercar la probabilidad a 50% durante los primeros partidos (horizonte `g0` de 8, 12, 16, 24 o 40). Eso solo se adopta si, en temporadas ya cerradas, el log loss de examen bajó. En la corrida actual no bajó: donde la validación pidió `g0 = 40` (2024-25), el log loss pasó de 0.667 a 0.671. El modelo que se sirve no encoge. El Elo sí se acerca un 30% a 1500 al cambiar de temporada, y eso no se apaga.
 
 ## Picks y confianza
 
@@ -127,4 +127,35 @@ Para dejarlo en marcha todavía falta:
 
 ## Números del último backtest
 
-Se rellenan al entrenar. Mira `data/backtest.json` si esta sección todavía no tiene la corrida de este clon.
+Walk-forward de 2022-23 a 2026-27 (la 2021-22 solo entrena). 5.779 partidos fuera de muestra. Se reproduce con `python entrenar_modelo.py` cuando `data/games.csv` ya está bajado; el detalle queda en `data/backtest.json`.
+
+| | Modelo | Mercado sin vig |
+| --- | --- | --- |
+| Log loss (5.746 con cuota) | 0.674 | 0.663 |
+| Brier (mismos partidos) | 0.240 | 0.235 |
+| Log loss, solo DraftKings (3.904) | 0.674 | 0.663 |
+| Brier, solo DraftKings | 0.240 | 0.235 |
+
+En todos los partidos fuera de muestra el log loss del modelo es 0.673 y el Brier 0.240. Acierta el ganador el 58.1% de las veces. El cierre del mercado es mejor: este modelo no lo supera. Sí está por debajo del 0.693 de tirar una moneda.
+
+Por temporada, log loss del modelo (sin encoger):
+
+| Temporada | Partidos | Log loss | Brier |
+| --- | --- | --- | --- |
+| 2022-23 | 1.400 | 0.674 | 0.240 |
+| 2023-24 | 1.400 | 0.663 | 0.235 |
+| 2024-25 | 1.398 | 0.667 | 0.237 |
+| 2025-26 | 1.394 | 0.691 | 0.249 |
+| 2026-27 (parcial) | 187 | 0.665 | 0.236 |
+
+El umbral de confianza alta quedó en **68%**. Se eligió con las temporadas anteriores a 2025-26. Estos son los aciertos en 2025-26, que no participó en esa elección:
+
+| Nivel | Aciertos | Tasa |
+| --- | --- | --- |
+| Alta (≥ 68%) | 77 / 118 | 65.3% |
+| Media (55% a 68%) | 428 / 785 | 54.5% |
+| Baja (< 55%) | 232 / 491 | 47.3% |
+
+En el conjunto fuera de muestra entero (aquí el umbral ya vio parte de los datos) la alta llega a 68.8% (817/1.187), la media a 57.3% y la baja a 51.5%. La banda que sirve es la alta. La baja, en el año de examen, quedó por debajo de una moneda.
+
+El reentreno promueve el `joblib` solo si mejora el log loss de los últimos partidos de examen. La promoción vigente bajó ese número de 0.675 a 0.665.

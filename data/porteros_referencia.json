@@ -1,0 +1,2030 @@
+{
+  "20202021": {
+    "WSH": {
+      "id": 8477970,
+      "nombre": "Vitek Vanecek",
+      "sv": 0.90785,
+      "gsax": -0.014314967931341016,
+      "inicios": 36,
+      "tiros": 1031,
+      "saves": 936
+    },
+    "SJS": {
+      "id": 8474889,
+      "nombre": "Martin Jones",
+      "sv": 0.89591,
+      "gsax": -11.712927903562331,
+      "inicios": 34,
+      "tiros": 980,
+      "saves": 878
+    },
+    "MTL": {
+      "id": 8474596,
+      "nombre": "Jake Allen",
+      "sv": 0.90697,
+      "gsax": -0.7300633645004382,
+      "inicios": 27,
+      "tiros": 817,
+      "saves": 741
+    },
+    "TOR": {
+      "id": 8475883,
+      "nombre": "Frederik Andersen",
+      "sv": 0.8952,
+      "gsax": -8.457383509775127,
+      "inicios": 23,
+      "tiros": 668,
+      "saves": 598
+    },
+    "STL": {
+      "id": 8476412,
+      "nombre": "Jordan Binnington",
+      "sv": 0.91,
+      "gsax": 2.5555984854338476,
+      "inicios": 41,
+      "tiros": 1200,
+      "saves": 1092
+    },
+    "WPG": {
+      "id": 8476945,
+      "nombre": "Connor Hellebuyck",
+      "sv": 0.9161,
+      "gsax": 10.993103315045346,
+      "inicios": 45,
+      "tiros": 1335,
+      "saves": 1223
+    },
+    "VGK": {
+      "id": 8470594,
+      "nombre": "Marc-Andre Fleury",
+      "sv": 0.92821,
+      "gsax": 20.116239085078405,
+      "inicios": 36,
+      "tiros": 989,
+      "saves": 918
+    },
+    "FLA": {
+      "id": 8475683,
+      "nombre": "Sergei Bobrovsky",
+      "sv": 0.90588,
+      "gsax": -1.8587628467660124,
+      "inicios": 30,
+      "tiros": 935,
+      "saves": 847
+    },
+    "BOS": {
+      "id": 8471695,
+      "nombre": "Tuukka Rask",
+      "sv": 0.91325,
+      "gsax": 3.291225562166801,
+      "inicios": 24,
+      "tiros": 611,
+      "saves": 558
+    },
+    "BUF": {
+      "id": 8476999,
+      "nombre": "Linus Ullmark",
+      "sv": 0.91708,
+      "gsax": 5.448632254076188,
+      "inicios": 20,
+      "tiros": 591,
+      "saves": 542
+    },
+    "NSH": {
+      "id": 8477424,
+      "nombre": "Juuse Saros",
+      "sv": 0.9273,
+      "gsax": 20.8551309790588,
+      "inicios": 35,
+      "tiros": 1073,
+      "saves": 995
+    },
+    "COL": {
+      "id": 8475831,
+      "nombre": "Philipp Grubauer",
+      "sv": 0.92245,
+      "gsax": 14.484757746696573,
+      "inicios": 39,
+      "tiros": 993,
+      "saves": 916
+    },
+    "ARI": {
+      "id": 8475311,
+      "nombre": "Darcy Kuemper",
+      "sv": 0.90704,
+      "gsax": -0.5879375627848731,
+      "inicios": 27,
+      "tiros": 710,
+      "saves": 644
+    },
+    "PIT": {
+      "id": 8477465,
+      "nombre": "Tristan Jarry",
+      "sv": 0.90909,
+      "gsax": 1.3426319449811217,
+      "inicios": 38,
+      "tiros": 1100,
+      "saves": 1000
+    },
+    "TBL": {
+      "id": 8476883,
+      "nombre": "Andrei Vasilevskiy",
+      "sv": 0.92481,
+      "gsax": 20.96439610540142,
+      "inicios": 42,
+      "tiros": 1237,
+      "saves": 1144
+    },
+    "CHI": {
+      "id": 8480947,
+      "nombre": "Kevin Lankinen",
+      "sv": 0.90946,
+      "gsax": 1.9241171470521294,
+      "inicios": 37,
+      "tiros": 1204,
+      "saves": 1095
+    },
+    "EDM": {
+      "id": 8469608,
+      "nombre": "Mike Smith",
+      "sv": 0.9229,
+      "gsax": 13.85142183757057,
+      "inicios": 30,
+      "tiros": 921,
+      "saves": 850
+    },
+    "ANA": {
+      "id": 8476434,
+      "nombre": "John Gibson",
+      "sv": 0.90307,
+      "gsax": -5.0008886484815775,
+      "inicios": 35,
+      "tiros": 1042,
+      "saves": 941
+    },
+    "OTT": {
+      "id": 8476899,
+      "nombre": "Matt Murray",
+      "sv": 0.89295,
+      "gsax": -11.00830693145815,
+      "inicios": 25,
+      "tiros": 738,
+      "saves": 659
+    },
+    "CGY": {
+      "id": 8474593,
+      "nombre": "Jacob Markstrom",
+      "sv": 0.90439,
+      "gsax": -4.037458465342752,
+      "inicios": 43,
+      "tiros": 1161,
+      "saves": 1050
+    },
+    "CAR": {
+      "id": 8477968,
+      "nombre": "Alex Nedeljkovic",
+      "sv": 0.93209,
+      "gsax": 15.700023182134373,
+      "inicios": 23,
+      "tiros": 648,
+      "saves": 604
+    },
+    "NYI": {
+      "id": 8473575,
+      "nombre": "Semyon Varlamov",
+      "sv": 0.92941,
+      "gsax": 21.972258712618782,
+      "inicios": 35,
+      "tiros": 1020,
+      "saves": 948
+    },
+    "CBJ": {
+      "id": 8476914,
+      "nombre": "Joonas Korpisalo",
+      "sv": 0.8938,
+      "gsax": -12.71478247430639,
+      "inicios": 31,
+      "tiros": 904,
+      "saves": 808
+    },
+    "PHI": {
+      "id": 8470880,
+      "nombre": "Brian Elliott",
+      "sv": 0.88888,
+      "gsax": -14.00830693145815,
+      "inicios": 26,
+      "tiros": 738,
+      "saves": 656
+    },
+    "MIN": {
+      "id": 8475660,
+      "nombre": "Cam Talbot",
+      "sv": 0.91468,
+      "gsax": 6.866702727764505,
+      "inicios": 33,
+      "tiros": 1008,
+      "saves": 922
+    },
+    "DET": {
+      "id": 8471306,
+      "nombre": "Thomas Greiss",
+      "sv": 0.91163,
+      "gsax": 3.363920871648247,
+      "inicios": 29,
+      "tiros": 894,
+      "saves": 815
+    },
+    "LAK": {
+      "id": 8477361,
+      "nombre": "Calvin Petersen",
+      "sv": 0.91141,
+      "gsax": 3.88198361795844,
+      "inicios": 32,
+      "tiros": 1095,
+      "saves": 998
+    },
+    "NJD": {
+      "id": 8478406,
+      "nombre": "Mackenzie Blackwood",
+      "sv": 0.90194,
+      "gsax": -6.407831697704978,
+      "inicios": 35,
+      "tiros": 1081,
+      "saves": 975
+    },
+    "DAL": {
+      "id": 8471418,
+      "nombre": "Anton Khudobin",
+      "sv": 0.90488,
+      "gsax": -2.3883973417819107,
+      "inicios": 32,
+      "tiros": 799,
+      "saves": 723
+    },
+    "NYR": {
+      "id": 8478048,
+      "nombre": "Igor Shesterkin",
+      "sv": 0.9159,
+      "gsax": 7.931979754269378,
+      "inicios": 31,
+      "tiros": 987,
+      "saves": 904
+    },
+    "VAN": {
+      "id": 8477967,
+      "nombre": "Thatcher Demko",
+      "sv": 0.91494,
+      "gsax": 8.238930530870903,
+      "inicios": 35,
+      "tiros": 1164,
+      "saves": 1065
+    },
+    "_liga_sv": 0.9078703345954717
+  },
+  "20212022": {
+    "WSH": {
+      "id": 8477970,
+      "nombre": "Vitek Vanecek",
+      "sv": 0.90778,
+      "gsax": 2.0109349547601596,
+      "inicios": 39,
+      "tiros": 1117,
+      "saves": 1014
+    },
+    "CAR": {
+      "id": 8477293,
+      "nombre": "Antti Raanta",
+      "sv": 0.91218,
+      "gsax": 4.372175539893192,
+      "inicios": 26,
+      "tiros": 706,
+      "saves": 644
+    },
+    "STL": {
+      "id": 8478024,
+      "nombre": "Ville Husso",
+      "sv": 0.91909,
+      "gsax": 16.19831298485542,
+      "inicios": 38,
+      "tiros": 1236,
+      "saves": 1136
+    },
+    "MTL": {
+      "id": 8474596,
+      "nombre": "Jake Allen",
+      "sv": 0.90471,
+      "gsax": -1.424995564730807,
+      "inicios": 35,
+      "tiros": 1123,
+      "saves": 1016
+    },
+    "TOR": {
+      "id": 8475789,
+      "nombre": "Jack Campbell",
+      "sv": 0.91398,
+      "gsax": 11.436559521313484,
+      "inicios": 47,
+      "tiros": 1430,
+      "saves": 1307
+    },
+    "LAK": {
+      "id": 8471734,
+      "nombre": "Jonathan Quick",
+      "sv": 0.90965,
+      "gsax": 4.710868828927687,
+      "inicios": 46,
+      "tiros": 1284,
+      "saves": 1168
+    },
+    "VGK": {
+      "id": 8475215,
+      "nombre": "Robin Lehner",
+      "sv": 0.90683,
+      "gsax": 1.0869151492668152,
+      "inicios": 44,
+      "tiros": 1288,
+      "saves": 1168
+    },
+    "CGY": {
+      "id": 8474593,
+      "nombre": "Jacob Markstrom",
+      "sv": 0.92189,
+      "gsax": 27.896311468799922,
+      "inicios": 63,
+      "tiros": 1754,
+      "saves": 1617
+    },
+    "NYI": {
+      "id": 8473575,
+      "nombre": "Semyon Varlamov",
+      "sv": 0.91104,
+      "gsax": 4.943325322968235,
+      "inicios": 29,
+      "tiros": 978,
+      "saves": 891
+    },
+    "FLA": {
+      "id": 8475683,
+      "nombre": "Sergei Bobrovsky",
+      "sv": 0.91251,
+      "gsax": 10.222134412850892,
+      "inicios": 53,
+      "tiros": 1566,
+      "saves": 1429
+    },
+    "CBJ": {
+      "id": 8476914,
+      "nombre": "Joonas Korpisalo",
+      "sv": 0.87697,
+      "gsax": -18.396658226214868,
+      "inicios": 17,
+      "tiros": 634,
+      "saves": 556
+    },
+    "OTT": {
+      "id": 8476341,
+      "nombre": "Anton Forsberg",
+      "sv": 0.91695,
+      "gsax": 15.97487218360402,
+      "inicios": 44,
+      "tiros": 1457,
+      "saves": 1336
+    },
+    "NJD": {
+      "id": 8482076,
+      "nombre": "Nico Daws",
+      "sv": 0.89303,
+      "gsax": -7.994855087657015,
+      "inicios": 23,
+      "tiros": 617,
+      "saves": 551
+    },
+    "SJS": {
+      "id": 8473503,
+      "nombre": "James Reimer",
+      "sv": 0.91103,
+      "gsax": 7.316791123010034,
+      "inicios": 46,
+      "tiros": 1450,
+      "saves": 1321
+    },
+    "PHI": {
+      "id": 8479394,
+      "nombre": "Carter Hart",
+      "sv": 0.90492,
+      "gsax": -1.529313097753402,
+      "inicios": 44,
+      "tiros": 1441,
+      "saves": 1304
+    },
+    "BUF": {
+      "id": 8467950,
+      "nombre": "Craig Anderson",
+      "sv": 0.89735,
+      "gsax": -8.159056819831335,
+      "inicios": 31,
+      "tiros": 945,
+      "saves": 848
+    },
+    "PIT": {
+      "id": 8477465,
+      "nombre": "Tristan Jarry",
+      "sv": 0.91934,
+      "gsax": 22.853813525151963,
+      "inicios": 56,
+      "tiros": 1711,
+      "saves": 1573
+    },
+    "VAN": {
+      "id": 8470860,
+      "nombre": "Jaroslav Halak",
+      "sv": 0.9025,
+      "gsax": -1.3953679660661464,
+      "inicios": 14,
+      "tiros": 400,
+      "saves": 361
+    },
+    "ARI": {
+      "id": 8478872,
+      "nombre": "Karel Vejmelka",
+      "sv": 0.89814,
+      "gsax": -13.094672838411043,
+      "inicios": 49,
+      "tiros": 1669,
+      "saves": 1499
+    },
+    "TBL": {
+      "id": 8476883,
+      "nombre": "Andrei Vasilevskiy",
+      "sv": 0.91648,
+      "gsax": 19.613631598470874,
+      "inicios": 63,
+      "tiros": 1868,
+      "saves": 1712
+    },
+    "SEA": {
+      "id": 8475831,
+      "nombre": "Philipp Grubauer",
+      "sv": 0.88911,
+      "gsax": -24.95687305452975,
+      "inicios": 54,
+      "tiros": 1479,
+      "saves": 1315
+    },
+    "NSH": {
+      "id": 8477424,
+      "nombre": "Juuse Saros",
+      "sv": 0.91789,
+      "gsax": 25.082399238746348,
+      "inicios": 67,
+      "tiros": 2107,
+      "saves": 1934
+    },
+    "EDM": {
+      "id": 8469608,
+      "nombre": "Mike Smith",
+      "sv": 0.91533,
+      "gsax": 8.166120994145444,
+      "inicios": 27,
+      "tiros": 874,
+      "saves": 800
+    },
+    "CHI": {
+      "id": 8480947,
+      "nombre": "Kevin Lankinen",
+      "sv": 0.89105,
+      "gsax": -14.52673257745596,
+      "inicios": 29,
+      "tiros": 973,
+      "saves": 867
+    },
+    "DET": {
+      "id": 8476433,
+      "nombre": "Magnus Hellberg",
+      "sv": 0.86956,
+      "gsax": -0.8377336580488048,
+      "inicios": 1,
+      "tiros": 23,
+      "saves": 20
+    },
+    "COL": {
+      "id": 8475311,
+      "nombre": "Darcy Kuemper",
+      "sv": 0.92132,
+      "gsax": 26.896311468799922,
+      "inicios": 57,
+      "tiros": 1754,
+      "saves": 1616
+    },
+    "BOS": {
+      "id": 8476999,
+      "nombre": "Linus Ullmark",
+      "sv": 0.91666,
+      "gsax": 12.17320129671134,
+      "inicios": 39,
+      "tiros": 1140,
+      "saves": 1045
+    },
+    "ANA": {
+      "id": 8476434,
+      "nombre": "John Gibson",
+      "sv": 0.90385,
+      "gsax": -3.8132832282310574,
+      "inicios": 56,
+      "tiros": 1789,
+      "saves": 1617
+    },
+    "DAL": {
+      "id": 8474651,
+      "nombre": "Braden Holtby",
+      "sv": 0.91285,
+      "gsax": 4.8081060593841585,
+      "inicios": 22,
+      "tiros": 700,
+      "saves": 639
+    },
+    "WPG": {
+      "id": 8476945,
+      "nombre": "Connor Hellebuyck",
+      "sv": 0.91044,
+      "gsax": 9.594955082818387,
+      "inicios": 66,
+      "tiros": 2155,
+      "saves": 1962
+    },
+    "NYR": {
+      "id": 8478903,
+      "nombre": "Adam Huska",
+      "sv": 0.82051,
+      "gsax": -3.3335483766914535,
+      "inicios": 1,
+      "tiros": 39,
+      "saves": 32
+    },
+    "MIN": {
+      "id": 8470594,
+      "nombre": "Marc-Andre Fleury",
+      "sv": 0.90819,
+      "gsax": 3.8280567069334666,
+      "inicios": 56,
+      "tiros": 1732,
+      "saves": 1573
+    },
+    "_liga_sv": 0.9059884199151654
+  },
+  "20222023": {
+    "DAL": {
+      "id": 8479979,
+      "nombre": "Jake Oettinger",
+      "sv": 0.91948,
+      "gsax": 26.486829872947055,
+      "inicios": 61,
+      "tiros": 1776,
+      "saves": 1633
+    },
+    "CAR": {
+      "id": 8477293,
+      "nombre": "Antti Raanta",
+      "sv": 0.90993,
+      "gsax": 3.4580621836587397,
+      "inicios": 26,
+      "tiros": 644,
+      "saves": 586
+    },
+    "VGK": {
+      "id": 8480313,
+      "nombre": "Logan Thompson",
+      "sv": 0.91519,
+      "gsax": 12.028767689288316,
+      "inicios": 36,
+      "tiros": 1132,
+      "saves": 1036
+    },
+    "CGY": {
+      "id": 8474593,
+      "nombre": "Jacob Markstrom",
+      "sv": 0.89234,
+      "gsax": -18.844205144096577,
+      "inicios": 58,
+      "tiros": 1542,
+      "saves": 1376
+    },
+    "FLA": {
+      "id": 8475683,
+      "nombre": "Sergei Bobrovsky",
+      "sv": 0.90109,
+      "gsax": -5.097019935956951,
+      "inicios": 49,
+      "tiros": 1466,
+      "saves": 1321
+    },
+    "CBJ": {
+      "id": 8478007,
+      "nombre": "Elvis Merzlikins",
+      "sv": 0.87626,
+      "gsax": -25.16115328994931,
+      "inicios": 27,
+      "tiros": 889,
+      "saves": 779
+    },
+    "ANA": {
+      "id": 8476434,
+      "nombre": "John Gibson",
+      "sv": 0.89914,
+      "gsax": -10.758792996591183,
+      "inicios": 52,
+      "tiros": 1983,
+      "saves": 1783
+    },
+    "OTT": {
+      "id": 8475660,
+      "nombre": "Cam Talbot",
+      "sv": 0.89839,
+      "gsax": -5.771291705402291,
+      "inicios": 32,
+      "tiros": 935,
+      "saves": 840
+    },
+    "PHI": {
+      "id": 8479394,
+      "nombre": "Carter Hart",
+      "sv": 0.9069,
+      "gsax": 3.893903005887978,
+      "inicios": 54,
+      "tiros": 1665,
+      "saves": 1510
+    },
+    "WSH": {
+      "id": 8475311,
+      "nombre": "Darcy Kuemper",
+      "sv": 0.9086,
+      "gsax": 6.752788968081859,
+      "inicios": 56,
+      "tiros": 1674,
+      "saves": 1521
+    },
+    "SJS": {
+      "id": 8473503,
+      "nombre": "James Reimer",
+      "sv": 0.88988,
+      "gsax": -19.59858227455834,
+      "inicios": 41,
+      "tiros": 1335,
+      "saves": 1188
+    },
+    "SEA": {
+      "id": 8474889,
+      "nombre": "Martin Jones",
+      "sv": 0.88733,
+      "gsax": -19.73061925420916,
+      "inicios": 42,
+      "tiros": 1145,
+      "saves": 1016
+    },
+    "PIT": {
+      "id": 8477465,
+      "nombre": "Tristan Jarry",
+      "sv": 0.90947,
+      "gsax": 6.940527838033404,
+      "inicios": 47,
+      "tiros": 1414,
+      "saves": 1286
+    },
+    "ARI": {
+      "id": 8478872,
+      "nombre": "Karel Vejmelka",
+      "sv": 0.9,
+      "gsax": -7.628938126226558,
+      "inicios": 49,
+      "tiros": 1670,
+      "saves": 1503
+    },
+    "TBL": {
+      "id": 8476883,
+      "nombre": "Andrei Vasilevskiy",
+      "sv": 0.9152,
+      "gsax": 19.934575457080882,
+      "inicios": 60,
+      "tiros": 1875,
+      "saves": 1716
+    },
+    "MIN": {
+      "id": 8470594,
+      "nombre": "Marc-Andre Fleury",
+      "sv": 0.90782,
+      "gsax": 4.4552344799092225,
+      "inicios": 45,
+      "tiros": 1367,
+      "saves": 1241
+    },
+    "EDM": {
+      "id": 8479973,
+      "nombre": "Stuart Skinner",
+      "sv": 0.91406,
+      "gsax": 14.583204214440684,
+      "inicios": 48,
+      "tiros": 1536,
+      "saves": 1404
+    },
+    "BUF": {
+      "id": 8480045,
+      "nombre": "Ukko-Pekka Luukkonen",
+      "sv": 0.89184,
+      "gsax": -13.414910649726266,
+      "inicios": 32,
+      "tiros": 1054,
+      "saves": 940
+    },
+    "CHI": {
+      "id": 8475852,
+      "nombre": "Petr Mrazek",
+      "sv": 0.89423,
+      "gsax": -12.901146575766916,
+      "inicios": 38,
+      "tiros": 1248,
+      "saves": 1116
+    },
+    "STL": {
+      "id": 8476412,
+      "nombre": "Jordan Binnington",
+      "sv": 0.89375,
+      "gsax": -19.741581448197394,
+      "inicios": 60,
+      "tiros": 1826,
+      "saves": 1632
+    },
+    "LAK": {
+      "id": 8477831,
+      "nombre": "Pheonix Copley",
+      "sv": 0.90285,
+      "gsax": -1.626110422476927,
+      "inicios": 35,
+      "tiros": 947,
+      "saves": 855
+    },
+    "NYI": {
+      "id": 8478009,
+      "nombre": "Ilya Sorokin",
+      "sv": 0.92437,
+      "gsax": 36.403599834727856,
+      "inicios": 60,
+      "tiros": 1838,
+      "saves": 1699
+    },
+    "BOS": {
+      "id": 8476999,
+      "nombre": "Linus Ullmark",
+      "sv": 0.93754,
+      "gsax": 48.04409410184917,
+      "inicios": 48,
+      "tiros": 1457,
+      "saves": 1366
+    },
+    "TOR": {
+      "id": 8478492,
+      "nombre": "Ilya Samsonov",
+      "sv": 0.91891,
+      "gsax": 16.99121991529796,
+      "inicios": 40,
+      "tiros": 1184,
+      "saves": 1088
+    },
+    "NSH": {
+      "id": 8477424,
+      "nombre": "Juuse Saros",
+      "sv": 0.91853,
+      "gsax": 29.311292738353586,
+      "inicios": 63,
+      "tiros": 2099,
+      "saves": 1928
+    },
+    "WPG": {
+      "id": 8476945,
+      "nombre": "Connor Hellebuyck",
+      "sv": 0.92006,
+      "gsax": 30.42800330544378,
+      "inicios": 64,
+      "tiros": 1964,
+      "saves": 1807
+    },
+    "VAN": {
+      "id": 8477484,
+      "nombre": "Spencer Martin",
+      "sv": 0.87108,
+      "gsax": -27.791627930998857,
+      "inicios": 27,
+      "tiros": 830,
+      "saves": 723
+    },
+    "NJD": {
+      "id": 8477970,
+      "nombre": "Vitek Vanecek",
+      "sv": 0.91072,
+      "gsax": 8.210554178287339,
+      "inicios": 48,
+      "tiros": 1333,
+      "saves": 1214
+    },
+    "DET": {
+      "id": 8478024,
+      "nombre": "Ville Husso",
+      "sv": 0.89582,
+      "gsax": -14.022866955892823,
+      "inicios": 56,
+      "tiros": 1603,
+      "saves": 1436
+    },
+    "COL": {
+      "id": 8480382,
+      "nombre": "Alexandar Georgiev",
+      "sv": 0.91859,
+      "gsax": 26.702096890817074,
+      "inicios": 62,
+      "tiros": 1904,
+      "saves": 1749
+    },
+    "MTL": {
+      "id": 8474596,
+      "nombre": "Jake Allen",
+      "sv": 0.89138,
+      "gsax": -17.59858227455834,
+      "inicios": 41,
+      "tiros": 1335,
+      "saves": 1190
+    },
+    "NYR": {
+      "id": 8478048,
+      "nombre": "Igor Shesterkin",
+      "sv": 0.91623,
+      "gsax": 20.047218779051946,
+      "inicios": 58,
+      "tiros": 1719,
+      "saves": 1575
+    },
+    "_liga_sv": 0.9045682264228901
+  },
+  "20232024": {
+    "DAL": {
+      "id": 8479979,
+      "nombre": "Jake Oettinger",
+      "sv": 0.90514,
+      "gsax": 2.4693838814582705,
+      "inicios": 53,
+      "tiros": 1476,
+      "saves": 1336
+    },
+    "CAR": {
+      "id": 8481611,
+      "nombre": "Pyotr Kochetkov",
+      "sv": 0.91076,
+      "gsax": 7.516215976818103,
+      "inicios": 40,
+      "tiros": 1031,
+      "saves": 939
+    },
+    "WPG": {
+      "id": 8476945,
+      "nombre": "Connor Hellebuyck",
+      "sv": 0.92102,
+      "gsax": 31.550103129310173,
+      "inicios": 60,
+      "tiros": 1798,
+      "saves": 1656
+    },
+    "VGK": {
+      "id": 8480313,
+      "nombre": "Logan Thompson",
+      "sv": 0.90832,
+      "gsax": 6.288116719602158,
+      "inicios": 42,
+      "tiros": 1298,
+      "saves": 1179
+    },
+    "CGY": {
+      "id": 8474593,
+      "nombre": "Jacob Markstrom",
+      "sv": 0.905,
+      "gsax": 2.1065585179749178,
+      "inicios": 48,
+      "tiros": 1379,
+      "saves": 1248
+    },
+    "FLA": {
+      "id": 8475683,
+      "nombre": "Sergei Bobrovsky",
+      "sv": 0.91477,
+      "gsax": 17.893972945955284,
+      "inicios": 58,
+      "tiros": 1584,
+      "saves": 1449
+    },
+    "CBJ": {
+      "id": 8478007,
+      "nombre": "Elvis Merzlikins",
+      "sv": 0.89731,
+      "gsax": -7.800650410619255,
+      "inicios": 40,
+      "tiros": 1266,
+      "saves": 1136
+    },
+    "MIN": {
+      "id": 8479406,
+      "nombre": "Filip Gustavsson",
+      "sv": 0.89945,
+      "gsax": -5.159742872689094,
+      "inicios": 43,
+      "tiros": 1283,
+      "saves": 1154
+    },
+    "OTT": {
+      "id": 8476914,
+      "nombre": "Joonas Korpisalo",
+      "sv": 0.88961,
+      "gsax": -21.090513368848633,
+      "inicios": 49,
+      "tiros": 1522,
+      "saves": 1354
+    },
+    "LAK": {
+      "id": 8475660,
+      "nombre": "Cam Talbot",
+      "sv": 0.91342,
+      "gsax": 14.820719500930181,
+      "inicios": 52,
+      "tiros": 1490,
+      "saves": 1361
+    },
+    "MTL": {
+      "id": 8478470,
+      "nombre": "Samuel Montembeault",
+      "sv": 0.90283,
+      "gsax": -0.843167525023091,
+      "inicios": 40,
+      "tiros": 1307,
+      "saves": 1180
+    },
+    "NJD": {
+      "id": 8477970,
+      "nombre": "Vitek Vanecek",
+      "sv": 0.88979,
+      "gsax": -11.796335429663259,
+      "inicios": 29,
+      "tiros": 862,
+      "saves": 767
+    },
+    "PHI": {
+      "id": 8481035,
+      "nombre": "Samuel Ersson",
+      "sv": 0.89036,
+      "gsax": -15.785136725422944,
+      "inicios": 49,
+      "tiros": 1204,
+      "saves": 1072
+    },
+    "WSH": {
+      "id": 8479292,
+      "nombre": "Charlie Lindgren",
+      "sv": 0.91125,
+      "gsax": 11.125805104584515,
+      "inicios": 48,
+      "tiros": 1431,
+      "saves": 1304
+    },
+    "PIT": {
+      "id": 8477465,
+      "nombre": "Tristan Jarry",
+      "sv": 0.90284,
+      "gsax": -0.8586812102191743,
+      "inicios": 48,
+      "tiros": 1369,
+      "saves": 1236
+    },
+    "ARI": {
+      "id": 8478971,
+      "nombre": "Connor Ingram",
+      "sv": 0.90691,
+      "gsax": 5.021524289167019,
+      "inicios": 48,
+      "tiros": 1461,
+      "saves": 1325
+    },
+    "TBL": {
+      "id": 8476883,
+      "nombre": "Andrei Vasilevskiy",
+      "sv": 0.89979,
+      "gsax": -5.4340921457223885,
+      "inicios": 52,
+      "tiros": 1477,
+      "saves": 1329
+    },
+    "SEA": {
+      "id": 8478916,
+      "nombre": "Joey Daccord",
+      "sv": 0.91557,
+      "gsax": 16.623938653877758,
+      "inicios": 46,
+      "tiros": 1374,
+      "saves": 1258
+    },
+    "EDM": {
+      "id": 8479973,
+      "nombre": "Stuart Skinner",
+      "sv": 0.90534,
+      "gsax": 2.9017297885532116,
+      "inicios": 57,
+      "tiros": 1553,
+      "saves": 1406
+    },
+    "CHI": {
+      "id": 8475852,
+      "nombre": "Petr Mrazek",
+      "sv": 0.90777,
+      "gsax": 7.4073291406734825,
+      "inicios": 53,
+      "tiros": 1724,
+      "saves": 1565
+    },
+    "STL": {
+      "id": 8476412,
+      "nombre": "Jordan Binnington",
+      "sv": 0.91265,
+      "gsax": 16.391815455477172,
+      "inicios": 55,
+      "tiros": 1786,
+      "saves": 1630
+    },
+    "SJS": {
+      "id": 8478406,
+      "nombre": "Mackenzie Blackwood",
+      "sv": 0.89877,
+      "gsax": -6.507345590747491,
+      "inicios": 41,
+      "tiros": 1383,
+      "saves": 1243
+    },
+    "NYI": {
+      "id": 8478009,
+      "nombre": "Ilya Sorokin",
+      "sv": 0.90884,
+      "gsax": 9.770154504156835,
+      "inicios": 55,
+      "tiros": 1821,
+      "saves": 1655
+    },
+    "BOS": {
+      "id": 8480280,
+      "nombre": "Jeremy Swayman",
+      "sv": 0.91608,
+      "gsax": 16.226353018588497,
+      "inicios": 43,
+      "tiros": 1287,
+      "saves": 1179
+    },
+    "ANA": {
+      "id": 8476434,
+      "nombre": "John Gibson",
+      "sv": 0.88756,
+      "gsax": -21.368304503524087,
+      "inicios": 44,
+      "tiros": 1343,
+      "saves": 1192
+    },
+    "NSH": {
+      "id": 8477424,
+      "nombre": "Juuse Saros",
+      "sv": 0.90623,
+      "gsax": 5.086729851822838,
+      "inicios": 64,
+      "tiros": 1845,
+      "saves": 1672
+    },
+    "NYR": {
+      "id": 8478048,
+      "nombre": "Igor Shesterkin",
+      "sv": 0.91282,
+      "gsax": 15.017500347982377,
+      "inicios": 55,
+      "tiros": 1606,
+      "saves": 1466
+    },
+    "BUF": {
+      "id": 8480045,
+      "nombre": "Ukko-Pekka Luukkonen",
+      "sv": 0.9102,
+      "gsax": 9.89024004454177,
+      "inicios": 51,
+      "tiros": 1470,
+      "saves": 1338
+    },
+    "DET": {
+      "id": 8479312,
+      "nombre": "Alex Lyon",
+      "sv": 0.90415,
+      "gsax": 0.8942639857264112,
+      "inicios": 43,
+      "tiros": 1325,
+      "saves": 1198
+    },
+    "TOR": {
+      "id": 8478492,
+      "nombre": "Ilya Samsonov",
+      "sv": 0.8896,
+      "gsax": -15.078441545294595,
+      "inicios": 40,
+      "tiros": 1087,
+      "saves": 967
+    },
+    "VAN": {
+      "id": 8477967,
+      "nombre": "Thatcher Demko",
+      "sv": 0.91756,
+      "gsax": 21.013767446568863,
+      "inicios": 51,
+      "tiros": 1492,
+      "saves": 1369
+    },
+    "COL": {
+      "id": 8480382,
+      "nombre": "Alexandar Georgiev",
+      "sv": 0.89717,
+      "gsax": -11.152568109633421,
+      "inicios": 62,
+      "tiros": 1770,
+      "saves": 1588
+    },
+    "_liga_sv": 0.9034760271805838
+  },
+  "20242025": {
+    "ANA": {
+      "id": 8480843,
+      "nombre": "Lukas Dostal",
+      "sv": 0.90276,
+      "gsax": 4.242084667378094,
+      "inicios": 49,
+      "tiros": 1625,
+      "saves": 1467
+    },
+    "BUF": {
+      "id": 8480045,
+      "nombre": "Ukko-Pekka Luukkonen",
+      "sv": 0.88657,
+      "gsax": -20.236488520373314,
+      "inicios": 55,
+      "tiros": 1490,
+      "saves": 1321
+    },
+    "CAR": {
+      "id": 8481611,
+      "nombre": "Pyotr Kochetkov",
+      "sv": 0.89761,
+      "gsax": -2.986016473743348,
+      "inicios": 47,
+      "tiros": 1172,
+      "saves": 1052
+    },
+    "NYI": {
+      "id": 8478009,
+      "nombre": "Ilya Sorokin",
+      "sv": 0.90737,
+      "gsax": 12.230974468434397,
+      "inicios": 60,
+      "tiros": 1695,
+      "saves": 1538
+    },
+    "CGY": {
+      "id": 8481692,
+      "nombre": "Dustin Wolf",
+      "sv": 0.90961,
+      "gsax": 14.654147169088446,
+      "inicios": 53,
+      "tiros": 1549,
+      "saves": 1409
+    },
+    "FLA": {
+      "id": 8475683,
+      "nombre": "Sergei Bobrovsky",
+      "sv": 0.90559,
+      "gsax": 7.481446515064363,
+      "inicios": 54,
+      "tiros": 1377,
+      "saves": 1247
+    },
+    "UTA": {
+      "id": 8478872,
+      "nombre": "Karel Vejmelka",
+      "sv": 0.9039,
+      "gsax": 5.660495854199098,
+      "inicios": 55,
+      "tiros": 1509,
+      "saves": 1364
+    },
+    "CBJ": {
+      "id": 8478007,
+      "nombre": "Elvis Merzlikins",
+      "sv": 0.8921,
+      "gsax": -12.547122567933684,
+      "inicios": 52,
+      "tiros": 1557,
+      "saves": 1389
+    },
+    "MIN": {
+      "id": 8479406,
+      "nombre": "Filip Gustavsson",
+      "sv": 0.91376,
+      "gsax": 23.031291902689873,
+      "inicios": 58,
+      "tiros": 1693,
+      "saves": 1547
+    },
+    "CHI": {
+      "id": 8482821,
+      "nombre": "Arvid Soderblom",
+      "sv": 0.89788,
+      "gsax": -2.472525517883014,
+      "inicios": 33,
+      "tiros": 1087,
+      "saves": 976
+    },
+    "DET": {
+      "id": 8475660,
+      "nombre": "Cam Talbot",
+      "sv": 0.90115,
+      "gsax": 1.2944613195413694,
+      "inicios": 43,
+      "tiros": 1295,
+      "saves": 1167
+    },
+    "OTT": {
+      "id": 8476999,
+      "nombre": "Linus Ullmark",
+      "sv": 0.90968,
+      "gsax": 11.704936649973888,
+      "inicios": 43,
+      "tiros": 1229,
+      "saves": 1118
+    },
+    "LAK": {
+      "id": 8475311,
+      "nombre": "Darcy Kuemper",
+      "sv": 0.92186,
+      "gsax": 27.49890539911894,
+      "inicios": 50,
+      "tiros": 1267,
+      "saves": 1168
+    },
+    "VGK": {
+      "id": 8478499,
+      "nombre": "Adin Hill",
+      "sv": 0.90641,
+      "gsax": 8.094778753796845,
+      "inicios": 50,
+      "tiros": 1293,
+      "saves": 1172
+    },
+    "PIT": {
+      "id": 8477465,
+      "nombre": "Tristan Jarry",
+      "sv": 0.89289,
+      "gsax": -7.05411433106201,
+      "inicios": 35,
+      "tiros": 971,
+      "saves": 867
+    },
+    "TBL": {
+      "id": 8476883,
+      "nombre": "Andrei Vasilevskiy",
+      "sv": 0.92132,
+      "gsax": 36.32764140875133,
+      "inicios": 63,
+      "tiros": 1716,
+      "saves": 1581
+    },
+    "EDM": {
+      "id": 8479973,
+      "nombre": "Stuart Skinner",
+      "sv": 0.89584,
+      "gsax": -5.710300194291676,
+      "inicios": 50,
+      "tiros": 1325,
+      "saves": 1187
+    },
+    "BOS": {
+      "id": 8480280,
+      "nombre": "Jeremy Swayman",
+      "sv": 0.89215,
+      "gsax": -13.059026352516184,
+      "inicios": 58,
+      "tiros": 1632,
+      "saves": 1456
+    },
+    "TOR": {
+      "id": 8479361,
+      "nombre": "Joseph Woll",
+      "sv": 0.90871,
+      "gsax": 10.406999972635049,
+      "inicios": 41,
+      "tiros": 1216,
+      "saves": 1105
+    },
+    "PHI": {
+      "id": 8481035,
+      "nombre": "Samuel Ersson",
+      "sv": 0.88296,
+      "gsax": -19.984429302465514,
+      "inicios": 45,
+      "tiros": 1162,
+      "saves": 1026
+    },
+    "STL": {
+      "id": 8476412,
+      "nombre": "Jordan Binnington",
+      "sv": 0.90048,
+      "gsax": 0.4687491448430592,
+      "inicios": 54,
+      "tiros": 1457,
+      "saves": 1312
+    },
+    "COL": {
+      "id": 8478039,
+      "nombre": "Kaapo Kahkonen",
+      "sv": 0.8,
+      "gsax": -2.003174342555347,
+      "inicios": 1,
+      "tiros": 20,
+      "saves": 16
+    },
+    "SEA": {
+      "id": 8478916,
+      "nombre": "Joey Daccord",
+      "sv": 0.90619,
+      "gsax": 9.646211312700189,
+      "inicios": 55,
+      "tiros": 1599,
+      "saves": 1449
+    },
+    "WSH": {
+      "id": 8480313,
+      "nombre": "Logan Thompson",
+      "sv": 0.9104,
+      "gsax": 12.013983526256652,
+      "inicios": 42,
+      "tiros": 1172,
+      "saves": 1067
+    },
+    "WPG": {
+      "id": 8476945,
+      "nombre": "Connor Hellebuyck",
+      "sv": 0.92487,
+      "gsax": 41.135894699395294,
+      "inicios": 62,
+      "tiros": 1664,
+      "saves": 1539
+    },
+    "NJD": {
+      "id": 8474593,
+      "nombre": "Jacob Markstrom",
+      "sv": 0.90032,
+      "gsax": 0.20731740689052458,
+      "inicios": 49,
+      "tiros": 1214,
+      "saves": 1093
+    },
+    "SJS": {
+      "id": 8482137,
+      "nombre": "Yaroslav Askarov",
+      "sv": 0.89635,
+      "gsax": -1.3566620146129367,
+      "inicios": 12,
+      "tiros": 357,
+      "saves": 320
+    },
+    "MTL": {
+      "id": 8478470,
+      "nombre": "Samuel Montembeault",
+      "sv": 0.90166,
+      "gsax": 2.533672659606509,
+      "inicios": 60,
+      "tiros": 1678,
+      "saves": 1513
+    },
+    "NYR": {
+      "id": 8478048,
+      "nombre": "Igor Shesterkin",
+      "sv": 0.90462,
+      "gsax": 7.822086309279484,
+      "inicios": 61,
+      "tiros": 1751,
+      "saves": 1584
+    },
+    "VAN": {
+      "id": 8480947,
+      "nombre": "Kevin Lankinen",
+      "sv": 0.90185,
+      "gsax": 2.286525463152884,
+      "inicios": 49,
+      "tiros": 1345,
+      "saves": 1213
+    },
+    "NSH": {
+      "id": 8477424,
+      "nombre": "Juuse Saros",
+      "sv": 0.89572,
+      "gsax": -7.052677667405533,
+      "inicios": 58,
+      "tiros": 1592,
+      "saves": 1426
+    },
+    "DAL": {
+      "id": 8479979,
+      "nombre": "Jake Oettinger",
+      "sv": 0.90875,
+      "gsax": 13.84430670716688,
+      "inicios": 58,
+      "tiros": 1611,
+      "saves": 1464
+    },
+    "_liga_sv": 0.9001587171277673
+  },
+  "20252026": {
+    "CAR": {
+      "id": 8483548,
+      "nombre": "Brandon Bussi",
+      "sv": 0.89473,
+      "gsax": -1.0151937129463704,
+      "inicios": 39,
+      "tiros": 912,
+      "saves": 816
+    },
+    "ANA": {
+      "id": 8480843,
+      "nombre": "Lukas Dostal",
+      "sv": 0.8883,
+      "gsax": -11.421039569833283,
+      "inicios": 55,
+      "tiros": 1513,
+      "saves": 1344
+    },
+    "FLA": {
+      "id": 8475683,
+      "nombre": "Sergei Bobrovsky",
+      "sv": 0.8768,
+      "gsax": -23.812491382876033,
+      "inicios": 51,
+      "tiros": 1250,
+      "saves": 1096
+    },
+    "NYI": {
+      "id": 8478009,
+      "nombre": "Ilya Sorokin",
+      "sv": 0.90588,
+      "gsax": 15.349510547359614,
+      "inicios": 54,
+      "tiros": 1530,
+      "saves": 1386
+    },
+    "MIN": {
+      "id": 8479406,
+      "nombre": "Filip Gustavsson",
+      "sv": 0.90413,
+      "gsax": 11.414559492623766,
+      "inicios": 49,
+      "tiros": 1377,
+      "saves": 1245
+    },
+    "NYR": {
+      "id": 8478048,
+      "nombre": "Igor Shesterkin",
+      "sv": 0.91157,
+      "gsax": 22.413759823521332,
+      "inicios": 51,
+      "tiros": 1425,
+      "saves": 1299
+    },
+    "DET": {
+      "id": 8476434,
+      "nombre": "John Gibson",
+      "sv": 0.90143,
+      "gsax": 8.163160071694392,
+      "inicios": 57,
+      "tiros": 1461,
+      "saves": 1317
+    },
+    "OTT": {
+      "id": 8476999,
+      "nombre": "Linus Ullmark",
+      "sv": 0.89065,
+      "gsax": -6.228291741348357,
+      "inicios": 49,
+      "tiros": 1198,
+      "saves": 1067
+    },
+    "VGK": {
+      "id": 8481033,
+      "nombre": "Akira Schmid",
+      "sv": 0.89254,
+      "gsax": -2.6173445470840306,
+      "inicios": 29,
+      "tiros": 791,
+      "saves": 706
+    },
+    "TBL": {
+      "id": 8476883,
+      "nombre": "Andrei Vasilevskiy",
+      "sv": 0.91233,
+      "gsax": 24.45446022335591,
+      "inicios": 58,
+      "tiros": 1483,
+      "saves": 1353
+    },
+    "BOS": {
+      "id": 8480280,
+      "nombre": "Jeremy Swayman",
+      "sv": 0.9077,
+      "gsax": 18.619660830001294,
+      "inicios": 54,
+      "tiros": 1571,
+      "saves": 1426
+    },
+    "TOR": {
+      "id": 8479361,
+      "nombre": "Joseph Woll",
+      "sv": 0.89918,
+      "gsax": 4.063008410312932,
+      "inicios": 38,
+      "tiros": 1220,
+      "saves": 1097
+    },
+    "CHI": {
+      "id": 8481519,
+      "nombre": "Spencer Knight",
+      "sv": 0.90208,
+      "gsax": 9.869460912725799,
+      "inicios": 55,
+      "tiros": 1583,
+      "saves": 1428
+    },
+    "CGY": {
+      "id": 8481692,
+      "nombre": "Dustin Wolf",
+      "sv": 0.89922,
+      "gsax": 5.265710740383156,
+      "inicios": 55,
+      "tiros": 1558,
+      "saves": 1401
+    },
+    "PHI": {
+      "id": 8478435,
+      "nombre": "Dan Vladar",
+      "sv": 0.90568,
+      "gsax": 12.624458844615901,
+      "inicios": 51,
+      "tiros": 1283,
+      "saves": 1162
+    },
+    "STL": {
+      "id": 8480981,
+      "nombre": "Joel Hofer",
+      "sv": 0.9096,
+      "gsax": 17.187508617123967,
+      "inicios": 43,
+      "tiros": 1250,
+      "saves": 1137
+    },
+    "BUF": {
+      "id": 8479312,
+      "nombre": "Alex Lyon",
+      "sv": 0.90704,
+      "gsax": 10.962856748931472,
+      "inicios": 34,
+      "tiros": 979,
+      "saves": 888
+    },
+    "SEA": {
+      "id": 8478916,
+      "nombre": "Joey Daccord",
+      "sv": 0.89747,
+      "gsax": 2.124059010064684,
+      "inicios": 46,
+      "tiros": 1307,
+      "saves": 1173
+    },
+    "LAK": {
+      "id": 8475311,
+      "nombre": "Darcy Kuemper",
+      "sv": 0.89141,
+      "gsax": -5.478891493175297,
+      "inicios": 50,
+      "tiros": 1234,
+      "saves": 1100
+    },
+    "COL": {
+      "id": 8475809,
+      "nombre": "Scott Wedgewood",
+      "sv": 0.92131,
+      "gsax": 27.835957534813133,
+      "inicios": 43,
+      "tiros": 1093,
+      "saves": 1007
+    },
+    "WSH": {
+      "id": 8480313,
+      "nombre": "Logan Thompson",
+      "sv": 0.91178,
+      "gsax": 25.28606094030056,
+      "inicios": 58,
+      "tiros": 1587,
+      "saves": 1447
+    },
+    "PIT": {
+      "id": 8481668,
+      "nombre": "Arturs Silovs",
+      "sv": 0.88823,
+      "gsax": -7.766992968426848,
+      "inicios": 38,
+      "tiros": 1020,
+      "saves": 906
+    },
+    "EDM": {
+      "id": 8478971,
+      "nombre": "Connor Ingram",
+      "sv": 0.89908,
+      "gsax": 2.4664552598924274,
+      "inicios": 30,
+      "tiros": 763,
+      "saves": 686
+    },
+    "WPG": {
+      "id": 8476945,
+      "nombre": "Connor Hellebuyck",
+      "sv": 0.89528,
+      "gsax": -0.8799393354474887,
+      "inicios": 57,
+      "tiros": 1547,
+      "saves": 1385
+    },
+    "NJD": {
+      "id": 8474593,
+      "nombre": "Jacob Markstrom",
+      "sv": 0.88319,
+      "gsax": -14.081042327312844,
+      "inicios": 43,
+      "tiros": 1113,
+      "saves": 983
+    },
+    "MTL": {
+      "id": 8482487,
+      "nombre": "Jakub Dobes",
+      "sv": 0.90143,
+      "gsax": 6.6260581828207705,
+      "inicios": 42,
+      "tiros": 1187,
+      "saves": 1070
+    },
+    "SJS": {
+      "id": 8482137,
+      "nombre": "Yaroslav Askarov",
+      "sv": 0.88366,
+      "gsax": -16.33484075554952,
+      "inicios": 47,
+      "tiros": 1341,
+      "saves": 1185
+    },
+    "CBJ": {
+      "id": 8482982,
+      "nombre": "Jet Greaves",
+      "sv": 0.90773,
+      "gsax": 18.286860609402993,
+      "inicios": 53,
+      "tiros": 1539,
+      "saves": 1397
+    },
+    "VAN": {
+      "id": 8480947,
+      "nombre": "Kevin Lankinen",
+      "sv": 0.87548,
+      "gsax": -26.167241141596605,
+      "inicios": 43,
+      "tiros": 1285,
+      "saves": 1125
+    },
+    "NSH": {
+      "id": 8477424,
+      "nombre": "Juuse Saros",
+      "sv": 0.89352,
+      "gsax": -3.9449882807114136,
+      "inicios": 59,
+      "tiros": 1700,
+      "saves": 1519
+    },
+    "UTA": {
+      "id": 8478872,
+      "nombre": "Karel Vejmelka",
+      "sv": 0.89667,
+      "gsax": 1.347911209154745,
+      "inicios": 63,
+      "tiros": 1626,
+      "saves": 1458
+    },
+    "DAL": {
+      "id": 8479979,
+      "nombre": "Jake Oettinger",
+      "sv": 0.89941,
+      "gsax": 4.893809458155147,
+      "inicios": 54,
+      "tiros": 1372,
+      "saves": 1234
+    },
+    "_liga_sv": 0.8958499931063009
+  },
+  "20262027": {
+    "CAR": {
+      "id": 8481611,
+      "nombre": "Pyotr Kochetkov",
+      "sv": 0.91608,
+      "gsax": 3.4894431896297817,
+      "inicios": 7,
+      "tiros": 143,
+      "saves": 131
+    },
+    "MIN": {
+      "id": 8482661,
+      "nombre": "Jesper Wallstedt",
+      "sv": 0.91843,
+      "gsax": 7.545615241088086,
+      "inicios": 11,
+      "tiros": 282,
+      "saves": 259
+    },
+    "NYR": {
+      "id": 8482193,
+      "nombre": "Dylan Garand",
+      "sv": 0.89912,
+      "gsax": 1.6964548757733553,
+      "inicios": 8,
+      "tiros": 228,
+      "saves": 205
+    },
+    "DET": {
+      "id": 8476434,
+      "nombre": "John Gibson",
+      "sv": 0.86702,
+      "gsax": -4.636256505941276,
+      "inicios": 8,
+      "tiros": 188,
+      "saves": 163
+    },
+    "TBL": {
+      "id": 8476883,
+      "nombre": "Andrei Vasilevskiy",
+      "sv": 0.88359,
+      "gsax": -1.5279387213984137,
+      "inicios": 8,
+      "tiros": 189,
+      "saves": 167
+    },
+    "OTT": {
+      "id": 8476999,
+      "nombre": "Linus Ullmark",
+      "sv": 0.94505,
+      "gsax": 9.713836786801522,
+      "inicios": 8,
+      "tiros": 182,
+      "saves": 172
+    },
+    "TOR": {
+      "id": 8475683,
+      "nombre": "Sergei Bobrovsky",
+      "sv": 0.89667,
+      "gsax": 1.3541196111165732,
+      "inicios": 9,
+      "tiros": 271,
+      "saves": 243
+    },
+    "CHI": {
+      "id": 8481519,
+      "nombre": "Spencer Knight",
+      "sv": 0.89084,
+      "gsax": -0.23774918982618942,
+      "inicios": 9,
+      "tiros": 284,
+      "saves": 253
+    },
+    "STL": {
+      "id": 8480981,
+      "nombre": "Joel Hofer",
+      "sv": 0.91666,
+      "gsax": 5.696454875773355,
+      "inicios": 8,
+      "tiros": 228,
+      "saves": 209
+    },
+    "EDM": {
+      "id": 8482221,
+      "nombre": "Devon Levi",
+      "sv": 0.88659,
+      "gsax": -0.9863497986840741,
+      "inicios": 7,
+      "tiros": 194,
+      "saves": 172
+    },
+    "NYI": {
+      "id": 8478009,
+      "nombre": "Ilya Sorokin",
+      "sv": 0.91855,
+      "gsax": 5.938230383973291,
+      "inicios": 8,
+      "tiros": 221,
+      "saves": 203
+    },
+    "SEA": {
+      "id": 8478916,
+      "nombre": "Joey Daccord",
+      "sv": 0.88235,
+      "gsax": -1.7445742904841381,
+      "inicios": 6,
+      "tiros": 187,
+      "saves": 165
+    },
+    "ANA": {
+      "id": 8480843,
+      "nombre": "Lukas Dostal",
+      "sv": 0.88038,
+      "gsax": -2.3615830305411123,
+      "inicios": 8,
+      "tiros": 209,
+      "saves": 184
+    },
+    "CGY": {
+      "id": 8482445,
+      "nombre": "Devin Cooley",
+      "sv": 0.91489,
+      "gsax": 4.363743494058724,
+      "inicios": 6,
+      "tiros": 188,
+      "saves": 172
+    },
+    "LAK": {
+      "id": 8475311,
+      "nombre": "Darcy Kuemper",
+      "sv": 0.88944,
+      "gsax": -0.444760875969763,
+      "inicios": 7,
+      "tiros": 199,
+      "saves": 177
+    },
+    "COL": {
+      "id": 8478406,
+      "nombre": "Mackenzie Blackwood",
+      "sv": 0.89252,
+      "gsax": 0.18000589217322727,
+      "inicios": 8,
+      "tiros": 214,
+      "saves": 191
+    },
+    "FLA": {
+      "id": 8474593,
+      "nombre": "Jacob Markstrom",
+      "sv": 0.89743,
+      "gsax": 0.6731807915152643,
+      "inicios": 6,
+      "tiros": 117,
+      "saves": 105
+    },
+    "WSH": {
+      "id": 8480313,
+      "nombre": "Logan Thompson",
+      "sv": 0.90099,
+      "gsax": 1.8801924776588521,
+      "inicios": 7,
+      "tiros": 202,
+      "saves": 182
+    },
+    "PIT": {
+      "id": 8481668,
+      "nombre": "Arturs Silovs",
+      "sv": 0.88995,
+      "gsax": -0.3615830305411123,
+      "inicios": 8,
+      "tiros": 209,
+      "saves": 186
+    },
+    "NJD": {
+      "id": 8474596,
+      "nombre": "Jake Allen",
+      "sv": 0.88636,
+      "gsax": -0.9360699204556511,
+      "inicios": 7,
+      "tiros": 176,
+      "saves": 156
+    },
+    "SJS": {
+      "id": 8482137,
+      "nombre": "Yaroslav Askarov",
+      "sv": 0.88349,
+      "gsax": -1.686536384169699,
+      "inicios": 7,
+      "tiros": 206,
+      "saves": 182
+    },
+    "MTL": {
+      "id": 8484170,
+      "nombre": "Jacob Fowler",
+      "sv": 0.92413,
+      "gsax": 4.706078758715506,
+      "inicios": 6,
+      "tiros": 145,
+      "saves": 134
+    },
+    "CBJ": {
+      "id": 8482982,
+      "nombre": "Jet Greaves",
+      "sv": 0.88321,
+      "gsax": -1.16046351762742,
+      "inicios": 5,
+      "tiros": 137,
+      "saves": 121
+    },
+    "WPG": {
+      "id": 8479973,
+      "nombre": "Stuart Skinner",
+      "sv": 0.91101,
+      "gsax": 4.5629971521162815,
+      "inicios": 8,
+      "tiros": 236,
+      "saves": 215
+    },
+    "VAN": {
+      "id": 8480947,
+      "nombre": "Kevin Lankinen",
+      "sv": 0.81218,
+      "gsax": -15.661396445055487,
+      "inicios": 7,
+      "tiros": 197,
+      "saves": 160
+    },
+    "PHI": {
+      "id": 8479361,
+      "nombre": "Joseph Woll",
+      "sv": 0.90366,
+      "gsax": 2.6132770303447046,
+      "inicios": 7,
+      "tiros": 218,
+      "saves": 197
+    },
+    "VGK": {
+      "id": 8479394,
+      "nombre": "Carter Hart",
+      "sv": 0.88888,
+      "gsax": -0.5530786605126252,
+      "inicios": 8,
+      "tiros": 198,
+      "saves": 176
+    },
+    "BOS": {
+      "id": 8480280,
+      "nombre": "Jeremy Swayman",
+      "sv": 0.91967,
+      "gsax": 6.971128351173519,
+      "inicios": 9,
+      "tiros": 249,
+      "saves": 229
+    },
+    "NSH": {
+      "id": 8477424,
+      "nombre": "Juuse Saros",
+      "sv": 0.908,
+      "gsax": 4.079446135716381,
+      "inicios": 8,
+      "tiros": 250,
+      "saves": 227
+    },
+    "UTA": {
+      "id": 8478872,
+      "nombre": "Karel Vejmelka",
+      "sv": 0.87826,
+      "gsax": -3.0869095551409202,
+      "inicios": 9,
+      "tiros": 230,
+      "saves": 202
+    },
+    "BUF": {
+      "id": 8480045,
+      "nombre": "Ukko-Pekka Luukkonen",
+      "sv": 0.86637,
+      "gsax": -5.870273986055196,
+      "inicios": 8,
+      "tiros": 232,
+      "saves": 201
+    },
+    "DAL": {
+      "id": 8479979,
+      "nombre": "Jake Oettinger",
+      "sv": 0.92934,
+      "gsax": 6.930472355887275,
+      "inicios": 9,
+      "tiros": 184,
+      "saves": 171
+    },
+    "_liga_sv": 0.8916822154571344
+  }
+}

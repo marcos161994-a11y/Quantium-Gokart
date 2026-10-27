@@ -8,7 +8,7 @@ import pandas as pd
 from comun_nhl import ZONA, a_nhl, fecha_de_cartelera, fecha_de_hoy
 from datos_nhl import americana, elegir_proveedor, probabilidad_implicita, sin_vig, texto_linea
 from elo_nhl import EloNHL
-from modelo_nhl import aplicar_encogimiento, construir_filas, elegir_umbral, nivel_de
+from modelo_nhl import _g0_justificado, aplicar_encogimiento, construir_filas, elegir_umbral, nivel_de
 from porteros_nhl import ajustar_probabilidad
 from reentrenar_nhl import conviene_promover
 
@@ -171,6 +171,33 @@ def test_portero_peor_que_la_referencia_baja_la_probabilidad():
         0.905,
     )
     assert peor < 0.61
+
+
+def test_el_encogimiento_solo_sigue_si_mejora_temporadas_cerradas():
+    g0, delta = _g0_justificado(
+        [
+            {
+                "n_examen": 1400,
+                "g0": 40,
+                "log_loss_encogido": 0.671,
+                "log_loss_sin_encoger": 0.667,
+            }
+        ]
+    )
+    assert g0 is None
+    assert delta > 0
+    g0, delta = _g0_justificado(
+        [
+            {
+                "n_examen": 1400,
+                "g0": 16,
+                "log_loss_encogido": 0.650,
+                "log_loss_sin_encoger": 0.670,
+            }
+        ]
+    )
+    assert g0 == 16
+    assert delta < 0
 
 
 def test_solo_se_promueve_si_mejora_el_log_loss():

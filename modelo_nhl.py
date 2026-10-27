@@ -253,8 +253,11 @@ def correr_backtest(juegos: pd.DataFrame, referencia: dict | None = None, min_en
         ajustadas = np.array(
             [aplicar_encogimiento(p, n, g0) for p, n in zip(crudo, examen["n_muestra"].to_numpy(), strict=True)]
         )
+        # El pliegue guarda la probabilidad sin encoger. Más abajo se decide
+        # si el backtest justifica aplicar un g0 a toda la muestra.
         bloque = examen.copy()
-        bloque["p_modelo"] = ajustadas
+        bloque["p_cruda"] = crudo
+        bloque["p_encogida"] = ajustadas
         bloque["g0_pliegue"] = g0 if g0 is not None else 0
         pedazos.append(bloque)
         decisiones.append(
@@ -263,9 +266,10 @@ def correr_backtest(juegos: pd.DataFrame, referencia: dict | None = None, min_en
                 "n_entrenamiento": int(len(entrenamiento)),
                 "n_examen": int(len(examen)),
                 "g0": g0,
-                "log_loss": log_loss_bin(examen["gano_local"], ajustadas),
                 "log_loss_sin_encoger": log_loss_bin(examen["gano_local"], crudo),
-                "brier": brier_bin(examen["gano_local"], ajustadas),
+                "log_loss_encogido": log_loss_bin(examen["gano_local"], ajustadas),
+                "brier_sin_encoger": brier_bin(examen["gano_local"], crudo),
+                "brier_encogido": brier_bin(examen["gano_local"], ajustadas),
             }
         )
     if not pedazos:
@@ -340,9 +344,41 @@ def _mercado(oos: pd.DataFrame) -> dict:
     return resultado
 
 
+def _g0_justificado(pliegues: list[dict]):
+    """Enciende el encogimiento solo si en temporadas ya cerradas bajó el log loss.
+
+    La validación interna a veces pide un horizonte (g0). Eso no basta:
+    tiene que haber mejorado el año que esa validación no vio.
+    """
+    cerrados = [p for p in pliegues if int(p["n_examen"]) >= 900 and p.get("g0")]
+    if not cerrados:
+        return None, 0.0
+    delta = sum(
+        (float(p["log_loss_encogido"]) - float(p["log_loss_sin_encoger"])) * int(p["n_examen"]) for p in cerrados
+    )
+    peso = sum(int(p["n_examen"]) for p in cerrados)
+    media = delta / peso
+    # media > 0: encoger empeoró el log loss en temporadas que la validación no vio.
+    if media < -1e-4:
+        return cerrados[-1]["g0"], media
+    return None, media
+
+
 def _resumen_oos(oos: pd.DataFrame, pliegues: list[dict]) -> dict:
+    g0, delta_encogimiento = _g0_justificado(pliegues)
+    if g0:
+        oos = oos.copy()
+        oos["p_modelo"] = [
+            aplicar_encogimiento(p, n, g0) for p, n in zip(oos["p_cruda"], oos["n_muestra"], strict=True)
+        ]
+    else:
+        oos = oos.copy()
+        oos["p_modelo"] = oos["p_cruda"]
+    for pliegue in pliegues:
+        pliegue["log_loss"] = pliegue["log_loss_encogido"] if g0 else pliegue["log_loss_sin_encoger"]
+        pliegue["brier"] = pliegue["brier_encogido"] if g0 else pliegue["brier_sin_encoger"]
     y = oos["gano_local"].to_numpy()
-    p = oos["p_modelo"].to_numpy()
+    p = np.asarray(oos["p_modelo"], dtype=float)
     prob_ganador = np.maximum(p, 1.0 - p)
     acierto = ((p >= 0.5) == (y == 1)).astype(float)
     conteo = oos.groupby("temporada").size().to_dict()
@@ -363,17 +399,11 @@ def _resumen_oos(oos: pd.DataFrame, pliegues: list[dict]) -> dict:
         )
     else:
         umbral = elegir_umbral(prob_ganador, acierto, minimo=minimo)
-    # g0 de producción: el del pliegue más reciente con entrenamiento decente.
-    # Corresponde a la validación previa a la temporada que estamos prediciendo.
-    g0 = None
-    for pliegue in pliegues:
-        g0 = pliegue["g0"]
     en_curso = None
     if examen is not None:
-        posteriores = [p for p in pliegues if int(p["temporada"]) > examen]
+        posteriores = [p for p in pliegues if int(p["temporada"]) > int(examen)]
         if posteriores:
-            en_curso = posteriores[-1]["temporada"]
-            g0 = posteriores[-1]["g0"]
+            en_curso = int(posteriores[-1]["temporada"])
     return {
         "n": int(len(oos)),
         "log_loss_modelo": log_loss_bin(y, p),
@@ -382,6 +412,8 @@ def _resumen_oos(oos: pd.DataFrame, pliegues: list[dict]) -> dict:
         "umbral_alta": umbral,
         "temporada_examen": examen,
         "g0": g0,
+        "encogimiento_justificado": g0 is not None,
+        "delta_log_loss_encogido": delta_encogimiento,
         "mercado": _mercado(oos),
         "por_nivel_oos": _cubeta(prob_ganador, acierto, umbral),
         "por_nivel_examen": _cubeta(
