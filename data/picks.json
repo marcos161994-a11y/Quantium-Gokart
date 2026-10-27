@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-27T12:33:42.862061-04:00",
+  "actualizado": "2026-10-27T15:46:35.165895-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-10-27",
   "umbral_alta": 0.68,
@@ -109,7 +109,7 @@
         "prob_mercado_local": 0.4826,
         "portero_local": {
           "nombre": "Spencer Knight",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8908,
           "tiros": 284,
           "gsax": -3.45,
@@ -138,8 +138,8 @@
         "nombre_visita": "Canadiens de Montreal",
         "ganador": "MTL",
         "nombre_ganador": "Canadiens de Montreal",
-        "probabilidad": 0.5191,
-        "probabilidad_local": 0.4809,
+        "probabilidad": 0.5338,
+        "probabilidad_local": 0.4662,
         "nivel": "baja",
         "linea": "STL -118",
         "casa": "Draft Kings",
@@ -148,7 +148,7 @@
         "prob_mercado_local": 0.5174,
         "portero_local": {
           "nombre": "Jordan Binnington",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8313,
           "tiros": 83,
           "gsax": -5.95,
@@ -156,7 +156,7 @@
         },
         "portero_visita": {
           "nombre": "Jacob Fowler",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9241,
           "tiros": 145,
           "gsax": 3.06,
@@ -181,8 +181,8 @@
         "nombre_visita": "Islanders de Nueva York",
         "ganador": "NSH",
         "nombre_ganador": "Predators de Nashville",
-        "probabilidad": 0.565,
-        "probabilidad_local": 0.565,
+        "probabilidad": 0.5728,
+        "probabilidad_local": 0.5728,
         "nivel": "media",
         "linea": "NSH -122",
         "casa": "Draft Kings",
@@ -191,7 +191,7 @@
         "prob_mercado_local": 0.5261,
         "portero_local": {
           "nombre": "Juuse Saros",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.908,
           "tiros": 250,
           "gsax": 1.25,
@@ -199,7 +199,7 @@
         },
         "portero_visita": {
           "nombre": "Semyon Varlamov",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8986,
           "tiros": 69,
           "gsax": -0.31,
@@ -220,8 +220,8 @@
         "nombre_visita": "Devils de New Jersey",
         "ganador": "DAL",
         "nombre_ganador": "Stars de Dallas",
-        "probabilidad": 0.5934,
-        "probabilidad_local": 0.5934,
+        "probabilidad": 0.6026,
+        "probabilidad_local": 0.6026,
         "nivel": "media",
         "linea": "DAL -120",
         "casa": "Draft Kings",
@@ -237,12 +237,12 @@
           "partidos": 2
         },
         "portero_visita": {
-          "nombre": "Jake Allen",
-          "estado": "expected",
-          "sv": 0.8864,
-          "tiros": 176,
-          "gsax": -2.93,
-          "partidos": 7
+          "nombre": "Connor Hellebuyck",
+          "estado": "confirmed",
+          "sv": null,
+          "tiros": null,
+          "gsax": null,
+          "partidos": null
         },
         "estado": "programado",
         "periodo": "",
@@ -263,8 +263,8 @@
         "nombre_visita": "Panthers de Florida",
         "ganador": "FLA",
         "nombre_ganador": "Panthers de Florida",
-        "probabilidad": 0.503,
-        "probabilidad_local": 0.497,
+        "probabilidad": 0.5089,
+        "probabilidad_local": 0.4911,
         "nivel": "baja",
         "linea": "FLA -130",
         "casa": "Draft Kings",
@@ -281,7 +281,7 @@
         },
         "portero_visita": {
           "nombre": "Akira Schmid",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8725,
           "tiros": 149,
           "gsax": -4.55,
@@ -306,8 +306,8 @@
         "nombre_visita": "Wild de Minnesota",
         "ganador": "MIN",
         "nombre_ganador": "Wild de Minnesota",
-        "probabilidad": 0.525,
-        "probabilidad_local": 0.475,
+        "probabilidad": 0.5298,
+        "probabilidad_local": 0.4702,
         "nivel": "baja",
         "linea": "UTA -125",
         "casa": "Draft Kings",
@@ -316,7 +316,7 @@
         "prob_mercado_local": 0.5325,
         "portero_local": {
           "nombre": "Karel Vejmelka",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8783,
           "tiros": 230,
           "gsax": -5.69,
@@ -324,7 +324,7 @@
         },
         "portero_visita": {
           "nombre": "Jesper Wallstedt",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9184,
           "tiros": 282,
           "gsax": 4.35,
@@ -345,8 +345,8 @@
         "nombre_visita": "Senators de Ottawa",
         "ganador": "VGK",
         "nombre_ganador": "Golden Knights de Vegas",
-        "probabilidad": 0.5462,
-        "probabilidad_local": 0.5462,
+        "probabilidad": 0.5292,
+        "probabilidad_local": 0.5292,
         "nivel": "baja",
         "linea": "VGK -162",
         "casa": "Draft Kings",
@@ -354,24 +354,28 @@
         "cuota_visita": 136,
         "prob_mercado_local": 0.5934,
         "portero_local": {
-          "nombre": "Carter Hart",
-          "estado": "expected",
-          "sv": 0.8889,
-          "tiros": 198,
-          "gsax": -2.79,
-          "partidos": 8
+          "nombre": "Adin Hill",
+          "estado": "confirmed",
+          "sv": 0.8819,
+          "tiros": 127,
+          "gsax": -2.68,
+          "partidos": 5
         },
         "portero_visita": {
-          "nombre": "Samuel Ersson",
-          "estado": "expected",
-          "sv": 0.8351,
-          "tiros": 97,
-          "gsax": -6.59,
-          "partidos": 5
+          "nombre": "Jonas Johansson",
+          "estado": "confirmed",
+          "sv": 0.8621,
+          "tiros": 29,
+          "gsax": -1.19,
+          "partidos": 1
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5462,
+        "portero_local_anterior": "Carter Hart",
+        "portero_visita_anterior": "Samuel Ersson"
       },
       {
         "id": "2026020197",
@@ -394,7 +398,7 @@
         "prob_mercado_local": 0.6575,
         "portero_local": {
           "nombre": "Lukas Dostal",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8804,
           "tiros": 209,
           "gsax": -4.73,
@@ -433,7 +437,7 @@
         "prob_mercado_local": 0.4365,
         "portero_local": {
           "nombre": "Yaroslav Askarov",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8835,
           "tiros": 206,
           "gsax": -4.02,
@@ -464,8 +468,8 @@
         "nombre_visita": "Flyers de Filadelfia",
         "ganador": "WSH",
         "nombre_ganador": "Capitals de Washington",
-        "probabilidad": 0.5716,
-        "probabilidad_local": 0.5716,
+        "probabilidad": 0.5745,
+        "probabilidad_local": 0.5745,
         "nivel": "media",
         "linea": "WSH -238",
         "casa": "Draft Kings",
@@ -473,12 +477,12 @@
         "cuota_visita": 195,
         "prob_mercado_local": 0.675,
         "portero_local": {
-          "nombre": "Charlie Lindgren",
+          "nombre": "Logan Thompson",
           "estado": "expected",
-          "sv": 0.8861,
-          "tiros": 79,
-          "gsax": -1.34,
-          "partidos": 3
+          "sv": 0.901,
+          "tiros": 202,
+          "gsax": -0.41,
+          "partidos": 7
         },
         "portero_visita": {
           "nombre": "Joseph Woll",
@@ -490,7 +494,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5716,
+        "portero_local_anterior": "Charlie Lindgren",
+        "portero_visita_anterior": "Joseph Woll"
       },
       {
         "id": "2026020200",
@@ -503,8 +511,8 @@
         "nombre_visita": "Flames de Calgary",
         "ganador": "EDM",
         "nombre_ganador": "Oilers de Edmonton",
-        "probabilidad": 0.6398,
-        "probabilidad_local": 0.6398,
+        "probabilidad": 0.612,
+        "probabilidad_local": 0.612,
         "nivel": "media",
         "linea": "EDM -218",
         "casa": "Draft Kings",
@@ -520,16 +528,20 @@
           "partidos": 5
         },
         "portero_visita": {
-          "nombre": "Dustin Wolf",
+          "nombre": "Devin Cooley",
           "estado": "expected",
-          "sv": 0.8345,
-          "tiros": 145,
-          "gsax": -9.94,
-          "partidos": 5
+          "sv": 0.9149,
+          "tiros": 188,
+          "gsax": 2.24,
+          "partidos": 6
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.6398,
+        "portero_local_anterior": "Tristan Jarry",
+        "portero_visita_anterior": "Dustin Wolf"
       },
       {
         "id": "2026020201",
@@ -542,8 +554,8 @@
         "nombre_visita": "Devils de New Jersey",
         "ganador": "COL",
         "nombre_ganador": "Avalanche de Colorado",
-        "probabilidad": 0.6297,
-        "probabilidad_local": 0.6297,
+        "probabilidad": 0.5871,
+        "probabilidad_local": 0.5871,
         "nivel": "media",
         "linea": "COL -192",
         "casa": "Draft Kings",
@@ -559,16 +571,20 @@
           "partidos": 8
         },
         "portero_visita": {
-          "nombre": "Remi Poirier",
+          "nombre": "Jake Allen",
           "estado": "expected",
-          "sv": null,
-          "tiros": null,
-          "gsax": null,
-          "partidos": null
+          "sv": 0.8864,
+          "tiros": 176,
+          "gsax": -2.93,
+          "partidos": 7
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.6297,
+        "portero_local_anterior": "Mackenzie Blackwood",
+        "portero_visita_anterior": "Remi Poirier"
       },
       {
         "id": "2026020202",
@@ -715,7 +731,7 @@
       "prob_mercado_local": 0.4826,
       "portero_local": {
         "nombre": "Spencer Knight",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8908,
         "tiros": 284,
         "gsax": -3.45,
@@ -744,8 +760,8 @@
       "nombre_visita": "Canadiens de Montreal",
       "ganador": "MTL",
       "nombre_ganador": "Canadiens de Montreal",
-      "probabilidad": 0.5191,
-      "probabilidad_local": 0.4809,
+      "probabilidad": 0.5338,
+      "probabilidad_local": 0.4662,
       "nivel": "baja",
       "linea": "STL -118",
       "casa": "Draft Kings",
@@ -754,7 +770,7 @@
       "prob_mercado_local": 0.5174,
       "portero_local": {
         "nombre": "Jordan Binnington",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8313,
         "tiros": 83,
         "gsax": -5.95,
@@ -762,7 +778,7 @@
       },
       "portero_visita": {
         "nombre": "Jacob Fowler",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9241,
         "tiros": 145,
         "gsax": 3.06,
@@ -787,8 +803,8 @@
       "nombre_visita": "Islanders de Nueva York",
       "ganador": "NSH",
       "nombre_ganador": "Predators de Nashville",
-      "probabilidad": 0.565,
-      "probabilidad_local": 0.565,
+      "probabilidad": 0.5728,
+      "probabilidad_local": 0.5728,
       "nivel": "media",
       "linea": "NSH -122",
       "casa": "Draft Kings",
@@ -797,7 +813,7 @@
       "prob_mercado_local": 0.5261,
       "portero_local": {
         "nombre": "Juuse Saros",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.908,
         "tiros": 250,
         "gsax": 1.25,
@@ -805,7 +821,7 @@
       },
       "portero_visita": {
         "nombre": "Semyon Varlamov",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8986,
         "tiros": 69,
         "gsax": -0.31,
@@ -826,8 +842,8 @@
       "nombre_visita": "Devils de New Jersey",
       "ganador": "DAL",
       "nombre_ganador": "Stars de Dallas",
-      "probabilidad": 0.5934,
-      "probabilidad_local": 0.5934,
+      "probabilidad": 0.6026,
+      "probabilidad_local": 0.6026,
       "nivel": "media",
       "linea": "DAL -120",
       "casa": "Draft Kings",
@@ -843,12 +859,12 @@
         "partidos": 2
       },
       "portero_visita": {
-        "nombre": "Jake Allen",
-        "estado": "expected",
-        "sv": 0.8864,
-        "tiros": 176,
-        "gsax": -2.93,
-        "partidos": 7
+        "nombre": "Connor Hellebuyck",
+        "estado": "confirmed",
+        "sv": null,
+        "tiros": null,
+        "gsax": null,
+        "partidos": null
       },
       "estado": "programado",
       "periodo": "",
@@ -869,8 +885,8 @@
       "nombre_visita": "Panthers de Florida",
       "ganador": "FLA",
       "nombre_ganador": "Panthers de Florida",
-      "probabilidad": 0.503,
-      "probabilidad_local": 0.497,
+      "probabilidad": 0.5089,
+      "probabilidad_local": 0.4911,
       "nivel": "baja",
       "linea": "FLA -130",
       "casa": "Draft Kings",
@@ -887,7 +903,7 @@
       },
       "portero_visita": {
         "nombre": "Akira Schmid",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8725,
         "tiros": 149,
         "gsax": -4.55,
@@ -912,8 +928,8 @@
       "nombre_visita": "Wild de Minnesota",
       "ganador": "MIN",
       "nombre_ganador": "Wild de Minnesota",
-      "probabilidad": 0.525,
-      "probabilidad_local": 0.475,
+      "probabilidad": 0.5298,
+      "probabilidad_local": 0.4702,
       "nivel": "baja",
       "linea": "UTA -125",
       "casa": "Draft Kings",
@@ -922,7 +938,7 @@
       "prob_mercado_local": 0.5325,
       "portero_local": {
         "nombre": "Karel Vejmelka",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8783,
         "tiros": 230,
         "gsax": -5.69,
@@ -930,7 +946,7 @@
       },
       "portero_visita": {
         "nombre": "Jesper Wallstedt",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9184,
         "tiros": 282,
         "gsax": 4.35,
@@ -951,8 +967,8 @@
       "nombre_visita": "Senators de Ottawa",
       "ganador": "VGK",
       "nombre_ganador": "Golden Knights de Vegas",
-      "probabilidad": 0.5462,
-      "probabilidad_local": 0.5462,
+      "probabilidad": 0.5292,
+      "probabilidad_local": 0.5292,
       "nivel": "baja",
       "linea": "VGK -162",
       "casa": "Draft Kings",
@@ -960,24 +976,28 @@
       "cuota_visita": 136,
       "prob_mercado_local": 0.5934,
       "portero_local": {
-        "nombre": "Carter Hart",
-        "estado": "expected",
-        "sv": 0.8889,
-        "tiros": 198,
-        "gsax": -2.79,
-        "partidos": 8
+        "nombre": "Adin Hill",
+        "estado": "confirmed",
+        "sv": 0.8819,
+        "tiros": 127,
+        "gsax": -2.68,
+        "partidos": 5
       },
       "portero_visita": {
-        "nombre": "Samuel Ersson",
-        "estado": "expected",
-        "sv": 0.8351,
-        "tiros": 97,
-        "gsax": -6.59,
-        "partidos": 5
+        "nombre": "Jonas Johansson",
+        "estado": "confirmed",
+        "sv": 0.8621,
+        "tiros": 29,
+        "gsax": -1.19,
+        "partidos": 1
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.5462,
+      "portero_local_anterior": "Carter Hart",
+      "portero_visita_anterior": "Samuel Ersson"
     },
     {
       "id": "2026020197",
@@ -1000,7 +1020,7 @@
       "prob_mercado_local": 0.6575,
       "portero_local": {
         "nombre": "Lukas Dostal",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8804,
         "tiros": 209,
         "gsax": -4.73,
@@ -1039,7 +1059,7 @@
       "prob_mercado_local": 0.4365,
       "portero_local": {
         "nombre": "Yaroslav Askarov",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8835,
         "tiros": 206,
         "gsax": -4.02,
