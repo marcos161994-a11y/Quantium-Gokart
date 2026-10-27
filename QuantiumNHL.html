@@ -310,6 +310,13 @@
             return e;
         }
 
+        function avisoPortero(p) {
+            if (!p || !p.portero_cambiado) return "";
+            const antes = [p.portero_visita_anterior, p.portero_local_anterior].filter(Boolean);
+            const quienes = antes.length ? " · esperado " + antes.join(" / ") : "";
+            return "Portero cambiado · antes " + pct(p.probabilidad_anterior) + quienes;
+        }
+
         function textoPortero(p) {
             if (!p || !p.nombre) return "titular sin confirmar";
             const bits = [p.nombre, estadoPortero(p.estado)];
@@ -371,12 +378,15 @@
             if (per === "shootout") tags.append(el("span", "tag pre", "SHOOTOUT"));
             if (alta) tags.append(el("span", "tag dia", "PICK DEL DÍA"));
             else tags.append(el("span", "tag no", (p.nivel || "sin nivel").toUpperCase()));
+            if (p.portero_cambiado) tags.append(el("span", "tag pre", "PORTERO CAMBIADO"));
             card.append(tags);
 
             const box = el("div", "pick-box " + (alta ? "pick-dia" : "no-apostar"));
             box.append(el("div", "nota", "Ganador, prórroga y shootout incluidos"));
             box.append(el("strong", null, (p.nombre_ganador || p.ganador || "—") + "  " + pct(p.probabilidad)));
             box.append(el("div", "nota", "Confianza " + (p.nivel || "—")));
+            const cambio = avisoPortero(p);
+            if (cambio) box.append(el("div", "ajuste", cambio));
             if (p.prob_mercado_local != null) {
                 box.append(el("div", "nota", "Mercado " + pct(p.prob_mercado_local) + " local · modelo " + pct(p.probabilidad_local)));
             }
@@ -508,6 +518,8 @@
             card.append(nums);
             card.append(el("div", "lesion", "Portero: " + textoPortero(lados.porteroEquipo)));
             card.append(el("div", "lesion", "Portero rival: " + textoPortero(lados.porteroRival)));
+            const cambio = avisoPortero(p);
+            if (cambio) card.append(el("div", "ajuste", cambio));
             return card;
         }
 

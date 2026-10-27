@@ -1,0 +1,33 @@
+name: Porteros NHL
+
+on:
+  schedule:
+    # Cada 30 minutos desde las 08:00 AST hasta las 02:59 AST (12:00–06:59 UTC):
+    # ahí se confirman los titulares y se juega la jornada. Render publica el
+    # push a main; el servicio web no tiene con qué hacer commit.
+    - cron: "*/30 12-23 * * *"
+    - cron: "*/30 0-6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  porteros:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Dependencias
+        run: pip install -r requirements.txt
+      - name: Recalcular picks que aún no empezaron
+        env:
+          SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+          SENTRY_ENVIRONMENT: ci
+        run: |
+          git config user.name "quantium-nhl"
+          git config user.email "quantium-nhl@users.noreply.github.com"
+          python picks_nhl.py --commit
+          git push

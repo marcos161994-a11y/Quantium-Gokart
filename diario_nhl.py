@@ -47,6 +47,28 @@ def confirmar_data() -> bool:
     return True
 
 
+def confirmar_picks() -> bool:
+    """Commit solo de data/picks.json. El recálculo de porteros no toca el modelo."""
+    email = _git("config", "--get", "user.email", check=False).stdout.strip()
+    nombre = _git("config", "--get", "user.name", check=False).stdout.strip()
+    if not email:
+        _git("config", "user.email", "quantium-nhl@users.noreply.github.com")
+    if not nombre:
+        _git("config", "user.name", "quantium-nhl")
+    ruta = "data/picks.json"
+    if not Path(ruta).exists():
+        print("no hay data/picks.json", flush=True)
+        return False
+    _git("add", "--", ruta)
+    diff = _git("diff", "--cached", "--quiet", check=False)
+    if diff.returncode == 0:
+        print("picks sin cambios", flush=True)
+        return False
+    _git("commit", "-m", "datos: recalcula picks con los porteros confirmados")
+    print("commit de data/picks.json listo", flush=True)
+    return True
+
+
 def correr(completo: bool = False, commit: bool = False, sin_red_picks: bool = False) -> None:
     iniciar_sentry()
     from datos_nhl import actualizar_datos

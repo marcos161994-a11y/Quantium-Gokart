@@ -68,6 +68,7 @@ def test_la_portada_destaca_los_picks_de_confianza_alta():
     assert 'id="picks-dia"' in html
     assert "Picks del día" in html
     assert "Hoy no hay picks de confianza alta." in html
+    assert "Portero cambiado" in html
 
 
 def test_panel_publica_el_elo_de_los_partidos_jugados(tmp_path, monkeypatch):
