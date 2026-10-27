@@ -1,0 +1,30 @@
+name: Diario NHL
+
+on:
+  schedule:
+    # 11:15 UTC = 07:15 en Puerto Rico, ya pasado el corte de las 06:00.
+    - cron: "15 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  diario:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Dependencias
+        run: pip install -r requirements.txt
+      - name: Calificar, reentrenar y dejar data en git
+        env:
+          SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+          SENTRY_ENVIRONMENT: ci
+        run: |
+          git config user.name "quantium-nhl"
+          git config user.email "quantium-nhl@users.noreply.github.com"
+          python diario_nhl.py --commit
+          git push
