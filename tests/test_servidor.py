@@ -63,6 +63,13 @@ def test_health_y_panel_con_los_picks_de_la_jornada(tmp_path, monkeypatch):
     assert cuerpo["backtest"]["log_loss_modelo"] == 0.68
 
 
+def test_la_portada_destaca_los_picks_de_confianza_alta():
+    html = TestClient(app).get("/").text
+    assert 'id="picks-dia"' in html
+    assert "Picks del día" in html
+    assert "Hoy no hay picks de confianza alta." in html
+
+
 def test_panel_publica_el_elo_de_los_partidos_jugados(tmp_path, monkeypatch):
     monkeypatch.setenv("QUANTIUM_DATOS", str(tmp_path))
     pd.DataFrame(
