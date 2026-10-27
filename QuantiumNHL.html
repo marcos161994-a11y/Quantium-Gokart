@@ -178,6 +178,56 @@
         .nota { color: var(--muted); font-size: 0.78rem; line-height: 1.45; }
         .lideres { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
         footer { color: var(--muted); font-size: 0.75rem; margin: 22px 0 8px; }
+        .destacados {
+            background: var(--panel);
+            border: 2px solid var(--gold);
+            box-shadow: 0 0 22px rgba(255, 188, 0, 0.18);
+            border-radius: 16px;
+            padding: 16px 14px 14px;
+            margin: 0 0 16px;
+        }
+        .destacados > h2 {
+            margin: 0;
+            color: var(--gold);
+            font-size: 1.35rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+        .destacados > .sub { margin: 4px 0 0; }
+        .sin-alta {
+            margin-top: 12px;
+            padding: 18px 12px;
+            border: 1px dashed var(--gold);
+            border-radius: 12px;
+            text-align: center;
+            background: rgba(255, 188, 0, 0.08);
+        }
+        .sin-alta strong { display: block; color: var(--gold); font-size: 1.05rem; }
+        .sin-alta p { margin: 6px 0 0; color: #f3e2a4; font-size: 0.9rem; }
+        .pick-dia-card {
+            margin-top: 12px;
+            background: rgba(255, 188, 0, 0.08);
+            border: 1px solid var(--gold);
+            border-radius: 12px;
+            padding: 12px;
+        }
+        .pick-dia-card .hora {
+            color: var(--gold);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+        .pick-dia-card .quien { font-size: 1.35rem; font-weight: 800; margin-top: 2px; }
+        .pick-dia-card .rival { color: var(--muted); font-size: 0.92rem; }
+        .pick-dia-nums { display: flex; justify-content: space-between; gap: 12px; margin-top: 10px; }
+        .pick-dia-nums .k {
+            display: block;
+            color: var(--muted);
+            font-size: 0.65rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .pick-dia-nums b { font-size: 1.25rem; color: var(--cyan); }
         button {
             background: rgba(0, 242, 255, 0.12);
             border: 1px solid var(--cyan);
@@ -194,6 +244,7 @@
         <p class="sub" id="subtitulo">Cargando cartelera…</p>
         <div class="badge" id="badge">NHL · jornada de Puerto Rico</div>
     </header>
+    <section class="destacados" id="picks-dia" aria-label="Picks del día"></section>
     <div id="avisos"></div>
     <div class="stats-row" id="metricas"></div>
     <h2 class="section-title">Historial de picks</h2>
@@ -259,6 +310,13 @@
             return e;
         }
 
+        function avisoPortero(p) {
+            if (!p || !p.portero_cambiado) return "";
+            const antes = [p.portero_visita_anterior, p.portero_local_anterior].filter(Boolean);
+            const quienes = antes.length ? " · esperado " + antes.join(" / ") : "";
+            return "Portero cambiado · antes " + pct(p.probabilidad_anterior) + quienes;
+        }
+
         function textoPortero(p) {
             if (!p || !p.nombre) return "titular sin confirmar";
             const bits = [p.nombre, estadoPortero(p.estado)];
@@ -320,12 +378,15 @@
             if (per === "shootout") tags.append(el("span", "tag pre", "SHOOTOUT"));
             if (alta) tags.append(el("span", "tag dia", "PICK DEL DÍA"));
             else tags.append(el("span", "tag no", (p.nivel || "sin nivel").toUpperCase()));
+            if (p.portero_cambiado) tags.append(el("span", "tag pre", "PORTERO CAMBIADO"));
             card.append(tags);
 
             const box = el("div", "pick-box " + (alta ? "pick-dia" : "no-apostar"));
             box.append(el("div", "nota", "Ganador, prórroga y shootout incluidos"));
             box.append(el("strong", null, (p.nombre_ganador || p.ganador || "—") + "  " + pct(p.probabilidad)));
             box.append(el("div", "nota", "Confianza " + (p.nivel || "—")));
+            const cambio = avisoPortero(p);
+            if (cambio) box.append(el("div", "ajuste", cambio));
             if (p.prob_mercado_local != null) {
                 box.append(el("div", "nota", "Mercado " + pct(p.prob_mercado_local) + " local · modelo " + pct(p.probabilidad_local)));
             }
@@ -419,6 +480,67 @@
             return p.estado === "final" || p.acierto === 0 || p.acierto === 1;
         }
 
+        function confianzaAlta(p, umbral) {
+            const prob = Number(p.probabilidad);
+            return !Number.isNaN(prob) && prob + 1e-12 >= umbral;
+        }
+
+        function ladosDelPick(p) {
+            const local = p.ganador === p.equipo_local;
+            if (local || p.ganador === p.equipo_visita) {
+                return {
+                    equipo: p.nombre_ganador || p.ganador,
+                    rival: local ? (p.nombre_visita || p.equipo_visita) : (p.nombre_local || p.equipo_local),
+                    porteroEquipo: local ? p.portero_local : p.portero_visita,
+                    porteroRival: local ? p.portero_visita : p.portero_local,
+                };
+            }
+            return {
+                equipo: p.nombre_ganador || p.ganador || "—",
+                rival: (p.nombre_visita || p.equipo_visita || "—") + " @ " + (p.nombre_local || p.equipo_local || "—"),
+                porteroEquipo: p.portero_visita,
+                porteroRival: p.portero_local,
+            };
+        }
+
+        function tarjetaDestacada(p) {
+            const lados = ladosDelPick(p);
+            const card = el("article", "pick-dia-card");
+            card.append(el("div", "hora", (p.hora || "Hora sin confirmar") + " AST"));
+            card.append(el("div", "quien", lados.equipo));
+            card.append(el("div", "rival", "vs " + lados.rival));
+            const nums = el("div", "pick-dia-nums");
+            const prob = el("div");
+            prob.append(el("span", "k", "Probabilidad"), el("b", null, pct(p.probabilidad)));
+            const linea = el("div");
+            linea.append(el("span", "k", "Línea"), el("b", null, p.linea || "sin línea"));
+            nums.append(prob, linea);
+            card.append(nums);
+            card.append(el("div", "lesion", "Portero: " + textoPortero(lados.porteroEquipo)));
+            card.append(el("div", "lesion", "Portero rival: " + textoPortero(lados.porteroRival)));
+            const cambio = avisoPortero(p);
+            if (cambio) card.append(el("div", "ajuste", cambio));
+            return card;
+        }
+
+        function pintarPicksDelDia(data) {
+            const nodo = document.getElementById("picks-dia");
+            nodo.replaceChildren();
+            const umbral = Number(data.umbral_alta || 0.62);
+            const umbralPct = Math.round(umbral * 100);
+            nodo.append(el("h2", null, "Picks del día"));
+            nodo.append(el("p", "sub", "Jornada " + fechaCorta(data.fecha) + " · confianza alta ≥ " + umbralPct + "%"));
+            const altos = (data.picks || []).filter((p) => confianzaAlta(p, umbral));
+            if (!altos.length) {
+                const vacio = el("div", "sin-alta");
+                vacio.append(el("strong", null, "Hoy no hay picks de confianza alta."));
+                vacio.append(el("p", null, "Ningún partido de la jornada del " + fechaCorta(data.fecha) + " llega al " + umbralPct + "%."));
+                nodo.append(vacio);
+                return;
+            }
+            altos.forEach((p) => nodo.append(tarjetaDestacada(p)));
+        }
+
         function pintar(data) {
             const examen = (data.record && data.record.examen) || {};
             const bt = data.backtest || {};
@@ -427,6 +549,7 @@
                 "Examen " + temporada(examen.temporada || bt.temporada_examen) +
                 " · " + fechaCorta(data.fecha) + " · " + String(data.zona || "").replaceAll("_", " ");
             const umbral = Math.round((data.umbral_alta || 0.62) * 100);
+            pintarPicksDelDia(data);
             document.getElementById("badge").textContent =
                 "Umbral alta " + umbral + "%" + (data.actualizado ? " · " + String(data.actualizado).slice(0, 16).replace("T", " ") : "");
 
