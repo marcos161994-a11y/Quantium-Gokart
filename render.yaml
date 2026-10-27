@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: quantium-nhl
+    runtime: python
+    plan: starter
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: bash start.sh
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.14"
+      - key: DATA_DIR
+        value: /opt/render/project/src/data/cache
+      - key: SENTRY_ENVIRONMENT
+        value: production

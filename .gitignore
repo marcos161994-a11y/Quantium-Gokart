@@ -1,0 +1,10 @@
+agent-tools/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+data/cache/
+data/*.tmp
+*.csv.tmp
+.DS_Store

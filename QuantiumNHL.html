@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quantium NHL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@380;500;640&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #141611;
+    --paper: #efe7d2;
+    --paper-2: #f6f1e2;
+    --line: #d9d0b8;
+    --ice: #1f6f78;
+    --ice-2: #d5efe8;
+    --signal: #c2412d;
+    --gold: #8a5a12;
+    --good: #2c6b32;
+    --muted: #5e5a4e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(1200px 500px at 10% -10%, #f7f3e6 0%, transparent 50%),
+      var(--paper);
+    color: var(--ink);
+    font-family: Outfit, "Segoe UI", sans-serif;
+    font-weight: 380;
+  }
+  header, main { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
+  header { padding: 28px 0 8px; }
+  .marca {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 14px;
+  }
+  h1 {
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 560;
+    font-size: clamp(40px, 7vw, 68px);
+    line-height: 0.85;
+    margin: 0;
+    letter-spacing: -0.03em;
+  }
+  h1 span { color: var(--ice); }
+  .fecha {
+    text-align: right;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .fecha strong { display: block; color: var(--ink); font-size: 16px; letter-spacing: 0.02em; margin-top: 4px; }
+  .lede { max-width: 46rem; font-size: 17px; line-height: 1.45; margin: 16px 0; }
+  .cintillo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 8px 0 22px;
+  }
+  .chip {
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    padding: 10px 12px;
+  }
+  .chip .k { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .chip .v { font-family: Fraunces, Georgia, serif; font-size: 28px; line-height: 1.1; margin-top: 2px; }
+  .chip .s { color: var(--muted); font-size: 12px; }
+  .aviso, .estado {
+    border: 1px dashed var(--gold);
+    background: #f8f1dc;
+    padding: 14px 16px;
+    margin: 12px 0 20px;
+  }
+  .error { border-color: var(--signal); background: #fbe8e4; }
+  h2 {
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 560;
+    font-size: 28px;
+    margin: 8px 0 12px;
+  }
+  .partido {
+    display: grid;
+    grid-template-columns: 1.4fr 0.9fr 0.9fr;
+    gap: 12px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+  }
+  .equipos { font-size: 18px; line-height: 1.25; }
+  .equipos .vs { color: var(--muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .hora { color: var(--muted); font-size: 13px; margin-top: 6px; }
+  .pick .quien {
+    font-family: Fraunces, Georgia, serif;
+    font-size: 26px;
+    line-height: 1;
+  }
+  .nivel {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 6px;
+    border: 1px solid var(--ink);
+  }
+  .nivel.alta { background: #dceccf; }
+  .nivel.media { background: #f3e6c2; }
+  .nivel.baja { background: transparent; color: var(--muted); }
+  .barra {
+    height: 8px;
+    margin-top: 10px;
+    background: #e4dcc6;
+    display: flex;
+  }
+  .barra i { display: block; height: 100%; background: var(--ice); }
+  .mercado .linea {
+    font-family: Fraunces, Georgia, serif;
+    font-size: 22px;
+  }
+  .porteros { color: var(--muted); font-size: 13px; margin-top: 8px; line-height: 1.35; }
+  .meta { margin-top: 28px; color: var(--muted); font-size: 13px; line-height: 1.45; }
+  .final { color: var(--good); }
+  .fallo { color: var(--signal); }
+  @media (max-width: 800px) {
+    .cintillo { grid-template-columns: 1fr 1fr; }
+    .partido { grid-template-columns: 1fr; gap: 6px; }
+    .marca { flex-direction: column; align-items: flex-start; }
+    .fecha { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="marca">
+    <h1>Quantium <span>NHL</span></h1>
+    <div class="fecha" id="fecha">Cargando la jornada…</div>
+  </div>
+  <p class="lede">Solo el ganador del partido, prórroga y shootout incluidos. La probabilidad sale del Elo y de una logística; la línea de al lado es el moneyline del mercado, sin vigorish.</p>
+</header>
+<main>
+  <section class="cintillo" id="cintillo" hidden></section>
+  <div id="estado" class="estado">Cargando la cartelera…</div>
+  <section id="lista"></section>
+  <section id="proxima"></section>
+  <p class="meta" id="meta"></p>
+</main>
+<script>
+function pct(x) {
+  if (x === null || x === undefined || Number.isNaN(Number(x))) return "—";
+  return Math.round(Number(x) * 1000) / 10 + "%";
+}
+function temporada(t) {
+  const s = String(t || "");
+  if (s.length !== 8) return s;
+  return s.slice(0, 4) + "–" + s.slice(6);
+}
+function portero(p) {
+  if (!p || !p.nombre) return "titular sin confirmar";
+  const sv = p.sv == null ? "" : " · sv% " + (p.sv * 100).toFixed(1);
+  const gs = p.gsax == null ? "" : " · GSAx " + (p.gsax > 0 ? "+" : "") + p.gsax.toFixed(1);
+  const estado = p.estado ? " (" + p.estado + ")" : "";
+  return p.nombre + estado + sv + gs;
+}
+function chip(k, v, s) {
+  return '<article class="chip"><div class="k">' + k + '</div><div class="v">' + v + '</div><div class="s">' + (s || "") + '</div></article>';
+}
+function partido(p) {
+  const marca = p.acierto === 1 ? '<div class="final">acertó</div>' : (p.acierto === 0 ? '<div class="fallo">falló</div>' : "");
+  const mercado = p.prob_mercado_local == null ? "sin línea" : "implícita local " + pct(p.prob_mercado_local);
+  return '<article class="partido">'
+    + '<div><div class="vs">' + (p.hora || "") + " · Puerto Rico</div>"
+    + '<div class="equipos">' + p.nombre_visita + "<br>" + p.nombre_local + "</div>"
+    + '<div class="porteros">Visita: ' + portero(p.portero_visita) + "<br>Local: " + portero(p.portero_local) + "</div></div>"
+    + '<div class="pick"><div class="vs">pick</div><div class="quien">' + p.ganador + " " + pct(p.probabilidad) + "</div>"
+    + '<span class="nivel ' + p.nivel + '">' + p.nivel + "</span>"
+    + '<div class="barra" title="probabilidad del local"><i style="width:' + Math.round(p.probabilidad_local * 100) + '%"></i></div>'
+    + marca + "</div>"
+    + '<div class="mercado"><div class="vs">mercado' + (p.casa ? " · " + p.casa : "") + '</div>'
+    + '<div class="linea">' + (p.linea || "—") + "</div>"
+    + '<div class="porteros">' + mercado + "</div></div>"
+    + "</article>";
+}
+function pintar(data) {
+  const estado = document.getElementById("estado");
+  const fecha = document.getElementById("fecha");
+  fecha.innerHTML = "America/Puerto Rico<strong>" + data.fecha + (data.en_madrugada ? " · madrugada" : "") + "</strong>";
+  const examen = (data.record && data.record.examen) || {};
+  const bt = data.backtest || {};
+  const mercado = bt.mercado || {};
+  const cintillo = document.getElementById("cintillo");
+  const umbral = Math.round((data.umbral_alta || 0.62) * 100);
+  cintillo.hidden = false;
+  cintillo.innerHTML = [
+    chip("Alta ≥ " + umbral + "%", pct(examen.alta && examen.alta.pct), examen.alta ? examen.alta.aciertos + "/" + examen.alta.total : ""),
+    chip("Media", pct(examen.media && examen.media.pct), examen.media ? examen.media.aciertos + "/" + examen.media.total : ""),
+    chip("Baja", pct(examen.baja && examen.baja.pct), examen.baja ? examen.baja.aciertos + "/" + examen.baja.total : ""),
+    chip("Log loss", bt.log_loss_modelo == null ? "—" : Number(bt.log_loss_modelo).toFixed(3),
+      mercado.log_loss_mercado == null ? "" : "mercado " + Number(mercado.log_loss_mercado).toFixed(3))
+  ].join("");
+  const lista = document.getElementById("lista");
+  if (!data.picks || !data.picks.length) {
+    estado.className = "aviso";
+    estado.hidden = false;
+    estado.textContent = "No hay partidos en la jornada del " + data.fecha + ". Lo que empieza de madrugada en Puerto Rico sigue contando para la noche anterior.";
+    lista.innerHTML = "";
+  } else {
+    estado.hidden = true;
+    lista.innerHTML = "<h2>Jornada " + data.fecha + "</h2>" + data.picks.map(partido).join("");
+  }
+  const prox = document.getElementById("proxima");
+  if (data.proxima && data.proxima.length) {
+    prox.innerHTML = "<h2>Siguiente jornada " + data.proxima_fecha + "</h2>" + data.proxima.map(partido).join("");
+  } else {
+    prox.innerHTML = "";
+  }
+  const partes = [];
+  if (examen.temporada) partes.push("El récord de arriba es la temporada de examen " + temporada(examen.temporada) + ", fuera de muestra. El umbral se eligió con las temporadas anteriores.");
+  if (bt.n) partes.push("Backtest: " + bt.n + " partidos. Brier del modelo " + (bt.brier_modelo == null ? "—" : Number(bt.brier_modelo).toFixed(3)) + (mercado.brier_mercado == null ? "" : " frente a " + Number(mercado.brier_mercado).toFixed(3) + " del mercado (" + mercado.n + " con cuota)."));
+  if (bt.g0) partes.push("Las probabilidades se encogen hacia 50% hasta el partido " + bt.g0 + " de cada equipo.");
+  else partes.push("El backtest no justificó encoger las probabilidades hacia 50%.");
+  document.getElementById("meta").textContent = partes.join(" ");
+}
+fetch("/api/panel")
+  .then((r) => { if (!r.ok) throw new Error("panel " + r.status); return r.json(); })
+  .then(pintar)
+  .catch(() => {
+    const estado = document.getElementById("estado");
+    estado.className = "estado error";
+    estado.hidden = false;
+    estado.textContent = "No se pudo cargar el panel. Revisa que el servidor esté en marcha y vuelve a intentar.";
+  });
+</script>
+</body>
+</html>
