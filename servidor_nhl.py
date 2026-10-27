@@ -113,6 +113,13 @@ def health() -> dict:
     return {"ok": True, "servicio": "quantium-nhl"}
 
 
+def _record_del_panel(documento: dict) -> dict:
+    """Récord visible: solo picks calificados desde data/record.json."""
+    from picks_nhl import record_desde
+
+    return record_desde(documento)
+
+
 @app.get("/api/panel")
 def panel() -> dict:
     """Picks de la jornada vigente. De madrugada sigue siendo el día anterior."""
@@ -135,7 +142,7 @@ def panel() -> dict:
         "picks": por_fecha.get(fecha) or [],
         "proxima_fecha": proxima if madrugada else None,
         "proxima": por_fecha.get(proxima) if madrugada else None,
-        "record": documento.get("record") or {},
+        "record": _record_del_panel(documento),
         "backtest": back,
         "actualizado": documento.get("actualizado"),
         "ranking": _ranking_elo(),

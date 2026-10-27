@@ -650,120 +650,6 @@
   ],
   "vivo": [
     {
-      "id": "2026020185",
-      "fecha": "2026-10-26",
-      "inicio_utc": "2026-10-26T23:00:00Z",
-      "hora": "7:00 pm",
-      "equipo_local": "NYR",
-      "equipo_visita": "LAK",
-      "nombre_local": "Rangers de Nueva York",
-      "nombre_visita": "Kings de Los Ángeles",
-      "ganador": "NYR",
-      "nombre_ganador": "Rangers de Nueva York",
-      "probabilidad": 0.5744,
-      "probabilidad_local": 0.5744,
-      "nivel": "media",
-      "linea": "NYR -130",
-      "casa": "Draft Kings",
-      "cuota_local": -130,
-      "cuota_visita": 110,
-      "prob_mercado_local": 0.5427,
-      "portero_local": {
-        "nombre": "James Reimer",
-        "estado": "confirmed",
-        "sv": null,
-        "tiros": null,
-        "gsax": null
-      },
-      "portero_visita": {
-        "nombre": "Darcy Kuemper",
-        "estado": "confirmed",
-        "sv": null,
-        "tiros": null,
-        "gsax": null
-      },
-      "estado": "final",
-      "periodo": "REG",
-      "acierto": 0,
-      "ganador_real": "LAK"
-    },
-    {
-      "id": "2026020186",
-      "fecha": "2026-10-26",
-      "inicio_utc": "2026-10-27T00:30:00Z",
-      "hora": "8:30 pm",
-      "equipo_local": "CGY",
-      "equipo_visita": "TOR",
-      "nombre_local": "Flames de Calgary",
-      "nombre_visita": "Maple Leafs de Toronto",
-      "ganador": "TOR",
-      "nombre_ganador": "Maple Leafs de Toronto",
-      "probabilidad": 0.5203,
-      "probabilidad_local": 0.4797,
-      "nivel": "baja",
-      "linea": "TOR -135",
-      "casa": "Draft Kings",
-      "cuota_local": 114,
-      "cuota_visita": -135,
-      "prob_mercado_local": 0.4486,
-      "portero_local": {
-        "nombre": "Devin Cooley",
-        "estado": "confirmed",
-        "sv": null,
-        "tiros": null,
-        "gsax": null
-      },
-      "portero_visita": {
-        "nombre": "Sergei Bobrovsky",
-        "estado": "confirmed",
-        "sv": null,
-        "tiros": null,
-        "gsax": null
-      },
-      "estado": "final",
-      "periodo": "REG",
-      "acierto": 0,
-      "ganador_real": "CGY"
-    },
-    {
-      "id": "2026020187",
-      "fecha": "2026-10-26",
-      "inicio_utc": "2026-10-27T01:30:00Z",
-      "hora": "9:30 pm",
-      "equipo_local": "EDM",
-      "equipo_visita": "DET",
-      "nombre_local": "Oilers de Edmonton",
-      "nombre_visita": "Red Wings de Detroit",
-      "ganador": "EDM",
-      "nombre_ganador": "Oilers de Edmonton",
-      "probabilidad": 0.6026,
-      "probabilidad_local": 0.6026,
-      "nivel": "media",
-      "linea": "EDM -170",
-      "casa": "Draft Kings",
-      "cuota_local": -170,
-      "cuota_visita": 142,
-      "prob_mercado_local": 0.6038,
-      "portero_local": {
-        "nombre": "Tristan Jarry",
-        "estado": "confirmed",
-        "sv": null,
-        "tiros": null,
-        "gsax": null
-      },
-      "portero_visita": {
-        "nombre": "Michal Postava",
-        "estado": "confirmed",
-        "sv": null,
-        "tiros": null,
-        "gsax": null
-      },
-      "estado": "final",
-      "periodo": "SO",
-      "acierto": 0,
-      "ganador_real": "DET"
-    },
-    {
       "id": "2026020188",
       "fecha": "2026-10-27",
       "inicio_utc": "2026-10-27T23:00:00Z",
@@ -1225,57 +1111,21 @@
     }
   ],
   "record": {
-    "examen": {
-      "temporada": 20252026,
-      "alta": {
-        "aciertos": 77,
-        "total": 118,
-        "pct": 0.6525
-      },
-      "media": {
-        "aciertos": 428,
-        "total": 785,
-        "pct": 0.5452
-      },
-      "baja": {
-        "aciertos": 232,
-        "total": 491,
-        "pct": 0.4725
-      }
+    "alta": {
+      "aciertos": 0,
+      "total": 0,
+      "pct": null
     },
-    "oos": {
-      "alta": {
-        "aciertos": 820,
-        "total": 1190,
-        "pct": 0.6891
-      },
-      "media": {
-        "aciertos": 1726,
-        "total": 3010,
-        "pct": 0.5734
-      },
-      "baja": {
-        "aciertos": 824,
-        "total": 1605,
-        "pct": 0.5134
-      }
+    "media": {
+      "aciertos": 2,
+      "total": 5,
+      "pct": 0.4
     },
-    "vivo": {
-      "alta": {
-        "aciertos": 0,
-        "total": 0,
-        "pct": null
-      },
-      "media": {
-        "aciertos": 2,
-        "total": 7,
-        "pct": 0.2857
-      },
-      "baja": {
-        "aciertos": 5,
-        "total": 7,
-        "pct": 0.7143
-      }
-    }
+    "baja": {
+      "aciertos": 5,
+      "total": 6,
+      "pct": 0.8333
+    },
+    "desde": "2026-10-27"
   }
 }

@@ -283,12 +283,6 @@
             return box;
         }
 
-        function temporada(t) {
-            const s = String(t || "");
-            if (s.length !== 8) return s || "—";
-            return s.slice(0, 4) + "-" + s.slice(6);
-        }
-
         function fechaCorta(iso) {
             const meses = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
             const [y, m, d] = String(iso || "").split("-");
@@ -453,7 +447,7 @@
             const partes = ["alta", "media", "baja"].map((k) => (cubo && cubo[k]) || {});
             const total = partes.reduce((s, n) => s + (n.total || 0), 0);
             const aciertos = partes.reduce((s, n) => s + (n.aciertos || 0), 0);
-            if (!total) return "sin picks cerrados";
+            if (!total) return cubo && cubo.desde ? "0-0" : "sin picks cerrados";
             return aciertos + "-" + (total - aciertos) + " · " + pct(aciertos / total);
         }
 
@@ -469,7 +463,7 @@
                 const n = cubo[k] || {};
                 const tr = document.createElement("tr");
                 tr.append(el("td", "", k));
-                tr.append(el("td", "num", n.total ? (n.aciertos + "-" + (n.total - n.aciertos) + " (" + pct(n.pct) + ")") : "—"));
+                tr.append(el("td", "num", n.total ? (n.aciertos + "-" + (n.total - n.aciertos) + " (" + pct(n.pct) + ")") : (cubo.desde ? "0-0" : "—")));
                 tr.append(el("td", "", uso[k]));
                 table.append(tr);
             });
@@ -542,12 +536,13 @@
         }
 
         function pintar(data) {
-            const examen = (data.record && data.record.examen) || {};
+            const record = data.record || {};
             const bt = data.backtest || {};
             const mercado = bt.mercado || {};
+            const desdeTxt = record.desde ? fechaCorta(record.desde) : "";
             document.getElementById("subtitulo").textContent =
-                "Examen " + temporada(examen.temporada || bt.temporada_examen) +
-                " · " + fechaCorta(data.fecha) + " · " + String(data.zona || "").replaceAll("_", " ");
+                (desdeTxt ? "Récord desde " + desdeTxt + " · " : "") +
+                fechaCorta(data.fecha) + " · " + String(data.zona || "").replaceAll("_", " ");
             const umbral = Math.round((data.umbral_alta || 0.62) * 100);
             pintarPicksDelDia(data);
             document.getElementById("badge").textContent =
@@ -573,11 +568,10 @@
 
             const hist = document.getElementById("historial");
             hist.replaceChildren();
-            bloqueRecord(hist, "Temporada de examen " + temporada(examen.temporada), examen);
-            bloqueRecord(hist, "Fuera de muestra", (data.record && data.record.oos) || {});
-            const vivo = (data.record && data.record.vivo) || {};
-            const vivoN = ["alta", "media", "baja"].reduce((s, k) => s + ((vivo[k] && vivo[k].total) || 0), 0);
-            if (vivoN) bloqueRecord(hist, "En vivo", vivo);
+            bloqueRecord(hist, "Récord desde " + (desdeTxt || "el inicio"), record);
+            hist.append(el("p", "nota", desdeTxt
+                ? "Solo cuentan los picks calificados desde el " + desdeTxt + ". El modelo, el Elo y el backtest no se reinician."
+                : "Todavía no hay fecha de inicio del récord."));
 
             const recientes = (data.picks || []).filter(finalizado);
             if (recientes.length) {

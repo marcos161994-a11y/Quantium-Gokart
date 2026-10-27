@@ -1,0 +1,5 @@
+{
+  "desde": "2026-10-27",
+  "zona": "America/Puerto_Rico",
+  "nota": "El récord del panel cuenta solo los picks calificados desde esta fecha (jornada AST). El modelo, el Elo, games.csv y backtest.json no se reinician."
+}
