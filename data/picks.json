@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-27T23:17:12.349934-04:00",
+  "actualizado": "2026-10-28T05:54:13.249463-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-10-27",
   "umbral_alta": 0.68,
@@ -572,7 +572,7 @@
         },
         "portero_visita": {
           "nombre": "Jake Allen",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8864,
           "tiros": 176,
           "gsax": -2.93,
