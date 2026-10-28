@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-28T13:09:28.944301-04:00",
+  "actualizado": "2026-10-28T13:29:22.259917-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-10-28",
   "umbral_alta": 0.68,
@@ -27,7 +27,7 @@
         "prob_mercado_local": 0.669,
         "portero_local": {
           "nombre": "Logan Thompson",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.901,
           "tiros": 202,
           "gsax": -0.41,
@@ -629,7 +629,7 @@
       "prob_mercado_local": 0.669,
       "portero_local": {
         "nombre": "Logan Thompson",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.901,
         "tiros": 202,
         "gsax": -0.41,
