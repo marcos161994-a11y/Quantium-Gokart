@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-29T13:24:48.465567-04:00",
+  "actualizado": "2026-10-29T13:40:29.906566-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-10-29",
   "umbral_alta": 0.68,
@@ -173,8 +173,8 @@
         "nombre_visita": "Bruins de Boston",
         "ganador": "BOS",
         "nombre_ganador": "Bruins de Boston",
-        "probabilidad": 0.5205,
-        "probabilidad_local": 0.4795,
+        "probabilidad": 0.5228,
+        "probabilidad_local": 0.4772,
         "nivel": "baja",
         "linea": "STL -115",
         "casa": "DraftKings",
@@ -183,7 +183,7 @@
         "prob_mercado_local": 0.5108,
         "portero_local": {
           "nombre": "Joel Hofer",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9167,
           "tiros": 228,
           "gsax": 3.12,
@@ -191,7 +191,7 @@
         },
         "portero_visita": {
           "nombre": "Jeremy Swayman",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9211,
           "tiros": 279,
           "gsax": 5.06,
@@ -312,7 +312,7 @@
         },
         "portero_visita": {
           "nombre": "Ilya Sorokin",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9186,
           "tiros": 221,
           "gsax": 3.44,
@@ -728,8 +728,8 @@
       "nombre_visita": "Bruins de Boston",
       "ganador": "BOS",
       "nombre_ganador": "Bruins de Boston",
-      "probabilidad": 0.5205,
-      "probabilidad_local": 0.4795,
+      "probabilidad": 0.5228,
+      "probabilidad_local": 0.4772,
       "nivel": "baja",
       "linea": "STL -115",
       "casa": "DraftKings",
@@ -738,7 +738,7 @@
       "prob_mercado_local": 0.5108,
       "portero_local": {
         "nombre": "Joel Hofer",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9167,
         "tiros": 228,
         "gsax": 3.12,
@@ -746,7 +746,7 @@
       },
       "portero_visita": {
         "nombre": "Jeremy Swayman",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9211,
         "tiros": 279,
         "gsax": 5.06,
@@ -867,7 +867,7 @@
       },
       "portero_visita": {
         "nombre": "Ilya Sorokin",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9186,
         "tiros": 221,
         "gsax": 3.44,
