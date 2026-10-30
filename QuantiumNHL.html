@@ -228,6 +228,47 @@
             text-transform: uppercase;
         }
         .pick-dia-nums b { font-size: 1.25rem; color: var(--cyan); }
+        .top-picks {
+            background: var(--panel);
+            border: 2px solid var(--cyan);
+            box-shadow: 0 0 22px rgba(0, 242, 255, 0.16);
+            border-radius: 16px;
+            padding: 16px 14px 14px;
+            margin: 0 0 16px;
+        }
+        .top-picks > h2 {
+            margin: 0;
+            color: var(--cyan);
+            font-size: 1.35rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+        .top-picks > .sub { margin: 4px 0 0; }
+        .sin-top {
+            margin-top: 12px;
+            padding: 18px 12px;
+            border: 1px dashed var(--cyan);
+            border-radius: 12px;
+            text-align: center;
+            background: rgba(0, 242, 255, 0.06);
+        }
+        .sin-top strong { display: block; color: var(--cyan); font-size: 1.05rem; }
+        .sin-top p { margin: 6px 0 0; color: #c5f6ff; font-size: 0.9rem; }
+        .top-card {
+            margin-top: 12px;
+            background: rgba(0, 242, 255, 0.06);
+            border: 1px solid var(--cyan);
+            border-radius: 12px;
+            padding: 12px;
+        }
+        .top-card .hora {
+            color: var(--cyan);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+        .top-card .quien { font-size: 1.35rem; font-weight: 800; margin-top: 2px; }
+        .top-card .rival { color: var(--muted); font-size: 0.92rem; }
         button {
             background: rgba(0, 242, 255, 0.12);
             border: 1px solid var(--cyan);
@@ -244,6 +285,7 @@
         <p class="sub" id="subtitulo">Cargando cartelera…</p>
         <div class="badge" id="badge">NHL · jornada de Puerto Rico</div>
     </header>
+    <section class="top-picks" id="top-picks" aria-label="Top picks"></section>
     <section class="destacados" id="picks-dia" aria-label="Picks del día"></section>
     <div id="avisos"></div>
     <div class="stats-row" id="metricas"></div>
@@ -281,12 +323,6 @@
             const box = el("div", "stat-box");
             box.append(el("div", "label", label), el("div", "val", val));
             return box;
-        }
-
-        function temporada(t) {
-            const s = String(t || "");
-            if (s.length !== 8) return s || "—";
-            return s.slice(0, 4) + "-" + s.slice(6);
         }
 
         function fechaCorta(iso) {
@@ -453,7 +489,7 @@
             const partes = ["alta", "media", "baja"].map((k) => (cubo && cubo[k]) || {});
             const total = partes.reduce((s, n) => s + (n.total || 0), 0);
             const aciertos = partes.reduce((s, n) => s + (n.aciertos || 0), 0);
-            if (!total) return "sin picks cerrados";
+            if (!total) return cubo && cubo.desde ? "0-0" : "sin picks cerrados";
             return aciertos + "-" + (total - aciertos) + " · " + pct(aciertos / total);
         }
 
@@ -469,7 +505,7 @@
                 const n = cubo[k] || {};
                 const tr = document.createElement("tr");
                 tr.append(el("td", "", k));
-                tr.append(el("td", "num", n.total ? (n.aciertos + "-" + (n.total - n.aciertos) + " (" + pct(n.pct) + ")") : "—"));
+                tr.append(el("td", "num", n.total ? (n.aciertos + "-" + (n.total - n.aciertos) + " (" + pct(n.pct) + ")") : (cubo.desde ? "0-0" : "—")));
                 tr.append(el("td", "", uso[k]));
                 table.append(tr);
             });
@@ -523,6 +559,61 @@
             return card;
         }
 
+        function textoValor(p) {
+            if (p.prob_mercado_local == null || p.probabilidad == null) return "Sin momio de mercado";
+            const local = p.ganador === p.equipo_local;
+            const mercado = local ? Number(p.prob_mercado_local) : 1 - Number(p.prob_mercado_local);
+            const ventaja = Number(p.probabilidad) - mercado;
+            const pp = (ventaja * 100).toFixed(1);
+            return (ventaja >= 0 ? "+" : "") + pp + " pp vs mercado";
+        }
+
+        function subtituloTop(data) {
+            const cfg = data.top_config || {};
+            const umbral = Math.round(Number(cfg.umbral_alta || data.umbral_alta || 0.62) * 100);
+            const porteros = cfg.porteros === "ambos" ? "los dos porteros confirmados" : "portero del equipo confirmado";
+            const margen = cfg.margen_valor;
+            const valor = margen == null
+                ? "sin mínimo de valor sobre el mercado"
+                : "valor ≥ " + Math.round(Number(margen) * 100) + " pp sobre el mercado";
+            return "Alta ≥ " + umbral + "% · " + porteros + " · " + valor;
+        }
+
+        function tarjetaTop(p) {
+            const lados = ladosDelPick(p);
+            const card = el("article", "top-card");
+            card.append(el("div", "hora", (p.hora || "Hora sin confirmar") + " AST"));
+            card.append(el("div", "quien", lados.equipo));
+            card.append(el("div", "rival", "vs " + lados.rival));
+            const nums = el("div", "pick-dia-nums");
+            const prob = el("div");
+            prob.append(el("span", "k", "Probabilidad"), el("b", null, pct(p.probabilidad)));
+            const linea = el("div");
+            linea.append(el("span", "k", "Línea"), el("b", null, p.linea || "sin línea"));
+            nums.append(prob, linea);
+            card.append(nums);
+            card.append(el("div", "ajuste", textoValor(p)));
+            card.append(el("div", "lesion", "Portero: " + textoPortero(lados.porteroEquipo)));
+            card.append(el("div", "lesion", "Portero rival: " + textoPortero(lados.porteroRival)));
+            return card;
+        }
+
+        function pintarTopPicks(data) {
+            const nodo = document.getElementById("top-picks");
+            nodo.replaceChildren();
+            nodo.append(el("h2", null, "Top picks"));
+            nodo.append(el("p", "sub", subtituloTop(data)));
+            const lista = data.top_picks || [];
+            if (!lista.length) {
+                const vacio = el("div", "sin-top");
+                vacio.append(el("strong", null, "Hoy no hay top picks."));
+                vacio.append(el("p", null, "Ningún partido de la jornada del " + fechaCorta(data.fecha) + " cumple los filtros."));
+                nodo.append(vacio);
+                return;
+            }
+            lista.forEach((p) => nodo.append(tarjetaTop(p)));
+        }
+
         function pintarPicksDelDia(data) {
             const nodo = document.getElementById("picks-dia");
             nodo.replaceChildren();
@@ -542,13 +633,15 @@
         }
 
         function pintar(data) {
-            const examen = (data.record && data.record.examen) || {};
+            const record = data.record || {};
             const bt = data.backtest || {};
             const mercado = bt.mercado || {};
+            const desdeTxt = record.desde ? fechaCorta(record.desde) : "";
             document.getElementById("subtitulo").textContent =
-                "Examen " + temporada(examen.temporada || bt.temporada_examen) +
-                " · " + fechaCorta(data.fecha) + " · " + String(data.zona || "").replaceAll("_", " ");
+                (desdeTxt ? "Récord desde " + desdeTxt + " · " : "") +
+                fechaCorta(data.fecha) + " · " + String(data.zona || "").replaceAll("_", " ");
             const umbral = Math.round((data.umbral_alta || 0.62) * 100);
+            pintarTopPicks(data);
             pintarPicksDelDia(data);
             document.getElementById("badge").textContent =
                 "Umbral alta " + umbral + "%" + (data.actualizado ? " · " + String(data.actualizado).slice(0, 16).replace("T", " ") : "");
@@ -573,11 +666,15 @@
 
             const hist = document.getElementById("historial");
             hist.replaceChildren();
-            bloqueRecord(hist, "Temporada de examen " + temporada(examen.temporada), examen);
-            bloqueRecord(hist, "Fuera de muestra", (data.record && data.record.oos) || {});
-            const vivo = (data.record && data.record.vivo) || {};
-            const vivoN = ["alta", "media", "baja"].reduce((s, k) => s + ((vivo[k] && vivo[k].total) || 0), 0);
-            if (vivoN) bloqueRecord(hist, "En vivo", vivo);
+            bloqueRecord(hist, "Récord desde " + (desdeTxt || "el inicio"), record);
+            const top = record.top || {};
+            const topMarca = top.total
+                ? (top.aciertos + "-" + (top.total - top.aciertos) + " · " + pct(top.pct))
+                : "0-0";
+            hist.append(el("p", "nota", "Top picks desde " + (desdeTxt || "el inicio") + ": " + topMarca));
+            hist.append(el("p", "nota", desdeTxt
+                ? "Solo cuentan los picks calificados desde el " + desdeTxt + ". El modelo, el Elo y el backtest no se reinician."
+                : "Todavía no hay fecha de inicio del récord."));
 
             const recientes = (data.picks || []).filter(finalizado);
             if (recientes.length) {

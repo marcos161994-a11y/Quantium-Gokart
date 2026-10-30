@@ -14,6 +14,7 @@ from comun_nhl import iniciar_sentry
 ARCHIVOS = [
     "data/games.csv",
     "data/picks.json",
+    "data/picks_archivo.json",
     "data/modelo.joblib",
     "data/reentrenos.json",
     "data/backtest.json",
@@ -55,11 +56,11 @@ def confirmar_picks() -> bool:
         _git("config", "user.email", "quantium-nhl@users.noreply.github.com")
     if not nombre:
         _git("config", "user.name", "quantium-nhl")
-    ruta = "data/picks.json"
-    if not Path(ruta).exists():
+    rutas = [ruta for ruta in ("data/picks.json", "data/picks_archivo.json") if Path(ruta).exists()]
+    if "data/picks.json" not in rutas:
         print("no hay data/picks.json", flush=True)
         return False
-    _git("add", "--", ruta)
+    _git("add", "--", *rutas)
     diff = _git("diff", "--cached", "--quiet", check=False)
     if diff.returncode == 0:
         print("picks sin cambios", flush=True)
