@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-29T22:02:34.279481-04:00",
+  "actualizado": "2026-10-29T23:44:19.483315-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-10-29",
   "umbral_alta": 0.68,
@@ -499,8 +499,8 @@
         "nombre_visita": "Jets de Winnipeg",
         "ganador": "FLA",
         "nombre_ganador": "Panthers de Florida",
-        "probabilidad": 0.5933,
-        "probabilidad_local": 0.5933,
+        "probabilidad": 0.5908,
+        "probabilidad_local": 0.5908,
         "nivel": "media",
         "linea": "FLA -218",
         "casa": "DraftKings",
@@ -518,10 +518,10 @@
         "portero_visita": {
           "nombre": "Nico Daws",
           "estado": "expected",
-          "sv": 0.8721,
-          "tiros": 86,
-          "gsax": -2.66,
-          "partidos": 4
+          "sv": 0.8842,
+          "tiros": 95,
+          "gsax": -1.78,
+          "partidos": 5
         },
         "estado": "programado",
         "periodo": "",
