@@ -71,6 +71,8 @@ def test_la_portada_destaca_los_picks_de_confianza_alta():
     assert "Hoy no hay picks de confianza alta." in html
     assert "Portero cambiado" in html
     assert "Récord desde" in html
+    assert 'id="top-picks"' in html
+    assert "Top picks" in html
 
 
 def test_panel_publica_el_elo_de_los_partidos_jugados(tmp_path, monkeypatch):
@@ -207,7 +209,7 @@ def test_el_record_empieza_hoy_y_archiva_los_picks_anteriores(tmp_path, monkeypa
     for nombre, contenido in protegidos.items():
         (tmp_path / nombre).write_bytes(contenido)
     huellas = {nombre: _sha(tmp_path / nombre) for nombre in protegidos}
-    hoy = desde
+    hoy = fecha_de_hoy().isoformat()
     pendiente = {
         "id": "hoy-pendiente",
         "fecha": hoy,
@@ -287,3 +289,70 @@ def test_el_record_empieza_hoy_y_archiva_los_picks_anteriores(tmp_path, monkeypa
     assert panel["backtest"]["por_nivel_examen"]["alta"]["aciertos"] == 77
     assert panel["backtest"]["n"] == 5779
     assert {nombre: _sha(tmp_path / nombre) for nombre in protegidos} == huellas
+
+
+def test_el_panel_publica_top_picks_y_su_record_desde_el_inicio(tmp_path, monkeypatch):
+    monkeypatch.setenv("QUANTIUM_DATOS", str(tmp_path))
+    monkeypatch.setenv("DATA_DIR", str(tmp_path / "cache"))
+    hoy = fecha_de_hoy().isoformat()
+    guardar_json(tmp_path / "record.json", {"desde": "2026-10-27"})
+    guardar_json(
+        tmp_path / "top_picks.json",
+        {"margen_valor": None, "umbral_alta": 0.68, "porteros": "elegido"},
+    )
+    top_hoy = {
+        "id": "top-hoy",
+        "fecha": hoy,
+        "ganador": "FLA",
+        "equipo_local": "FLA",
+        "equipo_visita": "WPG",
+        "probabilidad": 0.70,
+        "prob_mercado_local": 0.66,
+        "nivel": "alta",
+        "acierto": 1,
+        "estado": "final",
+        "portero_local": {"nombre": "Akira Schmid", "estado": "confirmed"},
+        "portero_visita": {"nombre": "Nico Daws", "estado": "expected"},
+    }
+    alta_sin_portero = {
+        "id": "sin-portero",
+        "fecha": hoy,
+        "ganador": "BOS",
+        "equipo_local": "BOS",
+        "equipo_visita": "CHI",
+        "probabilidad": 0.72,
+        "prob_mercado_local": 0.60,
+        "nivel": "alta",
+        "acierto": None,
+        "portero_local": {"nombre": "Jeremy Swayman", "estado": "expected"},
+    }
+    viejo = {
+        "id": "top-viejo",
+        "fecha": "2026-10-26",
+        "ganador": "NYR",
+        "equipo_local": "NYR",
+        "equipo_visita": "LAK",
+        "probabilidad": 0.80,
+        "prob_mercado_local": 0.55,
+        "nivel": "alta",
+        "acierto": 1,
+        "portero_local": {"nombre": "Igor Shesterkin", "estado": "confirmed"},
+    }
+    guardar_json(
+        tmp_path / "picks.json",
+        {
+            "fecha": hoy,
+            "umbral_alta": 0.68,
+            "vivo": [viejo],
+            "por_fecha": {hoy: [top_hoy, alta_sin_portero]},
+        },
+    )
+    panel = TestClient(app).get("/api/panel").json()
+    assert [pick["id"] for pick in panel["top_picks"]] == ["top-hoy"]
+    assert panel["top_config"]["margen_valor"] is None
+    assert panel["top_config"]["umbral_alta"] == 0.68
+    assert panel["top_config"]["porteros"] == "elegido"
+    assert panel["record"]["top"]["desde"] == "2026-10-27"
+    assert panel["record"]["top"]["aciertos"] == 1
+    assert panel["record"]["top"]["total"] == 1
+    assert panel["record"]["alta"]["total"] == 1

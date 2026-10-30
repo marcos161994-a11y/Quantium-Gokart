@@ -386,3 +386,42 @@ def test_generar_picks_congela_el_empezado_y_marca_el_cambio(tmp_path, monkeypat
     assert por_id["1002"]["probabilidad"] == 0.7
     assert por_id["1002"]["portero_local"]["nombre"] == "Jonathan Quick"
     assert por_id["1002"]["portero_local_anterior"] == "Igor Shesterkin"
+
+
+def test_top_pick_pide_alta_y_portero_y_el_margen_de_valor_es_configurable():
+    from picks_nhl import es_top_pick, ventaja_sobre_mercado
+
+    florida = {
+        "ganador": "FLA",
+        "equipo_local": "FLA",
+        "equipo_visita": "WPG",
+        "probabilidad": 0.6831,
+        "prob_mercado_local": 0.6636,
+        "portero_local": {"nombre": "Akira Schmid", "estado": "confirmed"},
+        "portero_visita": {"nombre": "Nico Daws", "estado": "expected"},
+    }
+    base = {"margen_valor": None, "umbral_alta": 0.68, "porteros": "elegido"}
+    assert es_top_pick(florida, base, 0.68)
+    assert round(ventaja_sobre_mercado(florida), 4) == round(0.6831 - 0.6636, 4)
+    assert not es_top_pick(florida, {**base, "margen_valor": 0.03}, 0.68)
+    assert not es_top_pick(florida, {**base, "margen_valor": 0.05}, 0.68)
+    sin_confirmar = {
+        **florida,
+        "portero_local": {"nombre": "Akira Schmid", "estado": "expected"},
+    }
+    assert not es_top_pick(sin_confirmar, base, 0.68)
+    assert not es_top_pick(florida, {**base, "porteros": "ambos"}, 0.68)
+    assert not es_top_pick({**florida, "probabilidad": 0.55}, base, 0.68)
+
+    visita = {
+        "ganador": "WPG",
+        "equipo_local": "FLA",
+        "equipo_visita": "WPG",
+        "probabilidad": 0.70,
+        "prob_mercado_local": 0.40,
+        "portero_visita": {"nombre": "Nico Daws", "estado": "confirmed"},
+        "portero_local": {"nombre": "Akira Schmid", "estado": "expected"},
+    }
+    assert round(ventaja_sobre_mercado(visita), 4) == 0.10
+    assert es_top_pick(visita, {**base, "margen_valor": 0.03}, 0.68)
+    assert not es_top_pick(visita, {**base, "margen_valor": 0.03, "porteros": "ambos"}, 0.68)

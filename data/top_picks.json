@@ -1,0 +1,6 @@
+{
+  "margen_valor": null,
+  "umbral_alta": null,
+  "porteros": "elegido",
+  "nota": "Top picks exige confianza alta (el umbral del modelo, hoy 68%) y el portero del equipo elegido confirmado. Si porteros es ambos, el rival también tiene que estarlo cuando ya hay nombre. margen_valor null no exige ventaja sobre el mercado sin vig: en el walk-forward con cuotas, alta sola acertó 68.8% con ROI +7.33% (1186), y alta más valor >= 3 pp bajó a 64.3% y ROI +5.00% (672). Los porteros confirmados no están en el histórico, así que ese filtro no se pudo validar."
+}

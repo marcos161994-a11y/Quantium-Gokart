@@ -113,11 +113,13 @@ def health() -> dict:
     return {"ok": True, "servicio": "quantium-nhl"}
 
 
-def _record_del_panel(documento: dict) -> dict:
-    """Récord visible: solo picks calificados desde data/record.json."""
-    from picks_nhl import record_desde
+def _record_del_panel(documento: dict, umbral: float) -> dict:
+    """Récord visible: solo picks calificados desde data/record.json, más el de Top picks."""
+    from picks_nhl import record_de_top, record_desde
 
-    return record_desde(documento)
+    record = record_desde(documento)
+    record["top"] = record_de_top(documento, umbral)
+    return record
 
 
 @app.get("/api/panel")
@@ -132,17 +134,29 @@ def panel() -> dict:
         por_fecha = {documento.get("fecha") or fecha: documento.get("picks")}
     proxima = (hoy + timedelta(days=1)).isoformat()
     back = _compactar_backtest(leer_json(directorio_datos() / "backtest.json", {}))
+    from picks_nhl import config_top, seleccionar_top
+
+    umbral = float(documento.get("umbral_alta") or back.get("umbral_alta") or 0.62)
+    cfg = config_top()
+    umbral_top = umbral if cfg.get("umbral_alta") is None else float(cfg["umbral_alta"])
+    picks = por_fecha.get(fecha) or []
     return {
         "servicio": "quantium-nhl",
         "fecha": fecha,
         "zona": "America/Puerto_Rico",
         "en_madrugada": madrugada,
-        "umbral_alta": documento.get("umbral_alta") or back.get("umbral_alta") or 0.62,
+        "umbral_alta": umbral,
         "g0": documento.get("g0", back.get("g0")),
-        "picks": por_fecha.get(fecha) or [],
+        "picks": picks,
+        "top_picks": seleccionar_top(picks, cfg, umbral_top),
+        "top_config": {
+            "margen_valor": cfg.get("margen_valor"),
+            "umbral_alta": umbral_top,
+            "porteros": cfg.get("porteros"),
+        },
         "proxima_fecha": proxima if madrugada else None,
         "proxima": por_fecha.get(proxima) if madrugada else None,
-        "record": _record_del_panel(documento),
+        "record": _record_del_panel(documento, umbral_top),
         "backtest": back,
         "actualizado": documento.get("actualizado"),
         "ranking": _ranking_elo(),

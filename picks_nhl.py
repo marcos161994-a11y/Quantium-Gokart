@@ -100,6 +100,120 @@ def record_desde(documento: dict, desde: str | None = None) -> dict:
     return cubo
 
 
+def config_top() -> dict:
+    """Umbrales de Top picks. `margen_valor` null no exige ventaja sobre el mercado."""
+    doc = leer_json(directorio_datos() / "top_picks.json", {})
+    margen = doc.get("margen_valor", None)
+    if margen is None or margen == "":
+        margen_f = None
+    else:
+        margen_f = float(margen)
+    umbral = doc.get("umbral_alta", None)
+    umbral_f = None if umbral is None or umbral == "" else float(umbral)
+    porteros = str(doc.get("porteros") or "elegido")
+    if porteros not in {"elegido", "ambos"}:
+        porteros = "elegido"
+    return {"margen_valor": margen_f, "umbral_alta": umbral_f, "porteros": porteros}
+
+
+def _numero_pick(valor) -> float | None:
+    if valor is None or valor == "":
+        return None
+    try:
+        numero = float(valor)
+    except (TypeError, ValueError):
+        return None
+    if numero != numero:
+        return None
+    return numero
+
+
+def ventaja_sobre_mercado(pick: dict) -> float | None:
+    """Probabilidad del equipo elegido menos la del mercado sin vig, en ese mismo lado."""
+    modelo = _numero_pick(pick.get("probabilidad"))
+    mercado_local = _numero_pick(pick.get("prob_mercado_local"))
+    if modelo is None or mercado_local is None:
+        return None
+    if pick.get("ganador") == pick.get("equipo_local"):
+        return modelo - mercado_local
+    if pick.get("ganador") == pick.get("equipo_visita"):
+        return modelo - (1.0 - mercado_local)
+    return None
+
+
+def _portero_de_lado(pick: dict, del_elegido: bool) -> dict | None:
+    local = pick.get("ganador") == pick.get("equipo_local")
+    visita = pick.get("ganador") == pick.get("equipo_visita")
+    if not local and not visita:
+        return None
+    if del_elegido:
+        ficha = pick.get("portero_local") if local else pick.get("portero_visita")
+    else:
+        ficha = pick.get("portero_visita") if local else pick.get("portero_local")
+    return ficha if isinstance(ficha, dict) else None
+
+
+def _portero_confirmado(ficha: dict | None) -> bool:
+    if not ficha or not str(ficha.get("nombre") or "").strip():
+        return False
+    return str(ficha.get("estado") or "").strip().lower() == "confirmed"
+
+
+def porteros_de_top(pick: dict, modo: str) -> bool:
+    """El titular del equipo elegido tiene que estar confirmado.
+
+    Con modo 'ambos', el rival también, si ya hay un nombre para él.
+    """
+    if not _portero_confirmado(_portero_de_lado(pick, True)):
+        return False
+    if modo != "ambos":
+        return True
+    rival = _portero_de_lado(pick, False)
+    if not rival or not str(rival.get("nombre") or "").strip():
+        return True
+    return _portero_confirmado(rival)
+
+
+def es_top_pick(pick: dict, cfg: dict | None = None, umbral_modelo: float = 0.68) -> bool:
+    """Alta confianza y, si el config lo pide, ventaja sobre el mercado. Portero confirmado."""
+    cfg = config_top() if cfg is None else cfg
+    umbral = umbral_modelo if cfg.get("umbral_alta") is None else float(cfg["umbral_alta"])
+    probabilidad = _numero_pick(pick.get("probabilidad"))
+    if probabilidad is None or probabilidad + 1e-12 < umbral:
+        return False
+    margen = cfg.get("margen_valor")
+    if margen is not None:
+        ventaja = ventaja_sobre_mercado(pick)
+        if ventaja is None or ventaja + 1e-12 < float(margen):
+            return False
+    return porteros_de_top(pick, str(cfg.get("porteros") or "elegido"))
+
+
+def seleccionar_top(picks: list[dict], cfg: dict | None = None, umbral_modelo: float = 0.68) -> list[dict]:
+    cfg = config_top() if cfg is None else cfg
+    return [pick for pick in picks if es_top_pick(pick, cfg, umbral_modelo)]
+
+
+def record_de_top(documento: dict, umbral_modelo: float = 0.68, desde: str | None = None) -> dict:
+    """Récord aparte: solo Top picks calificados desde el inicio del récord."""
+    if desde is None:
+        desde = inicio_del_record()
+    cfg = config_top()
+    cerrados = [
+        pick
+        for pick in picks_del_record(documento, desde)
+        if pick.get("acierto") is not None and es_top_pick(pick, cfg, umbral_modelo)
+    ]
+    aciertos = sum(int(bool(pick["acierto"])) for pick in cerrados)
+    total = len(cerrados)
+    return {
+        "desde": desde,
+        "aciertos": aciertos,
+        "total": total,
+        "pct": round(aciertos / total, 4) if total else None,
+    }
+
+
 def archivar_picks(documento: dict, desde: str | None = None) -> tuple[dict, int]:
     """Pasa a data/picks_archivo.json los picks anteriores al inicio del récord.
 
