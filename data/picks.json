@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-30T13:00:22.246088-04:00",
+  "actualizado": "2026-10-30T13:18:34.270370-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-10-30",
   "umbral_alta": 0.68,
@@ -136,8 +136,8 @@
         "nombre_visita": "Blackhawks de Chicago",
         "ganador": "BOS",
         "nombre_ganador": "Bruins de Boston",
-        "probabilidad": 0.7044,
-        "probabilidad_local": 0.7044,
+        "probabilidad": 0.7119,
+        "probabilidad_local": 0.7119,
         "nivel": "alta",
         "linea": "BOS -218",
         "casa": "Draft Kings",
@@ -153,16 +153,20 @@
           "partidos": 11
         },
         "portero_visita": {
-          "nombre": "Spencer Knight",
+          "nombre": "Arvid Soderblom",
           "estado": "expected",
-          "sv": 0.8971,
-          "tiros": 340,
-          "gsax": -2.02,
-          "partidos": 11
+          "sv": 0.82,
+          "tiros": 50,
+          "gsax": -4.15,
+          "partidos": 2
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.7044,
+        "portero_local_anterior": "Jeremy Swayman",
+        "portero_visita_anterior": "Spencer Knight"
       },
       {
         "id": "2026020218",
@@ -175,8 +179,8 @@
         "nombre_visita": "Blues de San Luis",
         "ganador": "STL",
         "nombre_ganador": "Blues de San Luis",
-        "probabilidad": 0.5288,
-        "probabilidad_local": 0.4712,
+        "probabilidad": 0.5286,
+        "probabilidad_local": 0.4714,
         "nivel": "baja",
         "linea": "STL -112",
         "casa": "Draft Kings",
@@ -194,9 +198,9 @@
         "portero_visita": {
           "nombre": "Joel Hofer",
           "estado": "expected",
-          "sv": 0.9231,
-          "tiros": 260,
-          "gsax": 5.22,
+          "sv": 0.9228,
+          "tiros": 259,
+          "gsax": 5.12,
           "partidos": 9
         },
         "estado": "programado",
@@ -370,8 +374,8 @@
         "nombre_visita": "Penguins de Pittsburgh",
         "ganador": "MTL",
         "nombre_ganador": "Canadiens de Montreal",
-        "probabilidad": 0.5959,
-        "probabilidad_local": 0.5959,
+        "probabilidad": 0.5957,
+        "probabilidad_local": 0.5957,
         "nivel": "media",
         "linea": "MTL -155",
         "casa": "Draft Kings",
@@ -389,9 +393,9 @@
         "portero_visita": {
           "nombre": "Arturs Silovs",
           "estado": "expected",
-          "sv": 0.8889,
-          "tiros": 243,
-          "gsax": -3.43,
+          "sv": 0.8893,
+          "tiros": 244,
+          "gsax": -3.33,
           "partidos": 9
         },
         "estado": "programado",
@@ -487,9 +491,9 @@
         "nombre_visita": "Flames de Calgary",
         "ganador": "COL",
         "nombre_ganador": "Avalanche de Colorado",
-        "probabilidad": 0.6602,
-        "probabilidad_local": 0.6602,
-        "nivel": "media",
+        "probabilidad": 0.6919,
+        "probabilidad_local": 0.6919,
+        "nivel": "alta",
         "linea": "COL -395",
         "casa": "Draft Kings",
         "cuota_local": -395,
@@ -504,16 +508,20 @@
           "partidos": 9
         },
         "portero_visita": {
-          "nombre": "Devin Cooley",
+          "nombre": "Arsenii Sergeev",
           "estado": "expected",
-          "sv": 0.9137,
-          "tiros": 197,
-          "gsax": 2.11,
-          "partidos": 7
+          "sv": null,
+          "tiros": null,
+          "gsax": null,
+          "partidos": null
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.6602,
+        "portero_local_anterior": "Mackenzie Blackwood",
+        "portero_visita_anterior": "Devin Cooley"
       }
     ]
   },
