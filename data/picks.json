@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-30T13:18:34.270370-04:00",
+  "actualizado": "2026-10-30T17:37:32.540664-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-10-30",
   "umbral_alta": 0.68,
@@ -35,7 +35,7 @@
         },
         "portero_visita": {
           "nombre": "Connor Hellebuyck",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9444,
           "tiros": 18,
           "gsax": 0.75,
@@ -257,8 +257,8 @@
         "nombre_visita": "Oilers de Edmonton",
         "ganador": "EDM",
         "nombre_ganador": "Oilers de Edmonton",
-        "probabilidad": 0.5423,
-        "probabilidad_local": 0.4577,
+        "probabilidad": 0.5421,
+        "probabilidad_local": 0.4579,
         "nivel": "baja",
         "linea": "EDM -135",
         "casa": "Draft Kings",
@@ -268,14 +268,14 @@
         "portero_local": {
           "nombre": "Ilya Sorokin",
           "estado": "expected",
-          "sv": 0.9146,
-          "tiros": 246,
-          "gsax": 2.86,
+          "sv": 0.915,
+          "tiros": 247,
+          "gsax": 2.96,
           "partidos": 9
         },
         "portero_visita": {
           "nombre": "Tristan Jarry",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8889,
           "tiros": 153,
           "gsax": -2.16,
@@ -413,8 +413,8 @@
         "nombre_visita": "Maple Leafs de Toronto",
         "ganador": "TOR",
         "nombre_ganador": "Maple Leafs de Toronto",
-        "probabilidad": 0.6119,
-        "probabilidad_local": 0.3881,
+        "probabilidad": 0.6224,
+        "probabilidad_local": 0.3776,
         "nivel": "media",
         "linea": "TOR -162",
         "casa": "Draft Kings",
@@ -430,16 +430,20 @@
           "partidos": 8
         },
         "portero_visita": {
-          "nombre": "Sergei Bobrovsky",
-          "estado": "expected",
-          "sv": 0.8854,
-          "tiros": 288,
-          "gsax": -5.06,
-          "partidos": 10
+          "nombre": "Anthony Stolarz",
+          "estado": "confirmed",
+          "sv": 0.9067,
+          "tiros": 150,
+          "gsax": 0.55,
+          "partidos": 5
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.6119,
+        "portero_local_anterior": "Kevin Lankinen",
+        "portero_visita_anterior": "Sergei Bobrovsky"
       },
       {
         "id": "2026020225",
@@ -555,7 +559,7 @@
       },
       "portero_visita": {
         "nombre": "Connor Hellebuyck",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9444,
         "tiros": 18,
         "gsax": 0.75,
