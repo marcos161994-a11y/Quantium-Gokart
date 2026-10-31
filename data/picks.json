@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-31T12:23:46.012715-04:00",
+  "actualizado": "2026-10-31T16:08:12.415370-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-10-31",
   "umbral_alta": 0.68,
@@ -255,8 +255,8 @@
         "nombre_visita": "Penguins de Pittsburgh",
         "ganador": "MTL",
         "nombre_ganador": "Canadiens de Montreal",
-        "probabilidad": 0.5957,
-        "probabilidad_local": 0.5957,
+        "probabilidad": 0.5979,
+        "probabilidad_local": 0.5979,
         "nivel": "media",
         "linea": "MTL -125",
         "casa": "Draft Kings",
@@ -272,16 +272,20 @@
           "partidos": 7
         },
         "portero_visita": {
-          "nombre": "Arturs Silovs",
-          "estado": "expected",
-          "sv": 0.8893,
-          "tiros": 244,
-          "gsax": -3.33,
-          "partidos": 9
+          "nombre": "Sergei Murashov",
+          "estado": "confirmed",
+          "sv": 0.8833,
+          "tiros": 120,
+          "gsax": -2.36,
+          "partidos": 4
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5957,
+        "portero_local_anterior": "Jacob Fowler",
+        "portero_visita_anterior": "Arturs Silovs"
       },
       {
         "id": "2026020224",
@@ -386,7 +390,7 @@
         "prob_mercado_local": 0.7768,
         "portero_local": {
           "nombre": "Mackenzie Blackwood",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8941,
           "tiros": 236,
           "gsax": -2.11,
@@ -394,7 +398,7 @@
         },
         "portero_visita": {
           "nombre": "Arsenii Sergeev",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": null,
           "tiros": null,
           "gsax": null,
@@ -478,7 +482,7 @@
         },
         "portero_visita": {
           "nombre": "Jesper Wallstedt",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9164,
           "tiros": 335,
           "gsax": 4.5,
@@ -577,8 +581,8 @@
         "nombre_visita": "Senators de Ottawa",
         "ganador": "OTT",
         "nombre_ganador": "Senators de Ottawa",
-        "probabilidad": 0.5735,
-        "probabilidad_local": 0.4265,
+        "probabilidad": 0.5697,
+        "probabilidad_local": 0.4303,
         "nivel": "media",
         "linea": "ANA -112",
         "casa": "Draft Kings",
@@ -586,12 +590,11 @@
         "cuota_visita": -108,
         "prob_mercado_local": 0.5043,
         "portero_local": {
-          "nombre": "Lukas Dostal",
-          "estado": "expected",
-          "sv": 0.8719,
-          "tiros": 242,
-          "gsax": -7.53,
-          "partidos": 9
+          "nombre": "Laurent Brossoit",
+          "estado": "confirmed",
+          "sv": null,
+          "tiros": null,
+          "gsax": null
         },
         "portero_visita": {
           "nombre": "Jonas Johansson",
@@ -603,7 +606,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5735,
+        "portero_local_anterior": "Lukas Dostal",
+        "portero_visita_anterior": "Jonas Johansson"
       }
     ]
   },
@@ -857,8 +864,8 @@
       "nombre_visita": "Penguins de Pittsburgh",
       "ganador": "MTL",
       "nombre_ganador": "Canadiens de Montreal",
-      "probabilidad": 0.5957,
-      "probabilidad_local": 0.5957,
+      "probabilidad": 0.5979,
+      "probabilidad_local": 0.5979,
       "nivel": "media",
       "linea": "MTL -125",
       "casa": "Draft Kings",
@@ -874,16 +881,20 @@
         "partidos": 7
       },
       "portero_visita": {
-        "nombre": "Arturs Silovs",
-        "estado": "expected",
-        "sv": 0.8893,
-        "tiros": 244,
-        "gsax": -3.33,
-        "partidos": 9
+        "nombre": "Sergei Murashov",
+        "estado": "confirmed",
+        "sv": 0.8833,
+        "tiros": 120,
+        "gsax": -2.36,
+        "partidos": 4
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.5957,
+      "portero_local_anterior": "Jacob Fowler",
+      "portero_visita_anterior": "Arturs Silovs"
     },
     {
       "id": "2026020224",
@@ -988,7 +999,7 @@
       "prob_mercado_local": 0.7768,
       "portero_local": {
         "nombre": "Mackenzie Blackwood",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8941,
         "tiros": 236,
         "gsax": -2.11,
@@ -996,7 +1007,7 @@
       },
       "portero_visita": {
         "nombre": "Arsenii Sergeev",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": null,
         "tiros": null,
         "gsax": null,
