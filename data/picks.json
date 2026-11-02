@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-01T17:17:52.605993-04:00",
+  "actualizado": "2026-11-01T20:55:30.622187-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-01",
   "umbral_alta": 0.68,
@@ -190,7 +190,7 @@
         },
         "portero_visita": {
           "nombre": "Jonas Johansson",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8611,
           "tiros": 72,
           "gsax": -3.02,
@@ -549,7 +549,7 @@
       },
       "portero_visita": {
         "nombre": "Jonas Johansson",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8611,
         "tiros": 72,
         "gsax": -3.02,
