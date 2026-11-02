@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-02T16:44:52.229994-04:00",
+  "actualizado": "2026-11-02T16:55:27.554715-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-02",
   "umbral_alta": 0.68,
@@ -300,8 +300,8 @@
         "nombre_visita": "Blues de San Luis",
         "ganador": "STL",
         "nombre_ganador": "Blues de San Luis",
-        "probabilidad": 0.5436,
-        "probabilidad_local": 0.4564,
+        "probabilidad": 0.5438,
+        "probabilidad_local": 0.4562,
         "nivel": "baja",
         "linea": "NYR -125",
         "casa": "DraftKings",
@@ -311,9 +311,9 @@
         "portero_local": {
           "nombre": "Dylan Garand",
           "estado": "expected",
-          "sv": 0.8968,
-          "tiros": 252,
-          "gsax": -1.56,
+          "sv": 0.8964,
+          "tiros": 251,
+          "gsax": -1.65,
           "partidos": 11
         },
         "portero_visita": {
