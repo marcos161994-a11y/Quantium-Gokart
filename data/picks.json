@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-02T16:55:27.554715-04:00",
+  "actualizado": "2026-11-02T22:42:25.851474-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-02",
   "umbral_alta": 0.68,
@@ -478,7 +478,7 @@
         },
         "portero_visita": {
           "nombre": "Scott Wedgewood",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8889,
           "tiros": 126,
           "gsax": -1.78,
