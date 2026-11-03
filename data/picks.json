@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-03T14:24:52.675240-04:00",
+  "actualizado": "2026-11-03T14:43:06.652846-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-03",
   "umbral_alta": 0.68,
@@ -427,8 +427,8 @@
         "nombre_visita": "Ducks de Anaheim",
         "ganador": "ANA",
         "nombre_ganador": "Ducks de Anaheim",
-        "probabilidad": 0.561,
-        "probabilidad_local": 0.439,
+        "probabilidad": 0.5968,
+        "probabilidad_local": 0.4032,
         "nivel": "media",
         "linea": "ANA -155",
         "casa": "DraftKings",
@@ -436,12 +436,12 @@
         "cuota_visita": -155,
         "prob_mercado_local": 0.417,
         "portero_local": {
-          "nombre": "Leevi Merilainen",
-          "estado": "expected",
-          "sv": 0.8974,
-          "tiros": 312,
-          "gsax": -1.74,
-          "partidos": 11
+          "nombre": "Kevin Lankinen",
+          "estado": "confirmed",
+          "sv": 0.8122,
+          "tiros": 197,
+          "gsax": -17.89,
+          "partidos": 8
         },
         "portero_visita": {
           "nombre": "Lukas Dostal",
@@ -453,7 +453,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.561,
+        "portero_local_anterior": "Leevi Merilainen",
+        "portero_visita_anterior": "Lukas Dostal"
       }
     ],
     "2026-11-04": [
@@ -468,8 +472,8 @@
         "nombre_visita": "Senators de Ottawa",
         "ganador": "BUF",
         "nombre_ganador": "Sabres de Buffalo",
-        "probabilidad": 0.5327,
-        "probabilidad_local": 0.5327,
+        "probabilidad": 0.5411,
+        "probabilidad_local": 0.5411,
         "nivel": "baja",
         "linea": "BUF -135",
         "casa": "DraftKings",
@@ -477,12 +481,12 @@
         "cuota_visita": 114,
         "prob_mercado_local": 0.5514,
         "portero_local": {
-          "nombre": "Ukko-Pekka Luukkonen",
+          "nombre": "Colten Ellis",
           "estado": "expected",
-          "sv": 0.8736,
-          "tiros": 261,
-          "gsax": -7.68,
-          "partidos": 10
+          "sv": 0.8803,
+          "tiros": 117,
+          "gsax": -2.65,
+          "partidos": 5
         },
         "portero_visita": {
           "nombre": "Samuel Ersson",
@@ -494,7 +498,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5327,
+        "portero_local_anterior": "Ukko-Pekka Luukkonen",
+        "portero_visita_anterior": "Samuel Ersson"
       },
       {
         "id": "2026020248",
@@ -1037,8 +1045,8 @@
       "nombre_visita": "Ducks de Anaheim",
       "ganador": "ANA",
       "nombre_ganador": "Ducks de Anaheim",
-      "probabilidad": 0.561,
-      "probabilidad_local": 0.439,
+      "probabilidad": 0.5968,
+      "probabilidad_local": 0.4032,
       "nivel": "media",
       "linea": "ANA -155",
       "casa": "DraftKings",
@@ -1046,12 +1054,12 @@
       "cuota_visita": -155,
       "prob_mercado_local": 0.417,
       "portero_local": {
-        "nombre": "Leevi Merilainen",
-        "estado": "expected",
-        "sv": 0.8974,
-        "tiros": 312,
-        "gsax": -1.74,
-        "partidos": 11
+        "nombre": "Kevin Lankinen",
+        "estado": "confirmed",
+        "sv": 0.8122,
+        "tiros": 197,
+        "gsax": -17.89,
+        "partidos": 8
       },
       "portero_visita": {
         "nombre": "Lukas Dostal",
@@ -1063,7 +1071,11 @@
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.561,
+      "portero_local_anterior": "Leevi Merilainen",
+      "portero_visita_anterior": "Lukas Dostal"
     }
   ],
   "vivo": [
