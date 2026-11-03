@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-03T14:43:06.652846-04:00",
+  "actualizado": "2026-11-03T19:45:20.923113-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-03",
   "umbral_alta": 0.68,
@@ -427,8 +427,8 @@
         "nombre_visita": "Ducks de Anaheim",
         "ganador": "ANA",
         "nombre_ganador": "Ducks de Anaheim",
-        "probabilidad": 0.5968,
-        "probabilidad_local": 0.4032,
+        "probabilidad": 0.6182,
+        "probabilidad_local": 0.3818,
         "nivel": "media",
         "linea": "ANA -155",
         "casa": "DraftKings",
@@ -444,12 +444,12 @@
           "partidos": 8
         },
         "portero_visita": {
-          "nombre": "Lukas Dostal",
-          "estado": "expected",
-          "sv": 0.8719,
-          "tiros": 242,
-          "gsax": -7.53,
-          "partidos": 9
+          "nombre": "Laurent Brossoit",
+          "estado": "confirmed",
+          "sv": 0.8696,
+          "tiros": 23,
+          "gsax": -0.77,
+          "partidos": 1
         },
         "estado": "programado",
         "periodo": "",
@@ -1045,8 +1045,8 @@
       "nombre_visita": "Ducks de Anaheim",
       "ganador": "ANA",
       "nombre_ganador": "Ducks de Anaheim",
-      "probabilidad": 0.5968,
-      "probabilidad_local": 0.4032,
+      "probabilidad": 0.6182,
+      "probabilidad_local": 0.3818,
       "nivel": "media",
       "linea": "ANA -155",
       "casa": "DraftKings",
@@ -1062,12 +1062,12 @@
         "partidos": 8
       },
       "portero_visita": {
-        "nombre": "Lukas Dostal",
-        "estado": "expected",
-        "sv": 0.8719,
-        "tiros": 242,
-        "gsax": -7.53,
-        "partidos": 9
+        "nombre": "Laurent Brossoit",
+        "estado": "confirmed",
+        "sv": 0.8696,
+        "tiros": 23,
+        "gsax": -0.77,
+        "partidos": 1
       },
       "estado": "programado",
       "periodo": "",
