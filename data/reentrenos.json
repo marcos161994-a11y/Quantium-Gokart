@@ -98,6 +98,17 @@
       "umbral_alta": 0.68,
       "log_loss_backtest": 0.672969,
       "n_backtest": 5823
+    },
+    {
+      "fecha": "2026-11-03T18:24:52Z",
+      "promovido": false,
+      "log_loss_nuevo": 0.659883,
+      "log_loss_anterior": 0.658919,
+      "n_examen": 400,
+      "g0": null,
+      "umbral_alta": 0.68,
+      "log_loss_backtest": 0.672953,
+      "n_backtest": 5827
     }
   ]
 }
