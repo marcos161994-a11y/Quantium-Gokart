@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T14:37:10.107277-04:00",
+  "actualizado": "2026-11-04T14:56:02.145828-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-04",
   "umbral_alta": 0.68,
@@ -138,8 +138,8 @@
         "nombre_visita": "Flames de Calgary",
         "ganador": "SEA",
         "nombre_ganador": "Kraken de Seattle",
-        "probabilidad": 0.5698,
-        "probabilidad_local": 0.5698,
+        "probabilidad": 0.5676,
+        "probabilidad_local": 0.5676,
         "nivel": "media",
         "linea": "SEA -135",
         "casa": "Draft Kings",
@@ -147,12 +147,12 @@
         "cuota_visita": 114,
         "prob_mercado_local": 0.5514,
         "portero_local": {
-          "nombre": "Philipp Grubauer",
-          "estado": "expected",
-          "sv": 0.8865,
-          "tiros": 229,
-          "gsax": -3.79,
-          "partidos": 9
+          "nombre": "Joey Daccord",
+          "estado": "confirmed",
+          "sv": 0.88,
+          "tiros": 200,
+          "gsax": -4.6,
+          "partidos": 7
         },
         "portero_visita": {
           "nombre": "Dustin Wolf",
@@ -164,7 +164,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5698,
+        "portero_local_anterior": "Philipp Grubauer",
+        "portero_visita_anterior": "Dustin Wolf"
       }
     ],
     "2026-11-05": [
@@ -732,8 +736,8 @@
       "nombre_visita": "Flames de Calgary",
       "ganador": "SEA",
       "nombre_ganador": "Kraken de Seattle",
-      "probabilidad": 0.5698,
-      "probabilidad_local": 0.5698,
+      "probabilidad": 0.5676,
+      "probabilidad_local": 0.5676,
       "nivel": "media",
       "linea": "SEA -135",
       "casa": "Draft Kings",
@@ -741,12 +745,12 @@
       "cuota_visita": 114,
       "prob_mercado_local": 0.5514,
       "portero_local": {
-        "nombre": "Philipp Grubauer",
-        "estado": "expected",
-        "sv": 0.8865,
-        "tiros": 229,
-        "gsax": -3.79,
-        "partidos": 9
+        "nombre": "Joey Daccord",
+        "estado": "confirmed",
+        "sv": 0.88,
+        "tiros": 200,
+        "gsax": -4.6,
+        "partidos": 7
       },
       "portero_visita": {
         "nombre": "Dustin Wolf",
@@ -758,7 +762,11 @@
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.5698,
+      "portero_local_anterior": "Philipp Grubauer",
+      "portero_visita_anterior": "Dustin Wolf"
     }
   ],
   "vivo": [
