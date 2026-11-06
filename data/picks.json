@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-05T20:27:12.810656-04:00",
+  "actualizado": "2026-11-06T00:26:07.841710-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-05",
   "umbral_alta": 0.68,
@@ -476,8 +476,8 @@
         "nombre_visita": "Blue Jackets de Columbus",
         "ganador": "BUF",
         "nombre_ganador": "Sabres de Buffalo",
-        "probabilidad": 0.5818,
-        "probabilidad_local": 0.5818,
+        "probabilidad": 0.578,
+        "probabilidad_local": 0.578,
         "nivel": "media",
         "linea": "BUF -175",
         "casa": "DraftKings",
@@ -495,10 +495,10 @@
         "portero_visita": {
           "nombre": "Cam Talbot",
           "estado": "expected",
-          "sv": 0.9006,
-          "tiros": 171,
-          "gsax": -0.41,
-          "partidos": 7
+          "sv": 0.9095,
+          "tiros": 199,
+          "gsax": 1.3,
+          "partidos": 8
         },
         "estado": "programado",
         "periodo": "",
