@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-06T13:55:54.909405-04:00",
+  "actualizado": "2026-11-06T14:35:22.236126-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-06",
   "umbral_alta": 0.68,
@@ -456,8 +456,8 @@
         "nombre_visita": "Lightning de Tampa Bay",
         "ganador": "MIN",
         "nombre_ganador": "Wild de Minnesota",
-        "probabilidad": 0.5664,
-        "probabilidad_local": 0.5664,
+        "probabilidad": 0.5662,
+        "probabilidad_local": 0.5662,
         "nivel": "media",
         "linea": "TBL -130",
         "casa": "Draft Kings",
@@ -475,9 +475,9 @@
         "portero_visita": {
           "nombre": "Andrei Vasilevskiy",
           "estado": "expected",
-          "sv": 0.8862,
-          "tiros": 290,
-          "gsax": -4.87,
+          "sv": 0.8866,
+          "tiros": 291,
+          "gsax": -4.77,
           "partidos": 12
         },
         "estado": "programado",
