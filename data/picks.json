@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-07T13:02:40.953392-04:00",
+  "actualizado": "2026-11-07T16:59:40.734119-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-07",
   "umbral_alta": 0.68,
@@ -99,8 +99,8 @@
         "nombre_visita": "Rangers de Nueva York",
         "ganador": "SEA",
         "nombre_ganador": "Kraken de Seattle",
-        "probabilidad": 0.5088,
-        "probabilidad_local": 0.5088,
+        "probabilidad": 0.5013,
+        "probabilidad_local": 0.5013,
         "nivel": "baja",
         "linea": "NYR -135",
         "casa": "Draft Kings",
@@ -116,16 +116,20 @@
           "partidos": 9
         },
         "portero_visita": {
-          "nombre": "Dylan Garand",
-          "estado": "expected",
-          "sv": 0.9061,
-          "tiros": 309,
-          "gsax": 0.97,
-          "partidos": 13
+          "nombre": "Joonas Korpisalo",
+          "estado": "confirmed",
+          "sv": null,
+          "tiros": null,
+          "gsax": null,
+          "partidos": null
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5088,
+        "portero_local_anterior": "Philipp Grubauer",
+        "portero_visita_anterior": "Dylan Garand"
       },
       {
         "id": "2026020268",
@@ -138,8 +142,8 @@
         "nombre_visita": "Canadiens de Montreal",
         "ganador": "MTL",
         "nombre_ganador": "Canadiens de Montreal",
-        "probabilidad": 0.5696,
-        "probabilidad_local": 0.4304,
+        "probabilidad": 0.5768,
+        "probabilidad_local": 0.4232,
         "nivel": "media",
         "linea": "MTL -122",
         "casa": "Draft Kings",
@@ -156,7 +160,7 @@
         },
         "portero_visita": {
           "nombre": "Jacob Fowler",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9251,
           "tiros": 267,
           "gsax": 5.9,
@@ -216,8 +220,8 @@
         "nombre_visita": "Devils de New Jersey",
         "ganador": "NJD",
         "nombre_ganador": "Devils de New Jersey",
-        "probabilidad": 0.5317,
-        "probabilidad_local": 0.4683,
+        "probabilidad": 0.5338,
+        "probabilidad_local": 0.4662,
         "nivel": "baja",
         "linea": "NJD -148",
         "casa": "Draft Kings",
@@ -226,23 +230,27 @@
         "prob_mercado_local": 0.4279,
         "portero_local": {
           "nombre": "Ilya Sorokin",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9114,
           "tiros": 271,
           "gsax": 2.29,
           "partidos": 10
         },
         "portero_visita": {
-          "nombre": "Connor Hellebuyck",
-          "estado": "expected",
-          "sv": 0.8913,
-          "tiros": 92,
-          "gsax": -1.08,
-          "partidos": 4
+          "nombre": "Jake Allen",
+          "estado": "confirmed",
+          "sv": 0.8869,
+          "tiros": 221,
+          "gsax": -3.56,
+          "partidos": 8
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5317,
+        "portero_local_anterior": "Ilya Sorokin",
+        "portero_visita_anterior": "Connor Hellebuyck"
       },
       {
         "id": "2026020271",
@@ -265,7 +273,7 @@
         "prob_mercado_local": 0.7819,
         "portero_local": {
           "nombre": "Pyotr Kochetkov",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9217,
           "tiros": 230,
           "gsax": 4.31,
@@ -304,7 +312,7 @@
         "prob_mercado_local": 0.7221,
         "portero_local": {
           "nombre": "Jake Oettinger",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9094,
           "tiros": 254,
           "gsax": 1.64,
@@ -333,8 +341,8 @@
         "nombre_visita": "Lightning de Tampa Bay",
         "ganador": "TBL",
         "nombre_ganador": "Lightning de Tampa Bay",
-        "probabilidad": 0.5146,
-        "probabilidad_local": 0.4854,
+        "probabilidad": 0.5174,
+        "probabilidad_local": 0.4826,
         "nivel": "baja",
         "linea": "TBL -142",
         "casa": "Draft Kings",
@@ -350,16 +358,20 @@
           "partidos": 2
         },
         "portero_visita": {
-          "nombre": "Andrei Vasilevskiy",
-          "estado": "expected",
-          "sv": 0.8866,
-          "tiros": 291,
-          "gsax": -4.77,
-          "partidos": 12
+          "nombre": "Dennis Hildeby",
+          "estado": "confirmed",
+          "sv": 0.8846,
+          "tiros": 78,
+          "gsax": -1.43,
+          "partidos": 3
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5146,
+        "portero_local_anterior": "Calvin Pickard",
+        "portero_visita_anterior": "Andrei Vasilevskiy"
       },
       {
         "id": "2026020274",
@@ -382,7 +394,7 @@
         "prob_mercado_local": 0.6636,
         "portero_local": {
           "nombre": "Mackenzie Blackwood",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8926,
           "tiros": 326,
           "gsax": -3.38,
@@ -411,8 +423,8 @@
         "nombre_visita": "Penguins de Pittsburgh",
         "ganador": "LAK",
         "nombre_ganador": "Kings de Los Ángeles",
-        "probabilidad": 0.5292,
-        "probabilidad_local": 0.5292,
+        "probabilidad": 0.5168,
+        "probabilidad_local": 0.5168,
         "nivel": "baja",
         "linea": "LAK -125",
         "casa": "Draft Kings",
@@ -420,24 +432,28 @@
         "cuota_visita": 105,
         "prob_mercado_local": 0.5325,
         "portero_local": {
-          "nombre": "Anton Forsberg",
-          "estado": "expected",
-          "sv": 0.9021,
-          "tiros": 143,
-          "gsax": -0.13,
-          "partidos": 6
+          "nombre": "Darcy Kuemper",
+          "estado": "confirmed",
+          "sv": 0.8854,
+          "tiros": 253,
+          "gsax": -4.46,
+          "partidos": 9
         },
         "portero_visita": {
-          "nombre": "Arturs Silovs",
-          "estado": "expected",
-          "sv": 0.8763,
-          "tiros": 291,
-          "gsax": -7.77,
-          "partidos": 11
+          "nombre": "Sergei Murashov",
+          "estado": "confirmed",
+          "sv": 0.8707,
+          "tiros": 147,
+          "gsax": -4.74,
+          "partidos": 5
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5292,
+        "portero_local_anterior": "Anton Forsberg",
+        "portero_visita_anterior": "Arturs Silovs"
       },
       {
         "id": "2026020276",
@@ -450,8 +466,8 @@
         "nombre_visita": "Canucks de Vancouver",
         "ganador": "EDM",
         "nombre_ganador": "Oilers de Edmonton",
-        "probabilidad": 0.7338,
-        "probabilidad_local": 0.7338,
+        "probabilidad": 0.719,
+        "probabilidad_local": 0.719,
         "nivel": "alta",
         "linea": "EDM -310",
         "casa": "Draft Kings",
@@ -459,16 +475,16 @@
         "cuota_visita": 250,
         "prob_mercado_local": 0.7258,
         "portero_local": {
-          "nombre": "Tristan Jarry",
-          "estado": "expected",
-          "sv": 0.9024,
-          "tiros": 205,
-          "gsax": -0.12,
-          "partidos": 8
+          "nombre": "Devon Levi",
+          "estado": "confirmed",
+          "sv": 0.8866,
+          "tiros": 194,
+          "gsax": -3.18,
+          "partidos": 7
         },
         "portero_visita": {
           "nombre": "Leevi Merilainen",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8886,
           "tiros": 341,
           "gsax": -4.92,
@@ -476,7 +492,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.7338,
+        "portero_local_anterior": "Tristan Jarry",
+        "portero_visita_anterior": "Leevi Merilainen"
       }
     ],
     "2026-11-08": [
@@ -573,8 +593,8 @@
         "nombre_visita": "Lightning de Tampa Bay",
         "ganador": "TBL",
         "nombre_ganador": "Lightning de Tampa Bay",
-        "probabilidad": 0.5909,
-        "probabilidad_local": 0.4091,
+        "probabilidad": 0.586,
+        "probabilidad_local": 0.414,
         "nivel": "media",
         "linea": "TBL -135",
         "casa": "Draft Kings",
@@ -590,16 +610,20 @@
           "partidos": 12
         },
         "portero_visita": {
-          "nombre": "Dennis Hildeby",
+          "nombre": "Andrei Vasilevskiy",
           "estado": "expected",
-          "sv": 0.8846,
-          "tiros": 78,
-          "gsax": -1.43,
-          "partidos": 3
+          "sv": 0.8866,
+          "tiros": 291,
+          "gsax": -4.77,
+          "partidos": 12
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5909,
+        "portero_local_anterior": "Stuart Skinner",
+        "portero_visita_anterior": "Dennis Hildeby"
       },
       {
         "id": "2026020279",
@@ -612,8 +636,8 @@
         "nombre_visita": "Devils de New Jersey",
         "ganador": "NJD",
         "nombre_ganador": "Devils de New Jersey",
-        "probabilidad": 0.5099,
-        "probabilidad_local": 0.4901,
+        "probabilidad": 0.5145,
+        "probabilidad_local": 0.4855,
         "nivel": "baja",
         "linea": "NJD -135",
         "casa": "Draft Kings",
@@ -629,16 +653,20 @@
           "partidos": 6
         },
         "portero_visita": {
-          "nombre": "Jake Allen",
+          "nombre": "Connor Hellebuyck",
           "estado": "expected",
-          "sv": 0.8869,
-          "tiros": 221,
-          "gsax": -3.56,
-          "partidos": 8
+          "sv": 0.8913,
+          "tiros": 92,
+          "gsax": -1.08,
+          "partidos": 4
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5099,
+        "portero_local_anterior": "Anthony Stolarz",
+        "portero_visita_anterior": "Jake Allen"
       },
       {
         "id": "2026020281",
@@ -651,8 +679,8 @@
         "nombre_visita": "Flyers de Filadelfia",
         "ganador": "PHI",
         "nombre_ganador": "Flyers de Filadelfia",
-        "probabilidad": 0.5165,
-        "probabilidad_local": 0.4835,
+        "probabilidad": 0.5088,
+        "probabilidad_local": 0.4912,
         "nivel": "baja",
         "linea": "PHI -118",
         "casa": "Draft Kings",
@@ -668,16 +696,20 @@
           "partidos": 10
         },
         "portero_visita": {
-          "nombre": "Joseph Woll",
+          "nombre": "Dan Vladar",
           "estado": "expected",
-          "sv": 0.8986,
-          "tiros": 276,
-          "gsax": -1.23,
+          "sv": 0.8831,
+          "tiros": 248,
+          "gsax": -4.94,
           "partidos": 9
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5165,
+        "portero_local_anterior": "Dustin Wolf",
+        "portero_visita_anterior": "Joseph Woll"
       },
       {
         "id": "2026020282",
@@ -690,8 +722,8 @@
         "nombre_visita": "Penguins de Pittsburgh",
         "ganador": "ANA",
         "nombre_ganador": "Ducks de Anaheim",
-        "probabilidad": 0.507,
-        "probabilidad_local": 0.507,
+        "probabilidad": 0.5102,
+        "probabilidad_local": 0.5102,
         "nivel": "baja",
         "linea": "ANA -135",
         "casa": "Draft Kings",
@@ -707,16 +739,20 @@
           "partidos": 3
         },
         "portero_visita": {
-          "nombre": "Sergei Murashov",
+          "nombre": "Arturs Silovs",
           "estado": "expected",
-          "sv": 0.8707,
-          "tiros": 147,
-          "gsax": -4.74,
-          "partidos": 5
+          "sv": 0.8763,
+          "tiros": 291,
+          "gsax": -7.77,
+          "partidos": 11
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.507,
+        "portero_local_anterior": "Laurent Brossoit",
+        "portero_visita_anterior": "Sergei Murashov"
       }
     ]
   },
@@ -814,8 +850,8 @@
       "nombre_visita": "Rangers de Nueva York",
       "ganador": "SEA",
       "nombre_ganador": "Kraken de Seattle",
-      "probabilidad": 0.5088,
-      "probabilidad_local": 0.5088,
+      "probabilidad": 0.5013,
+      "probabilidad_local": 0.5013,
       "nivel": "baja",
       "linea": "NYR -135",
       "casa": "Draft Kings",
@@ -831,16 +867,20 @@
         "partidos": 9
       },
       "portero_visita": {
-        "nombre": "Dylan Garand",
-        "estado": "expected",
-        "sv": 0.9061,
-        "tiros": 309,
-        "gsax": 0.97,
-        "partidos": 13
+        "nombre": "Joonas Korpisalo",
+        "estado": "confirmed",
+        "sv": null,
+        "tiros": null,
+        "gsax": null,
+        "partidos": null
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.5088,
+      "portero_local_anterior": "Philipp Grubauer",
+      "portero_visita_anterior": "Dylan Garand"
     },
     {
       "id": "2026020268",
@@ -853,8 +893,8 @@
       "nombre_visita": "Canadiens de Montreal",
       "ganador": "MTL",
       "nombre_ganador": "Canadiens de Montreal",
-      "probabilidad": 0.5696,
-      "probabilidad_local": 0.4304,
+      "probabilidad": 0.5768,
+      "probabilidad_local": 0.4232,
       "nivel": "media",
       "linea": "MTL -122",
       "casa": "Draft Kings",
@@ -871,7 +911,7 @@
       },
       "portero_visita": {
         "nombre": "Jacob Fowler",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9251,
         "tiros": 267,
         "gsax": 5.9,
@@ -931,8 +971,8 @@
       "nombre_visita": "Devils de New Jersey",
       "ganador": "NJD",
       "nombre_ganador": "Devils de New Jersey",
-      "probabilidad": 0.5317,
-      "probabilidad_local": 0.4683,
+      "probabilidad": 0.5338,
+      "probabilidad_local": 0.4662,
       "nivel": "baja",
       "linea": "NJD -148",
       "casa": "Draft Kings",
@@ -941,23 +981,27 @@
       "prob_mercado_local": 0.4279,
       "portero_local": {
         "nombre": "Ilya Sorokin",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9114,
         "tiros": 271,
         "gsax": 2.29,
         "partidos": 10
       },
       "portero_visita": {
-        "nombre": "Connor Hellebuyck",
-        "estado": "expected",
-        "sv": 0.8913,
-        "tiros": 92,
-        "gsax": -1.08,
-        "partidos": 4
+        "nombre": "Jake Allen",
+        "estado": "confirmed",
+        "sv": 0.8869,
+        "tiros": 221,
+        "gsax": -3.56,
+        "partidos": 8
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.5317,
+      "portero_local_anterior": "Ilya Sorokin",
+      "portero_visita_anterior": "Connor Hellebuyck"
     },
     {
       "id": "2026020271",
@@ -980,7 +1024,7 @@
       "prob_mercado_local": 0.7819,
       "portero_local": {
         "nombre": "Pyotr Kochetkov",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9217,
         "tiros": 230,
         "gsax": 4.31,
@@ -1019,7 +1063,7 @@
       "prob_mercado_local": 0.7221,
       "portero_local": {
         "nombre": "Jake Oettinger",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9094,
         "tiros": 254,
         "gsax": 1.64,
@@ -1048,8 +1092,8 @@
       "nombre_visita": "Lightning de Tampa Bay",
       "ganador": "TBL",
       "nombre_ganador": "Lightning de Tampa Bay",
-      "probabilidad": 0.5146,
-      "probabilidad_local": 0.4854,
+      "probabilidad": 0.5174,
+      "probabilidad_local": 0.4826,
       "nivel": "baja",
       "linea": "TBL -142",
       "casa": "Draft Kings",
@@ -1065,16 +1109,20 @@
         "partidos": 2
       },
       "portero_visita": {
-        "nombre": "Andrei Vasilevskiy",
-        "estado": "expected",
-        "sv": 0.8866,
-        "tiros": 291,
-        "gsax": -4.77,
-        "partidos": 12
+        "nombre": "Dennis Hildeby",
+        "estado": "confirmed",
+        "sv": 0.8846,
+        "tiros": 78,
+        "gsax": -1.43,
+        "partidos": 3
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.5146,
+      "portero_local_anterior": "Calvin Pickard",
+      "portero_visita_anterior": "Andrei Vasilevskiy"
     },
     {
       "id": "2026020274",
@@ -1097,7 +1145,7 @@
       "prob_mercado_local": 0.6636,
       "portero_local": {
         "nombre": "Mackenzie Blackwood",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8926,
         "tiros": 326,
         "gsax": -3.38,
@@ -1126,8 +1174,8 @@
       "nombre_visita": "Penguins de Pittsburgh",
       "ganador": "LAK",
       "nombre_ganador": "Kings de Los Ángeles",
-      "probabilidad": 0.5292,
-      "probabilidad_local": 0.5292,
+      "probabilidad": 0.5168,
+      "probabilidad_local": 0.5168,
       "nivel": "baja",
       "linea": "LAK -125",
       "casa": "Draft Kings",
@@ -1135,24 +1183,28 @@
       "cuota_visita": 105,
       "prob_mercado_local": 0.5325,
       "portero_local": {
-        "nombre": "Anton Forsberg",
-        "estado": "expected",
-        "sv": 0.9021,
-        "tiros": 143,
-        "gsax": -0.13,
-        "partidos": 6
+        "nombre": "Darcy Kuemper",
+        "estado": "confirmed",
+        "sv": 0.8854,
+        "tiros": 253,
+        "gsax": -4.46,
+        "partidos": 9
       },
       "portero_visita": {
-        "nombre": "Arturs Silovs",
-        "estado": "expected",
-        "sv": 0.8763,
-        "tiros": 291,
-        "gsax": -7.77,
-        "partidos": 11
+        "nombre": "Sergei Murashov",
+        "estado": "confirmed",
+        "sv": 0.8707,
+        "tiros": 147,
+        "gsax": -4.74,
+        "partidos": 5
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.5292,
+      "portero_local_anterior": "Anton Forsberg",
+      "portero_visita_anterior": "Arturs Silovs"
     },
     {
       "id": "2026020276",
@@ -1165,8 +1217,8 @@
       "nombre_visita": "Canucks de Vancouver",
       "ganador": "EDM",
       "nombre_ganador": "Oilers de Edmonton",
-      "probabilidad": 0.7338,
-      "probabilidad_local": 0.7338,
+      "probabilidad": 0.719,
+      "probabilidad_local": 0.719,
       "nivel": "alta",
       "linea": "EDM -310",
       "casa": "Draft Kings",
@@ -1174,16 +1226,16 @@
       "cuota_visita": 250,
       "prob_mercado_local": 0.7258,
       "portero_local": {
-        "nombre": "Tristan Jarry",
-        "estado": "expected",
-        "sv": 0.9024,
-        "tiros": 205,
-        "gsax": -0.12,
-        "partidos": 8
+        "nombre": "Devon Levi",
+        "estado": "confirmed",
+        "sv": 0.8866,
+        "tiros": 194,
+        "gsax": -3.18,
+        "partidos": 7
       },
       "portero_visita": {
         "nombre": "Leevi Merilainen",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8886,
         "tiros": 341,
         "gsax": -4.92,
@@ -1191,7 +1243,11 @@
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.7338,
+      "portero_local_anterior": "Tristan Jarry",
+      "portero_visita_anterior": "Leevi Merilainen"
     }
   ],
   "vivo": [
