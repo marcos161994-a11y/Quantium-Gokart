@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-07T16:59:40.734119-04:00",
+  "actualizado": "2026-11-07T20:12:08.014089-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-07",
   "umbral_alta": 0.68,
@@ -302,8 +302,8 @@
         "nombre_visita": "Sharks de San José",
         "ganador": "DAL",
         "nombre_ganador": "Stars de Dallas",
-        "probabilidad": 0.739,
-        "probabilidad_local": 0.739,
+        "probabilidad": 0.7342,
+        "probabilidad_local": 0.7342,
         "nivel": "alta",
         "linea": "DAL -305",
         "casa": "Draft Kings",
@@ -320,7 +320,7 @@
         },
         "portero_visita": {
           "nombre": "Alex Nedeljkovic",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8995,
           "tiros": 189,
           "gsax": -0.67,
@@ -384,8 +384,8 @@
         "nombre_visita": "Red Wings de Detroit",
         "ganador": "COL",
         "nombre_ganador": "Avalanche de Colorado",
-        "probabilidad": 0.6479,
-        "probabilidad_local": 0.6479,
+        "probabilidad": 0.6187,
+        "probabilidad_local": 0.6187,
         "nivel": "media",
         "linea": "COL -225",
         "casa": "Draft Kings",
@@ -401,16 +401,20 @@
           "partidos": 13
         },
         "portero_visita": {
-          "nombre": "John Gibson",
+          "nombre": "Daniil Tarasov",
           "estado": "expected",
-          "sv": 0.8596,
-          "tiros": 235,
-          "gsax": -10.21,
-          "partidos": 11
+          "sv": 0.9295,
+          "tiros": 156,
+          "gsax": 4.13,
+          "partidos": 7
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.6479,
+        "portero_local_anterior": "Mackenzie Blackwood",
+        "portero_visita_anterior": "John Gibson"
       },
       {
         "id": "2026020275",
@@ -1053,8 +1057,8 @@
       "nombre_visita": "Sharks de San José",
       "ganador": "DAL",
       "nombre_ganador": "Stars de Dallas",
-      "probabilidad": 0.739,
-      "probabilidad_local": 0.739,
+      "probabilidad": 0.7342,
+      "probabilidad_local": 0.7342,
       "nivel": "alta",
       "linea": "DAL -305",
       "casa": "Draft Kings",
@@ -1071,7 +1075,7 @@
       },
       "portero_visita": {
         "nombre": "Alex Nedeljkovic",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8995,
         "tiros": 189,
         "gsax": -0.67,
@@ -1135,8 +1139,8 @@
       "nombre_visita": "Red Wings de Detroit",
       "ganador": "COL",
       "nombre_ganador": "Avalanche de Colorado",
-      "probabilidad": 0.6479,
-      "probabilidad_local": 0.6479,
+      "probabilidad": 0.6187,
+      "probabilidad_local": 0.6187,
       "nivel": "media",
       "linea": "COL -225",
       "casa": "Draft Kings",
@@ -1152,16 +1156,20 @@
         "partidos": 13
       },
       "portero_visita": {
-        "nombre": "John Gibson",
+        "nombre": "Daniil Tarasov",
         "estado": "expected",
-        "sv": 0.8596,
-        "tiros": 235,
-        "gsax": -10.21,
-        "partidos": 11
+        "sv": 0.9295,
+        "tiros": 156,
+        "gsax": 4.13,
+        "partidos": 7
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.6479,
+      "portero_local_anterior": "Mackenzie Blackwood",
+      "portero_visita_anterior": "John Gibson"
     },
     {
       "id": "2026020275",
