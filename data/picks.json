@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-10T14:57:31.762381-04:00",
+  "actualizado": "2026-11-10T19:51:01.863298-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-10",
   "umbral_alta": 0.68,
@@ -56,8 +56,8 @@
         "nombre_visita": "Wild de Minnesota",
         "ganador": "MIN",
         "nombre_ganador": "Wild de Minnesota",
-        "probabilidad": 0.5061,
-        "probabilidad_local": 0.4939,
+        "probabilidad": 0.5047,
+        "probabilidad_local": 0.4953,
         "nivel": "baja",
         "linea": "MIN -130",
         "casa": "Draft Kings",
@@ -74,7 +74,7 @@
         },
         "portero_visita": {
           "nombre": "Jesper Wallstedt",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9221,
           "tiros": 411,
           "gsax": 7.87,
@@ -95,8 +95,8 @@
         "nombre_visita": "Capitals de Washington",
         "ganador": "OTT",
         "nombre_ganador": "Senators de Ottawa",
-        "probabilidad": 0.5684,
-        "probabilidad_local": 0.5684,
+        "probabilidad": 0.5804,
+        "probabilidad_local": 0.5804,
         "nivel": "media",
         "linea": "WSH -112",
         "casa": "Draft Kings",
@@ -113,7 +113,7 @@
         },
         "portero_visita": {
           "nombre": "Logan Thompson",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8878,
           "tiros": 294,
           "gsax": -4.48,
@@ -263,8 +263,8 @@
         "nombre_visita": "Predators de Nashville",
         "ganador": "NSH",
         "nombre_ganador": "Predators de Nashville",
-        "probabilidad": 0.5363,
-        "probabilidad_local": 0.4637,
+        "probabilidad": 0.5234,
+        "probabilidad_local": 0.4766,
         "nivel": "baja",
         "linea": "LAK -130",
         "casa": "Draft Kings",
@@ -272,12 +272,12 @@
         "cuota_visita": 110,
         "prob_mercado_local": 0.5427,
         "portero_local": {
-          "nombre": "Darcy Kuemper",
-          "estado": "expected",
-          "sv": 0.8782,
-          "tiros": 271,
-          "gsax": -6.71,
-          "partidos": 10
+          "nombre": "Anton Forsberg",
+          "estado": "confirmed",
+          "sv": 0.9021,
+          "tiros": 143,
+          "gsax": -0.13,
+          "partidos": 6
         },
         "portero_visita": {
           "nombre": "Juuse Saros",
@@ -289,7 +289,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5363,
+        "portero_local_anterior": "Darcy Kuemper",
+        "portero_visita_anterior": "Juuse Saros"
       }
     ],
     "2026-11-11": [
@@ -580,8 +584,8 @@
       "nombre_visita": "Wild de Minnesota",
       "ganador": "MIN",
       "nombre_ganador": "Wild de Minnesota",
-      "probabilidad": 0.5061,
-      "probabilidad_local": 0.4939,
+      "probabilidad": 0.5047,
+      "probabilidad_local": 0.4953,
       "nivel": "baja",
       "linea": "MIN -130",
       "casa": "Draft Kings",
@@ -598,7 +602,7 @@
       },
       "portero_visita": {
         "nombre": "Jesper Wallstedt",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9221,
         "tiros": 411,
         "gsax": 7.87,
@@ -619,8 +623,8 @@
       "nombre_visita": "Capitals de Washington",
       "ganador": "OTT",
       "nombre_ganador": "Senators de Ottawa",
-      "probabilidad": 0.5684,
-      "probabilidad_local": 0.5684,
+      "probabilidad": 0.5804,
+      "probabilidad_local": 0.5804,
       "nivel": "media",
       "linea": "WSH -112",
       "casa": "Draft Kings",
@@ -637,7 +641,7 @@
       },
       "portero_visita": {
         "nombre": "Logan Thompson",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8878,
         "tiros": 294,
         "gsax": -4.48,
@@ -787,8 +791,8 @@
       "nombre_visita": "Predators de Nashville",
       "ganador": "NSH",
       "nombre_ganador": "Predators de Nashville",
-      "probabilidad": 0.5363,
-      "probabilidad_local": 0.4637,
+      "probabilidad": 0.5234,
+      "probabilidad_local": 0.4766,
       "nivel": "baja",
       "linea": "LAK -130",
       "casa": "Draft Kings",
@@ -796,12 +800,12 @@
       "cuota_visita": 110,
       "prob_mercado_local": 0.5427,
       "portero_local": {
-        "nombre": "Darcy Kuemper",
-        "estado": "expected",
-        "sv": 0.8782,
-        "tiros": 271,
-        "gsax": -6.71,
-        "partidos": 10
+        "nombre": "Anton Forsberg",
+        "estado": "confirmed",
+        "sv": 0.9021,
+        "tiros": 143,
+        "gsax": -0.13,
+        "partidos": 6
       },
       "portero_visita": {
         "nombre": "Juuse Saros",
@@ -813,7 +817,11 @@
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.5363,
+      "portero_local_anterior": "Darcy Kuemper",
+      "portero_visita_anterior": "Juuse Saros"
     }
   ],
   "vivo": [
