@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-11T14:39:09.897424-04:00",
+  "actualizado": "2026-11-11T14:55:25.955085-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-11",
   "umbral_alta": 0.68,
@@ -117,7 +117,7 @@
         },
         "portero_visita": {
           "nombre": "Dan Vladar",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8796,
           "tiros": 274,
           "gsax": -6.42,
@@ -187,7 +187,7 @@
         "prob_mercado_local": 0.5635,
         "portero_local": {
           "nombre": "Laurent Brossoit",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8774,
           "tiros": 106,
           "gsax": -2.72,
@@ -226,7 +226,7 @@
         "prob_mercado_local": 0.4365,
         "portero_local": {
           "nombre": "Yaroslav Askarov",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8892,
           "tiros": 379,
           "gsax": -5.24,
@@ -789,7 +789,7 @@
       },
       "portero_visita": {
         "nombre": "Dan Vladar",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8796,
         "tiros": 274,
         "gsax": -6.42,
@@ -859,7 +859,7 @@
       "prob_mercado_local": 0.5635,
       "portero_local": {
         "nombre": "Laurent Brossoit",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8774,
         "tiros": 106,
         "gsax": -2.72,
@@ -898,7 +898,7 @@
       "prob_mercado_local": 0.4365,
       "portero_local": {
         "nombre": "Yaroslav Askarov",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.8892,
         "tiros": 379,
         "gsax": -5.24,
