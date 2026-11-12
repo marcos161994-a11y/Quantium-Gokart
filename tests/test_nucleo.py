@@ -425,3 +425,101 @@ def test_top_pick_pide_alta_y_portero_y_el_margen_de_valor_es_configurable():
     assert round(ventaja_sobre_mercado(visita), 4) == 0.10
     assert es_top_pick(visita, {**base, "margen_valor": 0.03}, 0.68)
     assert not es_top_pick(visita, {**base, "margen_valor": 0.03, "porteros": "ambos"}, 0.68)
+
+
+def _fila_juego(juego_id, fecha, visita, local, gano=""):
+    return {
+        "id": juego_id,
+        "espn_id": "",
+        "temporada": 20262027,
+        "tipo": 2,
+        "fecha": fecha,
+        "inicio_utc": f"{fecha}T23:00:00Z",
+        "estado": "OFF" if gano != "" else "FUT",
+        "visita": visita,
+        "local": local,
+        "neutral": 0,
+        "goles_visita": 1 if gano == 1 else (3 if gano == 0 else ""),
+        "goles_local": 3 if gano == 1 else (1 if gano == 0 else ""),
+        "periodo": "REG" if gano != "" else "",
+        "gano_local": gano,
+        "cuota_local": -130,
+        "cuota_visita": 110,
+        "casa": "DraftKings",
+        "linea": f"{local} -130",
+        "prob_mercado_local": 0.56,
+    }
+
+
+def test_el_record_acumula_varios_dias_aunque_el_resultado_llegue_tarde(tmp_path, monkeypatch):
+    """El cambio de jornada no puede borrar el pick si games.csv todavía no tiene el final."""
+    import joblib
+
+    from comun_nhl import guardar_json, leer_json
+    from picks_nhl import generar_picks
+
+    monkeypatch.setenv("QUANTIUM_DATOS", str(tmp_path))
+    monkeypatch.setenv("DATA_DIR", str(tmp_path / "cache"))
+    monkeypatch.setattr("picks_nhl.probabilidades_local", lambda bundle, slate: np.full(len(slate), 0.6))
+    juegos = [
+        _fila_juego(1, "2026-11-01", "MTL", "BOS"),
+        _fila_juego(2, "2026-11-02", "TOR", "NYR"),
+        _fila_juego(3, "2026-11-03", "BUF", "OTT"),
+    ]
+    pd.DataFrame(juegos).to_csv(tmp_path / "games.csv", index=False)
+    joblib.dump({"umbral_alta": 0.68, "g0": None}, tmp_path / "modelo.joblib")
+    guardar_json(
+        tmp_path / "picks.json",
+        {
+            "umbral_alta": 0.68,
+            "vivo": [],
+            "por_fecha": {
+                "2026-11-01": [
+                    {
+                        "id": "1",
+                        "fecha": "2026-11-01",
+                        "inicio_utc": "2026-11-01T23:00:00Z",
+                        "probabilidad": 0.62,
+                        "ganador": "BOS",
+                        "equipo_local": "BOS",
+                        "equipo_visita": "MTL",
+                        "nivel": "media",
+                        "estado": "programado",
+                        "acierto": None,
+                    }
+                ]
+            },
+        },
+    )
+
+    def correr(dia):
+        return generar_picks(en_vivo=False, ahora=datetime(2026, 11, dia, 12, tzinfo=timezone.utc))
+
+    manana = correr(2)
+    assert [p["id"] for p in manana["sin_calificar"]] == ["1"]
+    assert manana["sin_calificar"][0]["probabilidad"] == 0.62
+    assert manana["vivo"] == []
+    assert "2026-11-01" not in manana["por_fecha"]
+
+    todavía = correr(3)
+    assert {p["id"] for p in todavía["sin_calificar"]} == {"1", "2"}
+    assert todavía["vivo"] == []
+
+    juegos[0] = _fila_juego(1, "2026-11-01", "MTL", "BOS", gano=1)
+    pd.DataFrame(juegos).to_csv(tmp_path / "games.csv", index=False)
+    con_ayer = correr(3)
+    vivo = {p["id"]: p for p in con_ayer["vivo"]}
+    assert vivo["1"]["acierto"] == 1
+    assert vivo["1"]["probabilidad"] == 0.62
+    assert all(p["id"] != "1" for p in con_ayer["sin_calificar"])
+    assert con_ayer["record"]["media"]["total"] == 1
+
+    juegos[1] = _fila_juego(2, "2026-11-02", "TOR", "NYR", gano=0)
+    pd.DataFrame(juegos).to_csv(tmp_path / "games.csv", index=False)
+    dos_dias = correr(4)
+    ids = {p["id"] for p in dos_dias["vivo"]}
+    assert {"1", "2"} <= ids
+    total = sum(dos_dias["record"][nivel]["total"] for nivel in ("alta", "media", "baja"))
+    assert total >= 2
+    guardado = leer_json(tmp_path / "picks.json", {})
+    assert {p["id"] for p in guardado["vivo"]} >= {"1", "2"}

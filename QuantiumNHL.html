@@ -353,6 +353,13 @@
             return "Portero cambiado · antes " + pct(p.probabilidad_anterior) + quienes;
         }
 
+        function notaReconstruido(p) {
+            if (p.porteros_fuente === "boxscore") {
+                return "Reconstruido · portero del boxscore, no de la confirmación previa";
+            }
+            return "Reconstruido con el modelo actual";
+        }
+
         function textoPortero(p) {
             if (!p || !p.nombre) return "titular sin confirmar";
             const bits = [p.nombre, estadoPortero(p.estado)];
@@ -423,6 +430,7 @@
             box.append(el("div", "nota", "Confianza " + (p.nivel || "—")));
             const cambio = avisoPortero(p);
             if (cambio) box.append(el("div", "ajuste", cambio));
+            if (p.reconstruido) box.append(el("div", "nota", notaReconstruido(p)));
             if (p.prob_mercado_local != null) {
                 box.append(el("div", "nota", "Mercado " + pct(p.prob_mercado_local) + " local · modelo " + pct(p.probabilidad_local)));
             }
@@ -593,6 +601,7 @@
             nums.append(prob, linea);
             card.append(nums);
             card.append(el("div", "ajuste", textoValor(p)));
+            if (p.reconstruido) card.append(el("div", "nota", notaReconstruido(p)));
             card.append(el("div", "lesion", "Portero: " + textoPortero(lados.porteroEquipo)));
             card.append(el("div", "lesion", "Portero rival: " + textoPortero(lados.porteroRival)));
             return card;

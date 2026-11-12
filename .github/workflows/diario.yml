@@ -2,7 +2,10 @@ name: Diario NHL
 
 on:
   schedule:
-    # 11:15 UTC = 07:15 en Puerto Rico, ya pasado el corte de las 06:00.
+    # 11:15 UTC = 07:15 AST, ya pasado el corte de las 06:00.
+    # La expresión está bien. GitHub a veces crea el run varias horas después
+    # (en noviembre 2026, cerca de las 18:00 UTC). El job en sí tarda menos de
+    # un minuto. Los picks sin resultado se conservan hasta que este paso corre.
     - cron: "15 11 * * *"
   workflow_dispatch:
 
