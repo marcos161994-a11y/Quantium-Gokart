@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-11T21:07:02.312117-04:00",
+  "actualizado": "2026-11-12T01:04:31.494413-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-11",
   "umbral_alta": 0.68,
@@ -542,8 +542,8 @@
         "nombre_visita": "Sabres de Buffalo",
         "ganador": "BUF",
         "nombre_ganador": "Sabres de Buffalo",
-        "probabilidad": 0.6712,
-        "probabilidad_local": 0.3288,
+        "probabilidad": 0.6667,
+        "probabilidad_local": 0.3333,
         "nivel": "media",
         "linea": "BUF -148",
         "casa": "DraftKings",
@@ -561,10 +561,10 @@
         "portero_visita": {
           "nombre": "Colten Ellis",
           "estado": "expected",
-          "sv": 0.8844,
-          "tiros": 173,
-          "gsax": -3.22,
-          "partidos": 7
+          "sv": 0.8729,
+          "tiros": 181,
+          "gsax": -5.44,
+          "partidos": 8
         },
         "estado": "programado",
         "periodo": "",
