@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-11T14:55:25.955085-04:00",
+  "actualizado": "2026-11-11T21:07:02.312117-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-11",
   "umbral_alta": 0.68,
@@ -99,8 +99,8 @@
         "nombre_visita": "Flyers de Filadelfia",
         "ganador": "EDM",
         "nombre_ganador": "Oilers de Edmonton",
-        "probabilidad": 0.6458,
-        "probabilidad_local": 0.6458,
+        "probabilidad": 0.6552,
+        "probabilidad_local": 0.6552,
         "nivel": "media",
         "linea": "EDM -205",
         "casa": "DraftKings",
@@ -108,12 +108,12 @@
         "cuota_visita": 170,
         "prob_mercado_local": 0.6447,
         "portero_local": {
-          "nombre": "Devon Levi",
-          "estado": "expected",
-          "sv": 0.8992,
-          "tiros": 248,
-          "gsax": -0.94,
-          "partidos": 9
+          "nombre": "Tristan Jarry",
+          "estado": "confirmed",
+          "sv": 0.9024,
+          "tiros": 205,
+          "gsax": -0.12,
+          "partidos": 8
         },
         "portero_visita": {
           "nombre": "Dan Vladar",
@@ -125,7 +125,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.6458,
+        "portero_local_anterior": "Devon Levi",
+        "portero_visita_anterior": "Dan Vladar"
       },
       {
         "id": "2026020296",
@@ -138,8 +142,8 @@
         "nombre_visita": "Mammoth de Utah",
         "ganador": "VGK",
         "nombre_ganador": "Golden Knights de Vegas",
-        "probabilidad": 0.599,
-        "probabilidad_local": 0.599,
+        "probabilidad": 0.5925,
+        "probabilidad_local": 0.5925,
         "nivel": "media",
         "linea": "VGK -125",
         "casa": "DraftKings",
@@ -148,23 +152,27 @@
         "prob_mercado_local": 0.5325,
         "portero_local": {
           "nombre": "Carter Hart",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9004,
           "tiros": 251,
           "gsax": -0.65,
           "partidos": 10
         },
         "portero_visita": {
-          "nombre": "Karel Vejmelka",
+          "nombre": "Sebastian Cossa",
           "estado": "expected",
-          "sv": 0.8704,
-          "tiros": 301,
-          "gsax": -9.8,
-          "partidos": 13
+          "sv": 0.8707,
+          "tiros": 147,
+          "gsax": -4.74,
+          "partidos": 7
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.599,
+        "portero_local_anterior": "Carter Hart",
+        "portero_visita_anterior": "Karel Vejmelka"
       },
       {
         "id": "2026020297",
@@ -216,8 +224,8 @@
         "nombre_visita": "Penguins de Pittsburgh",
         "ganador": "PIT",
         "nombre_ganador": "Penguins de Pittsburgh",
-        "probabilidad": 0.5601,
-        "probabilidad_local": 0.4399,
+        "probabilidad": 0.5653,
+        "probabilidad_local": 0.4347,
         "nivel": "media",
         "linea": "PIT -142",
         "casa": "DraftKings",
@@ -233,16 +241,20 @@
           "partidos": 13
         },
         "portero_visita": {
-          "nombre": "Arturs Silovs",
-          "estado": "expected",
-          "sv": 0.873,
-          "tiros": 315,
-          "gsax": -9.44,
-          "partidos": 12
+          "nombre": "Sergei Murashov",
+          "estado": "confirmed",
+          "sv": 0.88,
+          "tiros": 175,
+          "gsax": -4.03,
+          "partidos": 6
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5601,
+        "portero_local_anterior": "Yaroslav Askarov",
+        "portero_visita_anterior": "Arturs Silovs"
       }
     ],
     "2026-11-12": [
@@ -608,8 +620,8 @@
         "nombre_visita": "Blues de San Luis",
         "ganador": "UTA",
         "nombre_ganador": "Mammoth de Utah",
-        "probabilidad": 0.5356,
-        "probabilidad_local": 0.5356,
+        "probabilidad": 0.5289,
+        "probabilidad_local": 0.5289,
         "nivel": "baja",
         "linea": "UTA -135",
         "casa": "DraftKings",
@@ -617,12 +629,12 @@
         "cuota_visita": 114,
         "prob_mercado_local": 0.5514,
         "portero_local": {
-          "nombre": "Sebastian Cossa",
+          "nombre": "Karel Vejmelka",
           "estado": "expected",
-          "sv": 0.8707,
-          "tiros": 147,
-          "gsax": -4.74,
-          "partidos": 7
+          "sv": 0.8704,
+          "tiros": 301,
+          "gsax": -9.8,
+          "partidos": 13
         },
         "portero_visita": {
           "nombre": "Joel Hofer",
@@ -634,7 +646,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5356,
+        "portero_local_anterior": "Sebastian Cossa",
+        "portero_visita_anterior": "Joel Hofer"
       },
       {
         "id": "2026020308",
@@ -771,8 +787,8 @@
       "nombre_visita": "Flyers de Filadelfia",
       "ganador": "EDM",
       "nombre_ganador": "Oilers de Edmonton",
-      "probabilidad": 0.6458,
-      "probabilidad_local": 0.6458,
+      "probabilidad": 0.6552,
+      "probabilidad_local": 0.6552,
       "nivel": "media",
       "linea": "EDM -205",
       "casa": "DraftKings",
@@ -780,12 +796,12 @@
       "cuota_visita": 170,
       "prob_mercado_local": 0.6447,
       "portero_local": {
-        "nombre": "Devon Levi",
-        "estado": "expected",
-        "sv": 0.8992,
-        "tiros": 248,
-        "gsax": -0.94,
-        "partidos": 9
+        "nombre": "Tristan Jarry",
+        "estado": "confirmed",
+        "sv": 0.9024,
+        "tiros": 205,
+        "gsax": -0.12,
+        "partidos": 8
       },
       "portero_visita": {
         "nombre": "Dan Vladar",
@@ -797,7 +813,11 @@
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.6458,
+      "portero_local_anterior": "Devon Levi",
+      "portero_visita_anterior": "Dan Vladar"
     },
     {
       "id": "2026020296",
@@ -810,8 +830,8 @@
       "nombre_visita": "Mammoth de Utah",
       "ganador": "VGK",
       "nombre_ganador": "Golden Knights de Vegas",
-      "probabilidad": 0.599,
-      "probabilidad_local": 0.599,
+      "probabilidad": 0.5925,
+      "probabilidad_local": 0.5925,
       "nivel": "media",
       "linea": "VGK -125",
       "casa": "DraftKings",
@@ -820,23 +840,27 @@
       "prob_mercado_local": 0.5325,
       "portero_local": {
         "nombre": "Carter Hart",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9004,
         "tiros": 251,
         "gsax": -0.65,
         "partidos": 10
       },
       "portero_visita": {
-        "nombre": "Karel Vejmelka",
+        "nombre": "Sebastian Cossa",
         "estado": "expected",
-        "sv": 0.8704,
-        "tiros": 301,
-        "gsax": -9.8,
-        "partidos": 13
+        "sv": 0.8707,
+        "tiros": 147,
+        "gsax": -4.74,
+        "partidos": 7
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.599,
+      "portero_local_anterior": "Carter Hart",
+      "portero_visita_anterior": "Karel Vejmelka"
     },
     {
       "id": "2026020297",
@@ -888,8 +912,8 @@
       "nombre_visita": "Penguins de Pittsburgh",
       "ganador": "PIT",
       "nombre_ganador": "Penguins de Pittsburgh",
-      "probabilidad": 0.5601,
-      "probabilidad_local": 0.4399,
+      "probabilidad": 0.5653,
+      "probabilidad_local": 0.4347,
       "nivel": "media",
       "linea": "PIT -142",
       "casa": "DraftKings",
@@ -905,16 +929,20 @@
         "partidos": 13
       },
       "portero_visita": {
-        "nombre": "Arturs Silovs",
-        "estado": "expected",
-        "sv": 0.873,
-        "tiros": 315,
-        "gsax": -9.44,
-        "partidos": 12
+        "nombre": "Sergei Murashov",
+        "estado": "confirmed",
+        "sv": 0.88,
+        "tiros": 175,
+        "gsax": -4.03,
+        "partidos": 6
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.5601,
+      "portero_local_anterior": "Yaroslav Askarov",
+      "portero_visita_anterior": "Arturs Silovs"
     }
   ],
   "vivo": [
