@@ -66,6 +66,7 @@ def _fecha_de_pick(pick: dict) -> str:
 def _fuentes_de_picks(documento: dict) -> list[dict]:
     fuentes: list[dict] = []
     fuentes.extend(documento.get("vivo") or [])
+    fuentes.extend(documento.get("sin_calificar") or [])
     por_fecha = documento.get("por_fecha") or {}
     for fecha in sorted(por_fecha):
         fuentes.extend(por_fecha[fecha] or [])
@@ -245,6 +246,9 @@ def archivar_picks(documento: dict, desde: str | None = None) -> tuple[dict, int
         return False
 
     documento["vivo"] = [pick for pick in (documento.get("vivo") or []) if conservar(pick)]
+    documento["sin_calificar"] = [
+        pick for pick in (documento.get("sin_calificar") or []) if conservar(pick)
+    ]
     por_fecha = {}
     for fecha, lista in (documento.get("por_fecha") or {}).items():
         quedaron = [pick for pick in (lista or []) if conservar(pick)]
@@ -283,6 +287,33 @@ def _resultados(juegos: pd.DataFrame) -> dict[int, dict]:
     return salida
 
 
+def promover_jornadas_cerradas(previo: dict, resultados: dict[int, dict], hoy: str) -> tuple[list[dict], list[dict]]:
+    """Pasa a vivo lo ya jugado y guarda lo que todavía no tiene resultado.
+
+    La jornada cambia a las 06:00 AST, pero games.csv se entera después.
+    Si se descarta el pick en ese hueco, el récord se congela.
+    """
+    vivos = calificar_lista(list(previo.get("vivo") or []), resultados)
+    vistos = {str(pick.get("id")) for pick in vivos if pick.get("id") is not None}
+    fuentes: list[dict] = []
+    for lista in (previo.get("por_fecha") or {}).values():
+        fuentes.extend(lista or [])
+    fuentes.extend(previo.get("sin_calificar") or [])
+    pendientes: list[dict] = []
+    for pick in calificar_lista(fuentes, resultados):
+        ident = str(pick.get("id") or "")
+        if not ident or ident in vistos:
+            continue
+        if _fecha_de_pick(pick) >= hoy:
+            continue
+        vistos.add(ident)
+        if pick.get("acierto") is None:
+            pendientes.append(pick)
+        else:
+            vivos.append(pick)
+    return vivos, pendientes
+
+
 def calificar_lista(picks: list[dict], resultados: dict[int, dict]) -> list[dict]:
     """Marca acierto cuando el partido ya tiene ganador. Se puede correr dos veces."""
     for pick in picks:
@@ -290,7 +321,7 @@ def calificar_lista(picks: list[dict], resultados: dict[int, dict]) -> list[dict
         if not juego:
             continue
         gano = juego.get("gano_local")
-        if gano is None or (isinstance(gano, float) and pd.isna(gano)):
+        if gano is None or gano == "" or (isinstance(gano, float) and pd.isna(gano)):
             continue
         ganador_real = juego["local"] if int(gano) == 1 else juego["visita"]
         pick["ganador_real"] = ganador_real
@@ -537,17 +568,9 @@ def generar_picks(en_vivo: bool = True, ahora: datetime | None = None, eventos: 
         picks.sort(key=lambda pick: pick.get("inicio_utc") or "")
         por_fecha[fecha] = picks
     resultados = _resultados(juegos)
-    vivos = calificar_lista(list(previo.get("vivo") or []), resultados)
-    ya = {str(p["id"]) for p in vivos}
-    for lista in (previo.get("por_fecha") or {}).values():
-        for pick in calificar_lista(list(lista), resultados):
-            if pick.get("acierto") is None or str(pick["id"]) in ya:
-                continue
-            if pick["fecha"] >= hoy.isoformat():
-                continue
-            vivos.append(pick)
-            ya.add(str(pick["id"]))
-    for fecha, lista in por_fecha.items():
+    # Lo de hoy y mañana se acaba de armar; lo anterior sigue en `previo`.
+    vivos, sin_calificar = promover_jornadas_cerradas(previo, resultados, hoy.isoformat())
+    for lista in por_fecha.values():
         calificar_lista(lista, resultados)
 
     documento = {
@@ -559,12 +582,79 @@ def generar_picks(en_vivo: bool = True, ahora: datetime | None = None, eventos: 
         "por_fecha": por_fecha,
         "picks": por_fecha.get(hoy.isoformat(), []),
         "vivo": vivos,
+        "sin_calificar": sin_calificar,
     }
     documento, _ = archivar_picks(documento)
     guardar_json(directorio_datos() / "picks.json", documento)
     n = len(documento["picks"])
     print(f"picks {hoy.isoformat()}: {n}", flush=True)
     return documento
+
+
+def reconstruir_faltantes(desde: str, hasta: str, porteros: dict | None = None) -> int:
+    """Rellena el vivo con el modelo actual donde no quedó snapshot del pick.
+
+    No pisa un pick que ya está en vivo, en espera o en la cartelera de hoy.
+    El portero, si llega en `porteros`, es el titular del boxscore.
+    """
+    import joblib
+
+    from porteros_nhl import SV_LIGA_DEFECTO
+
+    bundle = joblib.load(directorio_datos() / "modelo.joblib")
+    juegos = cargar_juegos()
+    referencia = leer_json(directorio_datos() / "porteros_referencia.json", {})
+    filas = construir_filas(juegos, referencia)
+    umbral = float(bundle.get("umbral_alta") or 0.62)
+    documento = _doc()
+    ocupados = {
+        str(pick.get("id"))
+        for lista in (
+            documento.get("vivo") or [],
+            documento.get("sin_calificar") or [],
+            documento.get("picks") or [],
+        )
+        for pick in lista
+        if pick.get("id") is not None
+    }
+    for lista in (documento.get("por_fecha") or {}).values():
+        ocupados.update(str(pick.get("id")) for pick in lista if pick.get("id") is not None)
+    slate = filas[
+        (filas["fecha"] >= desde)
+        & (filas["fecha"] <= hasta)
+        & (filas["tipo"].isin([2, 3]))
+        & (filas["final"] == 1)
+    ].copy()
+    if slate.empty:
+        return 0
+    probs = probabilidades_local(bundle, slate)
+    porteros = porteros or {}
+    nuevos: list[dict] = []
+    for indice, fila in enumerate(slate.to_dict(orient="records")):
+        ident = str(int(fila["id"]))
+        if ident in ocupados:
+            continue
+        pick = _armar_pick(fila, float(probs[indice]), umbral, None, SV_LIGA_DEFECTO)
+        ficha = porteros.get(ident) or {}
+        if ficha.get("portero_local") or ficha.get("portero_visita"):
+            pick["portero_local"] = ficha.get("portero_local")
+            pick["portero_visita"] = ficha.get("portero_visita")
+            pick["porteros_fuente"] = "boxscore"
+        else:
+            pick["porteros_fuente"] = "ninguno"
+        pick["reconstruido"] = True
+        pick["nota_reconstruccion"] = (
+            "Reconstruido con el modelo actual: no había snapshot del pick. "
+            "El portero, si aparece, es el titular del boxscore y no una confirmación guardada antes del saque."
+        )
+        nuevos.append(pick)
+    if not nuevos:
+        return 0
+    calificar_lista(nuevos, _resultados(juegos))
+    documento.setdefault("vivo", []).extend(pick for pick in nuevos if pick.get("acierto") is not None)
+    documento, _ = archivar_picks(documento)
+    guardar_json(directorio_datos() / "picks.json", documento)
+    return len(nuevos)
 
 
 def main() -> None:
