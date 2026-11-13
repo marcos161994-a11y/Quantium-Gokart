@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-12T15:14:36.128566-04:00",
+  "actualizado": "2026-11-12T20:35:23.386958-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-12",
   "umbral_alta": 0.68,
@@ -302,8 +302,8 @@
         "nombre_visita": "Sabres de Buffalo",
         "ganador": "BUF",
         "nombre_ganador": "Sabres de Buffalo",
-        "probabilidad": 0.5538,
-        "probabilidad_local": 0.4462,
+        "probabilidad": 0.558,
+        "probabilidad_local": 0.442,
         "nivel": "media",
         "linea": "BUF -155",
         "casa": "DraftKings",
@@ -319,16 +319,20 @@
           "partidos": 14
         },
         "portero_visita": {
-          "nombre": "Colten Ellis",
-          "estado": "expected",
-          "sv": 0.8729,
-          "tiros": 181,
-          "gsax": -5.44,
-          "partidos": 8
+          "nombre": "Alex Lyon",
+          "estado": "confirmed",
+          "sv": null,
+          "tiros": null,
+          "gsax": null,
+          "partidos": null
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5538,
+        "portero_local_anterior": "Spencer Knight",
+        "portero_visita_anterior": "Colten Ellis"
       },
       {
         "id": "2026020306",
@@ -398,7 +402,7 @@
         },
         "portero_visita": {
           "nombre": "Joel Hofer",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.92,
           "tiros": 375,
           "gsax": 6.38,
@@ -830,8 +834,8 @@
       "nombre_visita": "Sabres de Buffalo",
       "ganador": "BUF",
       "nombre_ganador": "Sabres de Buffalo",
-      "probabilidad": 0.5538,
-      "probabilidad_local": 0.4462,
+      "probabilidad": 0.558,
+      "probabilidad_local": 0.442,
       "nivel": "media",
       "linea": "BUF -155",
       "casa": "DraftKings",
@@ -847,16 +851,20 @@
         "partidos": 14
       },
       "portero_visita": {
-        "nombre": "Colten Ellis",
-        "estado": "expected",
-        "sv": 0.8729,
-        "tiros": 181,
-        "gsax": -5.44,
-        "partidos": 8
+        "nombre": "Alex Lyon",
+        "estado": "confirmed",
+        "sv": null,
+        "tiros": null,
+        "gsax": null,
+        "partidos": null
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.5538,
+      "portero_local_anterior": "Spencer Knight",
+      "portero_visita_anterior": "Colten Ellis"
     },
     {
       "id": "2026020306",
@@ -926,7 +934,7 @@
       },
       "portero_visita": {
         "nombre": "Joel Hofer",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.92,
         "tiros": 375,
         "gsax": 6.38,
