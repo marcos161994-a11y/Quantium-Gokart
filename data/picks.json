@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-13T14:30:30.327040-04:00",
+  "actualizado": "2026-11-13T14:50:23.706915-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-13",
   "umbral_alta": 0.68,
@@ -35,7 +35,7 @@
         },
         "portero_visita": {
           "nombre": "Dylan Garand",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9055,
           "tiros": 328,
           "gsax": 0.82,
@@ -664,7 +664,7 @@
       },
       "portero_visita": {
         "nombre": "Dylan Garand",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9055,
         "tiros": 328,
         "gsax": 0.82,
