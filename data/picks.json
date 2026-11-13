@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-13T14:50:23.706915-04:00",
+  "actualizado": "2026-11-13T19:58:23.020566-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-13",
   "umbral_alta": 0.68,
@@ -56,8 +56,8 @@
         "nombre_visita": "Predators de Nashville",
         "ganador": "VGK",
         "nombre_ganador": "Golden Knights de Vegas",
-        "probabilidad": 0.5829,
-        "probabilidad_local": 0.5829,
+        "probabilidad": 0.5794,
+        "probabilidad_local": 0.5794,
         "nivel": "media",
         "linea": "VGK -162",
         "casa": "DraftKings",
@@ -66,7 +66,7 @@
         "prob_mercado_local": 0.5934,
         "portero_local": {
           "nombre": "Adin Hill",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9034,
           "tiros": 238,
           "gsax": 0.09,
@@ -74,7 +74,7 @@
         },
         "portero_visita": {
           "nombre": "Juuse Saros",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9182,
           "tiros": 391,
           "gsax": 5.93,
@@ -292,8 +292,8 @@
         "nombre_visita": "Red Wings de Detroit",
         "ganador": "TBL",
         "nombre_ganador": "Lightning de Tampa Bay",
-        "probabilidad": 0.6718,
-        "probabilidad_local": 0.6718,
+        "probabilidad": 0.645,
+        "probabilidad_local": 0.645,
         "nivel": "media",
         "linea": "TBL -225",
         "casa": "DraftKings",
@@ -309,16 +309,20 @@
           "partidos": 14
         },
         "portero_visita": {
-          "nombre": "John Gibson",
-          "estado": "expected",
-          "sv": 0.862,
-          "tiros": 297,
-          "gsax": -12.19,
-          "partidos": 13
+          "nombre": "Daniil Tarasov",
+          "estado": "confirmed",
+          "sv": 0.9189,
+          "tiros": 185,
+          "gsax": 2.94,
+          "partidos": 8
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.6718,
+        "portero_local_anterior": "Andrei Vasilevskiy",
+        "portero_visita_anterior": "John Gibson"
       },
       {
         "id": "2026020317",
@@ -565,8 +569,8 @@
         "nombre_visita": "Islanders de Nueva York",
         "ganador": "ANA",
         "nombre_ganador": "Ducks de Anaheim",
-        "probabilidad": 0.5426,
-        "probabilidad_local": 0.5426,
+        "probabilidad": 0.5352,
+        "probabilidad_local": 0.5352,
         "nivel": "baja",
         "linea": "ANA -115",
         "casa": "DraftKings",
@@ -574,12 +578,12 @@
         "cuota_visita": -105,
         "prob_mercado_local": 0.5108,
         "portero_local": {
-          "nombre": "Laurent Brossoit",
+          "nombre": "Lukas Dostal",
           "estado": "expected",
-          "sv": 0.8672,
-          "tiros": 128,
-          "gsax": -4.58,
-          "partidos": 5
+          "sv": 0.8656,
+          "tiros": 253,
+          "gsax": -9.46,
+          "partidos": 10
         },
         "portero_visita": {
           "nombre": "Ilya Sorokin",
@@ -591,7 +595,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5426,
+        "portero_local_anterior": "Laurent Brossoit",
+        "portero_visita_anterior": "Ilya Sorokin"
       },
       {
         "id": "2026020325",
@@ -685,8 +693,8 @@
       "nombre_visita": "Predators de Nashville",
       "ganador": "VGK",
       "nombre_ganador": "Golden Knights de Vegas",
-      "probabilidad": 0.5829,
-      "probabilidad_local": 0.5829,
+      "probabilidad": 0.5794,
+      "probabilidad_local": 0.5794,
       "nivel": "media",
       "linea": "VGK -162",
       "casa": "DraftKings",
@@ -695,7 +703,7 @@
       "prob_mercado_local": 0.5934,
       "portero_local": {
         "nombre": "Adin Hill",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9034,
         "tiros": 238,
         "gsax": 0.09,
@@ -703,7 +711,7 @@
       },
       "portero_visita": {
         "nombre": "Juuse Saros",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9182,
         "tiros": 391,
         "gsax": 5.93,
