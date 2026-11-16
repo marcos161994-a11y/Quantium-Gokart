@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-16T16:58:35.800737-04:00",
+  "actualizado": "2026-11-16T17:19:21.403298-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-16",
   "umbral_alta": 0.68,
@@ -417,8 +417,8 @@
         "nombre_visita": "Predators de Nashville",
         "ganador": "MIN",
         "nombre_ganador": "Wild de Minnesota",
-        "probabilidad": 0.6372,
-        "probabilidad_local": 0.6372,
+        "probabilidad": 0.6369,
+        "probabilidad_local": 0.6369,
         "nivel": "media",
         "linea": "MIN -192",
         "casa": "Draft Kings",
@@ -436,9 +436,9 @@
         "portero_visita": {
           "nombre": "Juuse Saros",
           "estado": "expected",
-          "sv": 0.9168,
-          "tiros": 457,
-          "gsax": 6.33,
+          "sv": 0.9172,
+          "tiros": 459,
+          "gsax": 6.52,
           "partidos": 15
         },
         "estado": "programado",
