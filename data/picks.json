@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-20T15:04:37.772542-04:00",
+  "actualizado": "2026-11-20T15:19:04.181032-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-20",
   "umbral_alta": 0.68,
@@ -56,8 +56,8 @@
         "nombre_visita": "Blackhawks de Chicago",
         "ganador": "CGY",
         "nombre_ganador": "Flames de Calgary",
-        "probabilidad": 0.5986,
-        "probabilidad_local": 0.5986,
+        "probabilidad": 0.5984,
+        "probabilidad_local": 0.5984,
         "nivel": "media",
         "linea": "CGY -162",
         "casa": "DraftKings",
@@ -67,9 +67,9 @@
         "portero_local": {
           "nombre": "Dustin Wolf",
           "estado": "expected",
-          "sv": 0.8768,
-          "tiros": 349,
-          "gsax": -9.15,
+          "sv": 0.8764,
+          "tiros": 348,
+          "gsax": -9.24,
           "partidos": 13
         },
         "portero_visita": {
