@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-19T15:40:18.096560-04:00",
+  "actualizado": "2026-11-19T21:28:32.514114-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-19",
   "umbral_alta": 0.68,
@@ -466,25 +466,25 @@
         "nombre_visita": "Stars de Dallas",
         "ganador": "VGK",
         "nombre_ganador": "Golden Knights de Vegas",
-        "probabilidad": 0.5483,
-        "probabilidad_local": 0.5483,
-        "nivel": "baja",
+        "probabilidad": 0.5592,
+        "probabilidad_local": 0.5592,
+        "nivel": "media",
         "linea": "VGK -125",
         "casa": "Draft Kings",
         "cuota_local": -125,
         "cuota_visita": 105,
         "prob_mercado_local": 0.5325,
         "portero_local": {
-          "nombre": "Carter Hart",
-          "estado": "expected",
-          "sv": 0.8878,
-          "tiros": 294,
-          "gsax": -4.48,
-          "partidos": 12
+          "nombre": "Adin Hill",
+          "estado": "confirmed",
+          "sv": 0.901,
+          "tiros": 293,
+          "gsax": -0.58,
+          "partidos": 11
         },
         "portero_visita": {
           "nombre": "Jake Oettinger",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9009,
           "tiros": 353,
           "gsax": -0.76,
@@ -492,7 +492,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5483,
+        "portero_local_anterior": "Carter Hart",
+        "portero_visita_anterior": "Jake Oettinger"
       }
     ]
   },
@@ -957,25 +961,25 @@
       "nombre_visita": "Stars de Dallas",
       "ganador": "VGK",
       "nombre_ganador": "Golden Knights de Vegas",
-      "probabilidad": 0.5483,
-      "probabilidad_local": 0.5483,
-      "nivel": "baja",
+      "probabilidad": 0.5592,
+      "probabilidad_local": 0.5592,
+      "nivel": "media",
       "linea": "VGK -125",
       "casa": "Draft Kings",
       "cuota_local": -125,
       "cuota_visita": 105,
       "prob_mercado_local": 0.5325,
       "portero_local": {
-        "nombre": "Carter Hart",
-        "estado": "expected",
-        "sv": 0.8878,
-        "tiros": 294,
-        "gsax": -4.48,
-        "partidos": 12
+        "nombre": "Adin Hill",
+        "estado": "confirmed",
+        "sv": 0.901,
+        "tiros": 293,
+        "gsax": -0.58,
+        "partidos": 11
       },
       "portero_visita": {
         "nombre": "Jake Oettinger",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9009,
         "tiros": 353,
         "gsax": -0.76,
@@ -983,7 +987,11 @@
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.5483,
+      "portero_local_anterior": "Carter Hart",
+      "portero_visita_anterior": "Jake Oettinger"
     }
   ],
   "vivo": [
