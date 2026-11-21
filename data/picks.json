@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-21T14:20:37.702301-04:00",
+  "actualizado": "2026-11-21T19:29:51.858029-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-21",
   "umbral_alta": 0.68,
@@ -298,8 +298,8 @@
         "nombre_visita": "Kings de Los Ángeles",
         "ganador": "OTT",
         "nombre_ganador": "Senators de Ottawa",
-        "probabilidad": 0.6705,
-        "probabilidad_local": 0.6705,
+        "probabilidad": 0.6655,
+        "probabilidad_local": 0.6655,
         "nivel": "media",
         "linea": "OTT -185",
         "casa": "Draft Kings",
@@ -315,16 +315,20 @@
           "partidos": 11
         },
         "portero_visita": {
-          "nombre": "Darcy Kuemper",
-          "estado": "expected",
-          "sv": 0.8847,
-          "tiros": 347,
-          "gsax": -6.34,
-          "partidos": 13
+          "nombre": "Anton Forsberg",
+          "estado": "confirmed",
+          "sv": 0.9077,
+          "tiros": 195,
+          "gsax": 0.91,
+          "partidos": 8
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.6705,
+        "portero_local_anterior": "Linus Ullmark",
+        "portero_visita_anterior": "Darcy Kuemper"
       },
       {
         "id": "2026020367",
@@ -376,21 +380,21 @@
         "nombre_visita": "Devils de New Jersey",
         "ganador": "NJD",
         "nombre_ganador": "Devils de New Jersey",
-        "probabilidad": 0.5033,
-        "probabilidad_local": 0.4967,
-        "nivel": "baja",
+        "probabilidad": 0.567,
+        "probabilidad_local": 0.433,
+        "nivel": "media",
         "linea": "NJD -130",
         "casa": "Draft Kings",
         "cuota_local": 110,
         "cuota_visita": -130,
         "prob_mercado_local": 0.4573,
         "portero_local": {
-          "nombre": "Joel Hofer",
-          "estado": "expected",
-          "sv": 0.9226,
-          "tiros": 465,
-          "gsax": 9.1,
-          "partidos": 16
+          "nombre": "Jordan Binnington",
+          "estado": "confirmed",
+          "sv": 0.843,
+          "tiros": 172,
+          "gsax": -10.32,
+          "partidos": 6
         },
         "portero_visita": {
           "nombre": "Connor Hellebuyck",
@@ -402,7 +406,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5033,
+        "portero_local_anterior": "Joel Hofer",
+        "portero_visita_anterior": "Connor Hellebuyck"
       },
       {
         "id": "2026020369",
@@ -415,8 +423,8 @@
         "nombre_visita": "Golden Knights de Vegas",
         "ganador": "VGK",
         "nombre_ganador": "Golden Knights de Vegas",
-        "probabilidad": 0.5622,
-        "probabilidad_local": 0.4378,
+        "probabilidad": 0.5598,
+        "probabilidad_local": 0.4402,
         "nivel": "media",
         "linea": "VGK -135",
         "casa": "Draft Kings",
@@ -432,16 +440,20 @@
           "partidos": 16
         },
         "portero_visita": {
-          "nombre": "Adin Hill",
-          "estado": "expected",
-          "sv": 0.8984,
-          "tiros": 315,
-          "gsax": -1.44,
+          "nombre": "Carter Hart",
+          "estado": "confirmed",
+          "sv": 0.8878,
+          "tiros": 294,
+          "gsax": -4.48,
           "partidos": 12
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5622,
+        "portero_local_anterior": "Stuart Skinner",
+        "portero_visita_anterior": "Adin Hill"
       },
       {
         "id": "2026020370",
@@ -454,8 +466,8 @@
         "nombre_visita": "Ducks de Anaheim",
         "ganador": "UTA",
         "nombre_ganador": "Mammoth de Utah",
-        "probabilidad": 0.59,
-        "probabilidad_local": 0.59,
+        "probabilidad": 0.582,
+        "probabilidad_local": 0.582,
         "nivel": "media",
         "linea": "UTA -162",
         "casa": "Draft Kings",
@@ -471,12 +483,12 @@
           "partidos": 9
         },
         "portero_visita": {
-          "nombre": "Lukas Dostal",
-          "estado": "expected",
-          "sv": 0.8571,
-          "tiros": 308,
-          "gsax": -14.12,
-          "partidos": 13
+          "nombre": "Ville Husso",
+          "estado": "confirmed",
+          "sv": 0.8563,
+          "tiros": 174,
+          "gsax": -8.12,
+          "partidos": 8
         },
         "estado": "programado",
         "periodo": "",
@@ -497,8 +509,8 @@
         "nombre_visita": "Wild de Minnesota",
         "ganador": "MIN",
         "nombre_ganador": "Wild de Minnesota",
-        "probabilidad": 0.7586,
-        "probabilidad_local": 0.2414,
+        "probabilidad": 0.7561,
+        "probabilidad_local": 0.2439,
         "nivel": "alta",
         "linea": "MIN -325",
         "casa": "Draft Kings",
@@ -515,7 +527,7 @@
         },
         "portero_visita": {
           "nombre": "Jesper Wallstedt",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.9256,
           "tiros": 551,
           "gsax": 12.45,
@@ -536,8 +548,8 @@
         "nombre_visita": "Kraken de Seattle",
         "ganador": "SJS",
         "nombre_ganador": "Sharks de San José",
-        "probabilidad": 0.5011,
-        "probabilidad_local": 0.5011,
+        "probabilidad": 0.5109,
+        "probabilidad_local": 0.5109,
         "nivel": "baja",
         "linea": "SJS -118",
         "casa": "Draft Kings",
@@ -545,12 +557,12 @@
         "cuota_visita": -102,
         "prob_mercado_local": 0.5174,
         "portero_local": {
-          "nombre": "Yaroslav Askarov",
-          "estado": "expected",
-          "sv": 0.8884,
-          "tiros": 475,
-          "gsax": -6.93,
-          "partidos": 16
+          "nombre": "Alex Nedeljkovic",
+          "estado": "confirmed",
+          "sv": 0.902,
+          "tiros": 255,
+          "gsax": -0.27,
+          "partidos": 8
         },
         "portero_visita": {
           "nombre": "Philipp Grubauer",
@@ -562,7 +574,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5011,
+        "portero_local_anterior": "Yaroslav Askarov",
+        "portero_visita_anterior": "Philipp Grubauer"
       }
     ],
     "2026-11-22": [
@@ -655,21 +671,21 @@
         "nombre_visita": "Oilers de Edmonton",
         "ganador": "EDM",
         "nombre_ganador": "Oilers de Edmonton",
-        "probabilidad": 0.5743,
-        "probabilidad_local": 0.4257,
-        "nivel": "media",
+        "probabilidad": 0.5369,
+        "probabilidad_local": 0.4631,
+        "nivel": "baja",
         "linea": "EDM -135",
         "casa": "Draft Kings",
         "cuota_local": 114,
         "cuota_visita": -135,
         "prob_mercado_local": 0.4486,
         "portero_local": {
-          "nombre": "Jordan Binnington",
+          "nombre": "Joel Hofer",
           "estado": "expected",
-          "sv": 0.843,
-          "tiros": 172,
-          "gsax": -10.32,
-          "partidos": 6
+          "sv": 0.9226,
+          "tiros": 465,
+          "gsax": 9.1,
+          "partidos": 16
         },
         "portero_visita": {
           "nombre": "Tristan Jarry",
@@ -681,7 +697,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5743,
+        "portero_local_anterior": "Jordan Binnington",
+        "portero_visita_anterior": "Tristan Jarry"
       },
       {
         "id": "2026020376",
@@ -694,8 +714,8 @@
         "nombre_visita": "Penguins de Pittsburgh",
         "ganador": "DAL",
         "nombre_ganador": "Stars de Dallas",
-        "probabilidad": 0.596,
-        "probabilidad_local": 0.596,
+        "probabilidad": 0.609,
+        "probabilidad_local": 0.609,
         "nivel": "media",
         "linea": "DAL -238",
         "casa": "Draft Kings",
@@ -711,16 +731,20 @@
           "partidos": 17
         },
         "portero_visita": {
-          "nombre": "Sergei Murashov",
+          "nombre": "Arturs Silovs",
           "estado": "expected",
-          "sv": 0.8939,
-          "tiros": 245,
-          "gsax": -2.24,
-          "partidos": 8
+          "sv": 0.8732,
+          "tiros": 347,
+          "gsax": -10.34,
+          "partidos": 13
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.596,
+        "portero_local_anterior": "Jake Oettinger",
+        "portero_visita_anterior": "Sergei Murashov"
       },
       {
         "id": "2026020377",
@@ -742,12 +766,12 @@
         "cuota_visita": -108,
         "prob_mercado_local": 0.5043,
         "portero_local": {
-          "nombre": "Kevin Lankinen",
+          "nombre": "Nikita Tolopilo",
           "estado": "expected",
-          "sv": 0.8082,
-          "tiros": 219,
-          "gsax": -20.76,
-          "partidos": 9
+          "sv": 0.9459,
+          "tiros": 37,
+          "gsax": 1.59,
+          "partidos": 1
         },
         "portero_visita": {
           "nombre": "Drew Commesso",
@@ -759,7 +783,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.519,
+        "portero_local_anterior": "Kevin Lankinen",
+        "portero_visita_anterior": "Drew Commesso"
       }
     ]
   },
@@ -1056,8 +1084,8 @@
       "nombre_visita": "Kings de Los Ángeles",
       "ganador": "OTT",
       "nombre_ganador": "Senators de Ottawa",
-      "probabilidad": 0.6705,
-      "probabilidad_local": 0.6705,
+      "probabilidad": 0.6655,
+      "probabilidad_local": 0.6655,
       "nivel": "media",
       "linea": "OTT -185",
       "casa": "Draft Kings",
@@ -1073,16 +1101,20 @@
         "partidos": 11
       },
       "portero_visita": {
-        "nombre": "Darcy Kuemper",
-        "estado": "expected",
-        "sv": 0.8847,
-        "tiros": 347,
-        "gsax": -6.34,
-        "partidos": 13
+        "nombre": "Anton Forsberg",
+        "estado": "confirmed",
+        "sv": 0.9077,
+        "tiros": 195,
+        "gsax": 0.91,
+        "partidos": 8
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.6705,
+      "portero_local_anterior": "Linus Ullmark",
+      "portero_visita_anterior": "Darcy Kuemper"
     },
     {
       "id": "2026020367",
@@ -1134,21 +1166,21 @@
       "nombre_visita": "Devils de New Jersey",
       "ganador": "NJD",
       "nombre_ganador": "Devils de New Jersey",
-      "probabilidad": 0.5033,
-      "probabilidad_local": 0.4967,
-      "nivel": "baja",
+      "probabilidad": 0.567,
+      "probabilidad_local": 0.433,
+      "nivel": "media",
       "linea": "NJD -130",
       "casa": "Draft Kings",
       "cuota_local": 110,
       "cuota_visita": -130,
       "prob_mercado_local": 0.4573,
       "portero_local": {
-        "nombre": "Joel Hofer",
-        "estado": "expected",
-        "sv": 0.9226,
-        "tiros": 465,
-        "gsax": 9.1,
-        "partidos": 16
+        "nombre": "Jordan Binnington",
+        "estado": "confirmed",
+        "sv": 0.843,
+        "tiros": 172,
+        "gsax": -10.32,
+        "partidos": 6
       },
       "portero_visita": {
         "nombre": "Connor Hellebuyck",
@@ -1160,7 +1192,11 @@
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.5033,
+      "portero_local_anterior": "Joel Hofer",
+      "portero_visita_anterior": "Connor Hellebuyck"
     },
     {
       "id": "2026020369",
@@ -1173,8 +1209,8 @@
       "nombre_visita": "Golden Knights de Vegas",
       "ganador": "VGK",
       "nombre_ganador": "Golden Knights de Vegas",
-      "probabilidad": 0.5622,
-      "probabilidad_local": 0.4378,
+      "probabilidad": 0.5598,
+      "probabilidad_local": 0.4402,
       "nivel": "media",
       "linea": "VGK -135",
       "casa": "Draft Kings",
@@ -1190,16 +1226,20 @@
         "partidos": 16
       },
       "portero_visita": {
-        "nombre": "Adin Hill",
-        "estado": "expected",
-        "sv": 0.8984,
-        "tiros": 315,
-        "gsax": -1.44,
+        "nombre": "Carter Hart",
+        "estado": "confirmed",
+        "sv": 0.8878,
+        "tiros": 294,
+        "gsax": -4.48,
         "partidos": 12
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.5622,
+      "portero_local_anterior": "Stuart Skinner",
+      "portero_visita_anterior": "Adin Hill"
     },
     {
       "id": "2026020370",
@@ -1212,8 +1252,8 @@
       "nombre_visita": "Ducks de Anaheim",
       "ganador": "UTA",
       "nombre_ganador": "Mammoth de Utah",
-      "probabilidad": 0.59,
-      "probabilidad_local": 0.59,
+      "probabilidad": 0.582,
+      "probabilidad_local": 0.582,
       "nivel": "media",
       "linea": "UTA -162",
       "casa": "Draft Kings",
@@ -1229,12 +1269,12 @@
         "partidos": 9
       },
       "portero_visita": {
-        "nombre": "Lukas Dostal",
-        "estado": "expected",
-        "sv": 0.8571,
-        "tiros": 308,
-        "gsax": -14.12,
-        "partidos": 13
+        "nombre": "Ville Husso",
+        "estado": "confirmed",
+        "sv": 0.8563,
+        "tiros": 174,
+        "gsax": -8.12,
+        "partidos": 8
       },
       "estado": "programado",
       "periodo": "",
@@ -1255,8 +1295,8 @@
       "nombre_visita": "Wild de Minnesota",
       "ganador": "MIN",
       "nombre_ganador": "Wild de Minnesota",
-      "probabilidad": 0.7586,
-      "probabilidad_local": 0.2414,
+      "probabilidad": 0.7561,
+      "probabilidad_local": 0.2439,
       "nivel": "alta",
       "linea": "MIN -325",
       "casa": "Draft Kings",
@@ -1273,7 +1313,7 @@
       },
       "portero_visita": {
         "nombre": "Jesper Wallstedt",
-        "estado": "expected",
+        "estado": "confirmed",
         "sv": 0.9256,
         "tiros": 551,
         "gsax": 12.45,
@@ -1294,8 +1334,8 @@
       "nombre_visita": "Kraken de Seattle",
       "ganador": "SJS",
       "nombre_ganador": "Sharks de San José",
-      "probabilidad": 0.5011,
-      "probabilidad_local": 0.5011,
+      "probabilidad": 0.5109,
+      "probabilidad_local": 0.5109,
       "nivel": "baja",
       "linea": "SJS -118",
       "casa": "Draft Kings",
@@ -1303,12 +1343,12 @@
       "cuota_visita": -102,
       "prob_mercado_local": 0.5174,
       "portero_local": {
-        "nombre": "Yaroslav Askarov",
-        "estado": "expected",
-        "sv": 0.8884,
-        "tiros": 475,
-        "gsax": -6.93,
-        "partidos": 16
+        "nombre": "Alex Nedeljkovic",
+        "estado": "confirmed",
+        "sv": 0.902,
+        "tiros": 255,
+        "gsax": -0.27,
+        "partidos": 8
       },
       "portero_visita": {
         "nombre": "Philipp Grubauer",
@@ -1320,7 +1360,11 @@
       },
       "estado": "programado",
       "periodo": "",
-      "acierto": null
+      "acierto": null,
+      "portero_cambiado": true,
+      "probabilidad_anterior": 0.5011,
+      "portero_local_anterior": "Yaroslav Askarov",
+      "portero_visita_anterior": "Philipp Grubauer"
     }
   ],
   "vivo": [
