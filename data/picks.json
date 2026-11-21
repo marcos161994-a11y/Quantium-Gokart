@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-20T15:19:04.181032-04:00",
+  "actualizado": "2026-11-20T20:53:21.658991-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-20",
   "umbral_alta": 0.68,
@@ -485,8 +485,8 @@
         "nombre_visita": "Wild de Minnesota",
         "ganador": "MIN",
         "nombre_ganador": "Wild de Minnesota",
-        "probabilidad": 0.7587,
-        "probabilidad_local": 0.2413,
+        "probabilidad": 0.7586,
+        "probabilidad_local": 0.2414,
         "nivel": "alta",
         "linea": "MIN -285",
         "casa": "DraftKings",
@@ -496,9 +496,9 @@
         "portero_local": {
           "nombre": "Leevi Merilainen",
           "estado": "expected",
-          "sv": 0.8889,
-          "tiros": 495,
-          "gsax": -6.99,
+          "sv": 0.8891,
+          "tiros": 496,
+          "gsax": -6.89,
           "partidos": 17
         },
         "portero_visita": {
