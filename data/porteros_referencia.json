@@ -1740,26 +1740,26 @@
     "CAR": {
       "id": 8481611,
       "nombre": "Pyotr Kochetkov",
-      "sv": 0.91986,
-      "gsax": 8.074746231928657,
-      "inicios": 14,
-      "tiros": 287,
-      "saves": 264
+      "sv": 0.91059,
+      "gsax": 6.076900296150029,
+      "inicios": 15,
+      "tiros": 302,
+      "saves": 275
     },
     "MIN": {
       "id": 8482661,
       "nombre": "Jesper Wallstedt",
-      "sv": 0.92558,
-      "gsax": 18.65918179021844,
-      "inicios": 21,
-      "tiros": 551,
-      "saves": 510
+      "sv": 0.92347,
+      "gsax": 18.97754195459038,
+      "inicios": 22,
+      "tiros": 575,
+      "saves": 531
     },
     "NYR": {
       "id": 8482193,
       "nombre": "Dylan Garand",
       "sv": 0.91011,
-      "gsax": 6.545678252845278,
+      "gsax": 6.9913129318854885,
       "inicios": 13,
       "tiros": 356,
       "saves": 324
@@ -1767,17 +1767,17 @@
     "DET": {
       "id": 8476434,
       "nombre": "John Gibson",
-      "sv": 0.86195,
-      "gsax": -8.842509996924036,
-      "inicios": 13,
-      "tiros": 297,
-      "saves": 256
+      "sv": 0.86163,
+      "gsax": -9.17068114511352,
+      "inicios": 14,
+      "tiros": 318,
+      "saves": 274
     },
     "TBL": {
       "id": 8476883,
       "nombre": "Andrei Vasilevskiy",
       "sv": 0.89473,
-      "gsax": 1.2586896339587952,
+      "gsax": 1.7819348469891452,
       "inicios": 17,
       "tiros": 418,
       "saves": 374
@@ -1785,17 +1785,17 @@
     "OTT": {
       "id": 8476999,
       "nombre": "Linus Ullmark",
-      "sv": 0.93975,
-      "gsax": 11.960319901568766,
-      "inicios": 11,
-      "tiros": 249,
-      "saves": 234
+      "sv": 0.93703,
+      "gsax": 12.572063178677183,
+      "inicios": 12,
+      "tiros": 270,
+      "saves": 253
     },
     "TOR": {
       "id": 8475683,
       "nombre": "Sergei Bobrovsky",
       "sv": 0.87376,
-      "gsax": -7.257151645647468,
+      "gsax": -6.751431391905214,
       "inicios": 14,
       "tiros": 404,
       "saves": 353
@@ -1803,26 +1803,26 @@
     "CHI": {
       "id": 8481519,
       "nombre": "Spencer Knight",
-      "sv": 0.88555,
-      "gsax": -3.28975699784678,
-      "inicios": 18,
-      "tiros": 533,
-      "saves": 472
+      "sv": 0.88752,
+      "gsax": -1.6796150049358403,
+      "inicios": 19,
+      "tiros": 569,
+      "saves": 505
     },
     "CGY": {
       "id": 8481692,
       "nombre": "Dustin Wolf",
-      "sv": 0.87643,
-      "gsax": -5.320516764072579,
-      "inicios": 12,
-      "tiros": 348,
-      "saves": 305
+      "sv": 0.87664,
+      "gsax": -5.270533070088845,
+      "inicios": 13,
+      "tiros": 381,
+      "saves": 334
     },
     "STL": {
       "id": 8480981,
       "nombre": "Joel Hofer",
       "sv": 0.92258,
-      "gsax": 14.347585358351296,
+      "gsax": 14.929664363277368,
       "inicios": 16,
       "tiros": 465,
       "saves": 429
@@ -1830,17 +1830,17 @@
     "EDM": {
       "id": 8482221,
       "nombre": "Devon Levi",
-      "sv": 0.90614,
-      "gsax": 4.456782528452777,
-      "inicios": 12,
-      "tiros": 309,
-      "saves": 280
+      "sv": 0.89565,
+      "gsax": 1.7865251727541818,
+      "inicios": 13,
+      "tiros": 345,
+      "saves": 309
     },
     "BUF": {
       "id": 8480045,
       "nombre": "Ukko-Pekka Luukkonen",
       "sv": 0.87278,
-      "gsax": -6.4032605352199425,
+      "gsax": -5.980157946692998,
       "inicios": 12,
       "tiros": 338,
       "saves": 295
@@ -1848,17 +1848,17 @@
     "NYI": {
       "id": 8478009,
       "nombre": "Ilya Sorokin",
-      "sv": 0.91885,
-      "gsax": 11.366964011073549,
-      "inicios": 14,
-      "tiros": 419,
-      "saves": 385
+      "sv": 0.91799,
+      "gsax": 12.081984205330684,
+      "inicios": 15,
+      "tiros": 439,
+      "saves": 403
     },
     "ANA": {
       "id": 8480843,
       "nombre": "Lukas Dostal",
       "sv": 0.85714,
-      "gsax": -10.65149184866192,
+      "gsax": -10.265942744323809,
       "inicios": 12,
       "tiros": 308,
       "saves": 264
@@ -1866,17 +1866,17 @@
     "SEA": {
       "id": 8475831,
       "nombre": "Philipp Grubauer",
-      "sv": 0.89719,
-      "gsax": 1.7560750538295906,
-      "inicios": 10,
-      "tiros": 321,
-      "saves": 288
+      "sv": 0.89428,
+      "gsax": 1.3341559723593264,
+      "inicios": 11,
+      "tiros": 350,
+      "saves": 313
     },
     "LAK": {
       "id": 8475311,
       "nombre": "Darcy Kuemper",
       "sv": 0.88472,
-      "gsax": -2.4287911411873324,
+      "gsax": -1.9944225074037263,
       "inicios": 13,
       "tiros": 347,
       "saves": 307
@@ -1885,7 +1885,7 @@
       "id": 8478406,
       "nombre": "Mackenzie Blackwood",
       "sv": 0.9041,
-      "gsax": 5.424177176253465,
+      "gsax": 5.972458045409667,
       "inicios": 16,
       "tiros": 438,
       "saves": 396
@@ -1893,17 +1893,17 @@
     "FLA": {
       "id": 8474593,
       "nombre": "Jacob Markstrom",
-      "sv": 0.89752,
-      "gsax": 1.6416487234697286,
-      "inicios": 12,
-      "tiros": 283,
-      "saves": 254
+      "sv": 0.89403,
+      "gsax": 1.0769002961500291,
+      "inicios": 13,
+      "tiros": 302,
+      "saves": 270
     },
     "WSH": {
       "id": 8480313,
       "nombre": "Logan Thompson",
       "sv": 0.8783,
-      "gsax": -5.072285450630545,
+      "gsax": -4.599111549851898,
       "inicios": 15,
       "tiros": 378,
       "saves": 332
@@ -1912,7 +1912,7 @@
       "id": 8481668,
       "nombre": "Arturs Silovs",
       "sv": 0.87319,
-      "gsax": -6.428791141187332,
+      "gsax": -5.994422507403726,
       "inicios": 13,
       "tiros": 347,
       "saves": 303
@@ -1920,17 +1920,17 @@
     "NJD": {
       "id": 8474596,
       "nombre": "Jake Allen",
-      "sv": 0.88059,
-      "gsax": -2.9824669332512883,
+      "sv": 0.87323,
+      "gsax": -4.894570582428429,
       "inicios": 10,
-      "tiros": 268,
-      "saves": 236
+      "tiros": 284,
+      "saves": 248
     },
     "SJS": {
       "id": 8482137,
       "nombre": "Yaroslav Askarov",
       "sv": 0.88842,
-      "gsax": -1.5696708705013407,
+      "gsax": -0.9750740375123428,
       "inicios": 16,
       "tiros": 475,
       "saves": 422
@@ -1938,80 +1938,80 @@
     "MTL": {
       "id": 8484170,
       "nombre": "Jacob Fowler",
-      "sv": 0.92345,
-      "gsax": 12.851122731467285,
-      "inicios": 14,
-      "tiros": 405,
-      "saves": 374
+      "sv": 0.91764,
+      "gsax": 11.548617966436325,
+      "inicios": 15,
+      "tiros": 425,
+      "saves": 390
     },
     "CBJ": {
-      "id": 8482982,
-      "nombre": "Jet Greaves",
-      "sv": 0.87547,
-      "gsax": -4.307290064595492,
-      "inicios": 10,
-      "tiros": 265,
-      "saves": 232
+      "id": 8475660,
+      "nombre": "Cam Talbot",
+      "sv": 0.90683,
+      "gsax": 5.2674234945706075,
+      "inicios": 11,
+      "tiros": 322,
+      "saves": 292
     },
     "WPG": {
       "id": 8479973,
       "nombre": "Stuart Skinner",
-      "sv": 0.88321,
-      "gsax": -3.499231005844308,
-      "inicios": 16,
-      "tiros": 411,
-      "saves": 363
+      "sv": 0.88288,
+      "gsax": -3.370384995064171,
+      "inicios": 17,
+      "tiros": 444,
+      "saves": 392
     },
     "VAN": {
       "id": 8482447,
       "nombre": "Leevi Merilainen",
-      "sv": 0.88911,
-      "gsax": -1.295908951091974,
-      "inicios": 15,
-      "tiros": 496,
-      "saves": 441
+      "sv": 0.88867,
+      "gsax": -0.9368706811451375,
+      "inicios": 16,
+      "tiros": 521,
+      "saves": 463
     },
     "PHI": {
-      "id": 8479361,
-      "nombre": "Joseph Woll",
-      "sv": 0.89247,
-      "gsax": 0.278068286681048,
+      "id": 8478435,
+      "nombre": "Dan Vladar",
+      "sv": 0.87647,
+      "gsax": -4.761105626850963,
       "inicios": 13,
-      "tiros": 372,
-      "saves": 332
+      "tiros": 340,
+      "saves": 298
     },
     "VGK": {
       "id": 8479394,
       "nombre": "Carter Hart",
-      "sv": 0.88775,
-      "gsax": -1.167333128268183,
-      "inicios": 12,
-      "tiros": 294,
-      "saves": 261
+      "sv": 0.8858,
+      "gsax": -1.5135241855873574,
+      "inicios": 13,
+      "tiros": 324,
+      "saves": 287
     },
     "BOS": {
       "id": 8480280,
       "nombre": "Jeremy Swayman",
-      "sv": 0.90823,
-      "gsax": 7.016610273761955,
-      "inicios": 16,
-      "tiros": 425,
-      "saves": 386
+      "sv": 0.90455,
+      "gsax": 6.491559723593298,
+      "inicios": 17,
+      "tiros": 461,
+      "saves": 417
     },
     "NSH": {
       "id": 8477424,
       "nombre": "Juuse Saros",
-      "sv": 0.91823,
-      "gsax": 12.64687788372811,
-      "inicios": 15,
-      "tiros": 477,
-      "saves": 438
+      "sv": 0.91616,
+      "gsax": 12.872606120434341,
+      "inicios": 16,
+      "tiros": 501,
+      "saves": 459
     },
     "UTA": {
       "id": 8478872,
       "nombre": "Karel Vejmelka",
       "sv": 0.87228,
-      "gsax": -7.155029221777909,
+      "gsax": -6.694373149062187,
       "inicios": 15,
       "tiros": 368,
       "saves": 321
@@ -2020,11 +2020,11 @@
       "id": 8479979,
       "nombre": "Jake Oettinger",
       "sv": 0.90078,
-      "gsax": 3.469086434943108,
+      "gsax": 3.94851924975319,
       "inicios": 17,
       "tiros": 383,
       "saves": 345
     },
-    "_liga_sv": 0.891725622885266
+    "_liga_sv": 0.8904738400789733
   }
 }

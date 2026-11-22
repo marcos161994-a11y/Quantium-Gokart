@@ -1,40 +1,40 @@
 {
-  "n": 5950,
-  "log_loss_modelo": 0.672964,
-  "brier_modelo": 0.239971,
-  "acierto_modelo": 0.58084,
+  "n": 5964,
+  "log_loss_modelo": 0.673044,
+  "brier_modelo": 0.240004,
+  "acierto_modelo": 0.580986,
   "umbral_alta": 0.68,
   "temporada_examen": 20252026,
   "g0": null,
   "encogimiento_justificado": false,
   "delta_log_loss_encogido": 0.004137,
   "mercado": {
-    "n": 5948,
-    "log_loss_modelo": 0.673024,
-    "log_loss_mercado": 0.662428,
-    "brier_modelo": 0.24,
-    "brier_mercado": 0.235139,
-    "n_draftkings": 4106,
-    "log_loss_modelo_dk": 0.67301,
-    "log_loss_mercado_dk": 0.662032,
-    "brier_modelo_dk": 0.239854,
-    "brier_mercado_dk": 0.234954
+    "n": 5962,
+    "log_loss_modelo": 0.673104,
+    "log_loss_mercado": 0.662492,
+    "brier_modelo": 0.240033,
+    "brier_mercado": 0.235166,
+    "n_draftkings": 4120,
+    "log_loss_modelo_dk": 0.673125,
+    "log_loss_mercado_dk": 0.662125,
+    "brier_modelo_dk": 0.239902,
+    "brier_mercado_dk": 0.234994
   },
   "por_nivel_oos": {
     "alta": {
       "aciertos": 832,
-      "total": 1205,
-      "pct": 0.6905
+      "total": 1206,
+      "pct": 0.6899
     },
     "media": {
-      "aciertos": 1769,
-      "total": 3076,
-      "pct": 0.5751
+      "aciertos": 1775,
+      "total": 3084,
+      "pct": 0.5756
     },
     "baja": {
-      "aciertos": 855,
-      "total": 1669,
-      "pct": 0.5123
+      "aciertos": 858,
+      "total": 1674,
+      "pct": 0.5125
     }
   },
   "por_nivel_examen": {
@@ -107,14 +107,14 @@
     {
       "temporada": 20262027,
       "n_entrenamiento": 6993,
-      "n_examen": 358,
+      "n_examen": 372,
       "g0": 40,
-      "log_loss_sin_encoger": 0.66279,
-      "log_loss_encogido": 0.682776,
-      "brier_sin_encoger": 0.235236,
-      "brier_encogido": 0.24482,
-      "log_loss": 0.66279,
-      "brier": 0.235236
+      "log_loss_sin_encoger": 0.664451,
+      "log_loss_encogido": 0.68332,
+      "brier_sin_encoger": 0.235942,
+      "brier_encogido": 0.245073,
+      "log_loss": 0.664451,
+      "brier": 0.235942
     }
   ]
 }
