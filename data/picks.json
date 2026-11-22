@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-22T14:28:58.282815-04:00",
+  "actualizado": "2026-11-22T14:44:44.986964-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-22",
   "umbral_alta": 0.68,
@@ -421,8 +421,8 @@
         "nombre_visita": "Ducks de Anaheim",
         "ganador": "SEA",
         "nombre_ganador": "Kraken de Seattle",
-        "probabilidad": 0.5262,
-        "probabilidad_local": 0.5262,
+        "probabilidad": 0.526,
+        "probabilidad_local": 0.526,
         "nivel": "baja",
         "linea": "SEA -115",
         "casa": "Draft Kings",
@@ -432,9 +432,9 @@
         "portero_local": {
           "nombre": "Philipp Grubauer",
           "estado": "expected",
-          "sv": 0.8943,
-          "tiros": 350,
-          "gsax": -3.05,
+          "sv": 0.894,
+          "tiros": 349,
+          "gsax": -3.15,
           "partidos": 14
         },
         "portero_visita": {
