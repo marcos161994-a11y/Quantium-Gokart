@@ -1,30 +1,30 @@
 {
-  "n": 5964,
-  "log_loss_modelo": 0.673044,
-  "brier_modelo": 0.240004,
-  "acierto_modelo": 0.580986,
+  "n": 5969,
+  "log_loss_modelo": 0.673075,
+  "brier_modelo": 0.240019,
+  "acierto_modelo": 0.581002,
   "umbral_alta": 0.68,
   "temporada_examen": 20252026,
   "g0": null,
   "encogimiento_justificado": false,
   "delta_log_loss_encogido": 0.004137,
   "mercado": {
-    "n": 5962,
-    "log_loss_modelo": 0.673104,
-    "log_loss_mercado": 0.662492,
-    "brier_modelo": 0.240033,
-    "brier_mercado": 0.235166,
-    "n_draftkings": 4120,
-    "log_loss_modelo_dk": 0.673125,
-    "log_loss_mercado_dk": 0.662125,
-    "brier_modelo_dk": 0.239902,
-    "brier_mercado_dk": 0.234994
+    "n": 5967,
+    "log_loss_modelo": 0.673135,
+    "log_loss_mercado": 0.662488,
+    "brier_modelo": 0.240048,
+    "brier_mercado": 0.235164,
+    "n_draftkings": 4125,
+    "log_loss_modelo_dk": 0.67317,
+    "log_loss_mercado_dk": 0.662119,
+    "brier_modelo_dk": 0.239924,
+    "brier_mercado_dk": 0.234991
   },
   "por_nivel_oos": {
     "alta": {
-      "aciertos": 832,
-      "total": 1206,
-      "pct": 0.6899
+      "aciertos": 833,
+      "total": 1208,
+      "pct": 0.6896
     },
     "media": {
       "aciertos": 1775,
@@ -32,9 +32,9 @@
       "pct": 0.5756
     },
     "baja": {
-      "aciertos": 858,
-      "total": 1674,
-      "pct": 0.5125
+      "aciertos": 860,
+      "total": 1677,
+      "pct": 0.5128
     }
   },
   "por_nivel_examen": {
@@ -107,14 +107,14 @@
     {
       "temporada": 20262027,
       "n_entrenamiento": 6993,
-      "n_examen": 372,
+      "n_examen": 377,
       "g0": 40,
-      "log_loss_sin_encoger": 0.664451,
-      "log_loss_encogido": 0.68332,
-      "brier_sin_encoger": 0.235942,
-      "brier_encogido": 0.245073,
-      "log_loss": 0.664451,
-      "brier": 0.235942
+      "log_loss_sin_encoger": 0.665055,
+      "log_loss_encogido": 0.683464,
+      "brier_sin_encoger": 0.236228,
+      "brier_encogido": 0.245144,
+      "log_loss": 0.665055,
+      "brier": 0.236228
     }
   ]
 }
