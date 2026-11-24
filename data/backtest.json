@@ -1,39 +1,39 @@
 {
-  "n": 5969,
-  "log_loss_modelo": 0.673075,
-  "brier_modelo": 0.240019,
-  "acierto_modelo": 0.581002,
+  "n": 5976,
+  "log_loss_modelo": 0.673063,
+  "brier_modelo": 0.240014,
+  "acierto_modelo": 0.580991,
   "umbral_alta": 0.68,
   "temporada_examen": 20252026,
   "g0": null,
   "encogimiento_justificado": false,
   "delta_log_loss_encogido": 0.004137,
   "mercado": {
-    "n": 5967,
-    "log_loss_modelo": 0.673135,
-    "log_loss_mercado": 0.662488,
-    "brier_modelo": 0.240048,
-    "brier_mercado": 0.235164,
-    "n_draftkings": 4125,
-    "log_loss_modelo_dk": 0.67317,
-    "log_loss_mercado_dk": 0.662119,
-    "brier_modelo_dk": 0.239924,
-    "brier_mercado_dk": 0.234991
+    "n": 5974,
+    "log_loss_modelo": 0.673123,
+    "log_loss_mercado": 0.662453,
+    "brier_modelo": 0.240043,
+    "brier_mercado": 0.235147,
+    "n_draftkings": 4132,
+    "log_loss_modelo_dk": 0.673153,
+    "log_loss_mercado_dk": 0.662069,
+    "brier_modelo_dk": 0.239917,
+    "brier_mercado_dk": 0.234967
   },
   "por_nivel_oos": {
     "alta": {
-      "aciertos": 833,
-      "total": 1208,
-      "pct": 0.6896
+      "aciertos": 834,
+      "total": 1209,
+      "pct": 0.6898
     },
     "media": {
-      "aciertos": 1775,
-      "total": 3084,
-      "pct": 0.5756
+      "aciertos": 1777,
+      "total": 3088,
+      "pct": 0.5755
     },
     "baja": {
-      "aciertos": 860,
-      "total": 1677,
+      "aciertos": 861,
+      "total": 1679,
       "pct": 0.5128
     }
   },
@@ -107,14 +107,14 @@
     {
       "temporada": 20262027,
       "n_entrenamiento": 6993,
-      "n_examen": 377,
+      "n_examen": 384,
       "g0": 40,
-      "log_loss_sin_encoger": 0.665055,
-      "log_loss_encogido": 0.683464,
-      "brier_sin_encoger": 0.236228,
-      "brier_encogido": 0.245144,
-      "log_loss": 0.665055,
-      "brier": 0.236228
+      "log_loss_sin_encoger": 0.665021,
+      "log_loss_encogido": 0.683104,
+      "brier_sin_encoger": 0.236221,
+      "brier_encogido": 0.244971,
+      "log_loss": 0.665021,
+      "brier": 0.236221
     }
   ]
 }
