@@ -1,24 +1,24 @@
 {
-  "n": 5976,
-  "log_loss_modelo": 0.673063,
-  "brier_modelo": 0.240014,
-  "acierto_modelo": 0.580991,
+  "n": 5977,
+  "log_loss_modelo": 0.673078,
+  "brier_modelo": 0.240022,
+  "acierto_modelo": 0.580893,
   "umbral_alta": 0.68,
   "temporada_examen": 20252026,
   "g0": null,
   "encogimiento_justificado": false,
   "delta_log_loss_encogido": 0.004137,
   "mercado": {
-    "n": 5974,
-    "log_loss_modelo": 0.673123,
-    "log_loss_mercado": 0.662453,
-    "brier_modelo": 0.240043,
-    "brier_mercado": 0.235147,
-    "n_draftkings": 4132,
-    "log_loss_modelo_dk": 0.673153,
-    "log_loss_mercado_dk": 0.662069,
-    "brier_modelo_dk": 0.239917,
-    "brier_mercado_dk": 0.234967
+    "n": 5975,
+    "log_loss_modelo": 0.673138,
+    "log_loss_mercado": 0.662447,
+    "brier_modelo": 0.24005,
+    "brier_mercado": 0.235144,
+    "n_draftkings": 4133,
+    "log_loss_modelo_dk": 0.673174,
+    "log_loss_mercado_dk": 0.662062,
+    "brier_modelo_dk": 0.239927,
+    "brier_mercado_dk": 0.234963
   },
   "por_nivel_oos": {
     "alta": {
@@ -33,8 +33,8 @@
     },
     "baja": {
       "aciertos": 861,
-      "total": 1679,
-      "pct": 0.5128
+      "total": 1680,
+      "pct": 0.5125
     }
   },
   "por_nivel_examen": {
@@ -107,14 +107,14 @@
     {
       "temporada": 20262027,
       "n_entrenamiento": 6993,
-      "n_examen": 384,
+      "n_examen": 385,
       "g0": 40,
-      "log_loss_sin_encoger": 0.665021,
-      "log_loss_encogido": 0.683104,
-      "brier_sin_encoger": 0.236221,
-      "brier_encogido": 0.244971,
-      "log_loss": 0.665021,
-      "brier": 0.236221
+      "log_loss_sin_encoger": 0.665271,
+      "log_loss_encogido": 0.68324,
+      "brier_sin_encoger": 0.236345,
+      "brier_encogido": 0.245039,
+      "log_loss": 0.665271,
+      "brier": 0.236345
     }
   ]
 }
