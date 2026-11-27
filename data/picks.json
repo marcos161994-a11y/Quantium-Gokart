@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-27T15:55:18.315763-04:00",
+  "actualizado": "2026-11-27T16:23:14.216865-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-27",
   "umbral_alta": 0.68,
@@ -667,8 +667,8 @@
         "nombre_visita": "Lightning de Tampa Bay",
         "ganador": "FLA",
         "nombre_ganador": "Panthers de Florida",
-        "probabilidad": 0.5087,
-        "probabilidad_local": 0.5087,
+        "probabilidad": 0.5058,
+        "probabilidad_local": 0.5058,
         "nivel": "baja",
         "linea": "FLA -115",
         "casa": "DraftKings",
@@ -684,16 +684,20 @@
           "partidos": 11
         },
         "portero_visita": {
-          "nombre": "Dennis Hildeby",
+          "nombre": "Andrei Vasilevskiy",
           "estado": "expected",
-          "sv": 0.8846,
-          "tiros": 156,
-          "gsax": -2.87,
-          "partidos": 6
+          "sv": 0.8971,
+          "tiros": 447,
+          "gsax": -2.64,
+          "partidos": 18
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5087,
+        "portero_local_anterior": "Akira Schmid",
+        "portero_visita_anterior": "Dennis Hildeby"
       },
       {
         "id": "2026020417",
