@@ -1,57 +1,57 @@
 {
   "n": 5991,
-  "log_loss_modelo": 0.673146,
-  "brier_modelo": 0.240055,
-  "acierto_modelo": 0.580704,
-  "umbral_alta": 0.68,
+  "log_loss_modelo": 0.673395,
+  "brier_modelo": 0.240156,
+  "acierto_modelo": 0.581706,
+  "umbral_alta": 0.7,
   "temporada_examen": 20252026,
   "g0": null,
   "encogimiento_justificado": false,
-  "delta_log_loss_encogido": 0.004137,
+  "delta_log_loss_encogido": 0.00413,
   "mercado": {
     "n": 5989,
-    "log_loss_modelo": 0.673206,
+    "log_loss_modelo": 0.673458,
     "log_loss_mercado": 0.662527,
-    "brier_modelo": 0.240084,
+    "brier_modelo": 0.240186,
     "brier_mercado": 0.235183,
     "n_draftkings": 4147,
-    "log_loss_modelo_dk": 0.673273,
+    "log_loss_modelo_dk": 0.673622,
     "log_loss_mercado_dk": 0.662178,
-    "brier_modelo_dk": 0.239976,
+    "brier_modelo_dk": 0.240118,
     "brier_mercado_dk": 0.23502
   },
   "por_nivel_oos": {
     "alta": {
-      "aciertos": 834,
-      "total": 1209,
-      "pct": 0.6898
+      "aciertos": 668,
+      "total": 967,
+      "pct": 0.6908
     },
     "media": {
-      "aciertos": 1782,
-      "total": 3098,
-      "pct": 0.5752
+      "aciertos": 1951,
+      "total": 3342,
+      "pct": 0.5838
     },
     "baja": {
-      "aciertos": 863,
-      "total": 1684,
-      "pct": 0.5125
+      "aciertos": 866,
+      "total": 1682,
+      "pct": 0.5149
     }
   },
   "por_nivel_examen": {
     "alta": {
-      "aciertos": 77,
-      "total": 118,
-      "pct": 0.6525
+      "aciertos": 50,
+      "total": 77,
+      "pct": 0.6494
     },
     "media": {
-      "aciertos": 428,
-      "total": 785,
-      "pct": 0.5452
+      "aciertos": 453,
+      "total": 827,
+      "pct": 0.5478
     },
     "baja": {
-      "aciertos": 232,
-      "total": 491,
-      "pct": 0.4725
+      "aciertos": 238,
+      "total": 490,
+      "pct": 0.4857
     }
   },
   "temporada_en_curso": 20262027,
@@ -61,60 +61,60 @@
       "n_entrenamiento": 1401,
       "n_examen": 1400,
       "g0": null,
-      "log_loss_sin_encoger": 0.673609,
-      "log_loss_encogido": 0.673609,
-      "brier_sin_encoger": 0.239635,
-      "brier_encogido": 0.239635,
-      "log_loss": 0.673609,
-      "brier": 0.239635
+      "log_loss_sin_encoger": 0.674681,
+      "log_loss_encogido": 0.674681,
+      "brier_sin_encoger": 0.240066,
+      "brier_encogido": 0.240066,
+      "log_loss": 0.674681,
+      "brier": 0.240066
     },
     {
       "temporada": 20232024,
       "n_entrenamiento": 2801,
       "n_examen": 1400,
       "g0": null,
-      "log_loss_sin_encoger": 0.663198,
-      "log_loss_encogido": 0.663198,
-      "brier_sin_encoger": 0.235381,
-      "brier_encogido": 0.235381,
-      "log_loss": 0.663198,
-      "brier": 0.235381
+      "log_loss_sin_encoger": 0.663247,
+      "log_loss_encogido": 0.663247,
+      "brier_sin_encoger": 0.235407,
+      "brier_encogido": 0.235407,
+      "log_loss": 0.663247,
+      "brier": 0.235407
     },
     {
       "temporada": 20242025,
       "n_entrenamiento": 4201,
       "n_examen": 1398,
       "g0": 40,
-      "log_loss_sin_encoger": 0.667175,
-      "log_loss_encogido": 0.671312,
-      "brier_sin_encoger": 0.237494,
-      "brier_encogido": 0.239443,
-      "log_loss": 0.667175,
-      "brier": 0.237494
+      "log_loss_sin_encoger": 0.667156,
+      "log_loss_encogido": 0.671286,
+      "brier_sin_encoger": 0.237484,
+      "brier_encogido": 0.23943,
+      "log_loss": 0.667156,
+      "brier": 0.237484
     },
     {
       "temporada": 20252026,
       "n_entrenamiento": 5599,
       "n_examen": 1394,
       "g0": null,
-      "log_loss_sin_encoger": 0.690542,
-      "log_loss_encogido": 0.690542,
-      "brier_sin_encoger": 0.248621,
-      "brier_encogido": 0.248621,
-      "log_loss": 0.690542,
-      "brier": 0.248621
+      "log_loss_sin_encoger": 0.690511,
+      "log_loss_encogido": 0.690511,
+      "brier_sin_encoger": 0.248608,
+      "brier_encogido": 0.248608,
+      "log_loss": 0.690511,
+      "brier": 0.248608
     },
     {
       "temporada": 20262027,
       "n_entrenamiento": 6993,
       "n_examen": 399,
       "g0": 40,
-      "log_loss_sin_encoger": 0.666573,
-      "log_loss_encogido": 0.683645,
-      "brier_sin_encoger": 0.236979,
-      "brier_encogido": 0.24524,
-      "log_loss": 0.666573,
-      "brier": 0.236979
+      "log_loss_sin_encoger": 0.666545,
+      "log_loss_encogido": 0.683635,
+      "brier_sin_encoger": 0.236968,
+      "brier_encogido": 0.245235,
+      "log_loss": 0.666545,
+      "brier": 0.236968
     }
   ]
 }
