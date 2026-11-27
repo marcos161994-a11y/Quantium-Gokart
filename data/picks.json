@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-26T16:37:09.262584-04:00",
+  "actualizado": "2026-11-26T23:19:57.220215-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-26",
   "umbral_alta": 0.68,
@@ -288,10 +288,10 @@
         "equipo_visita": "DET",
         "nombre_local": "Blue Jackets de Columbus",
         "nombre_visita": "Red Wings de Detroit",
-        "ganador": "CBJ",
-        "nombre_ganador": "Blue Jackets de Columbus",
-        "probabilidad": 0.5284,
-        "probabilidad_local": 0.5284,
+        "ganador": "DET",
+        "nombre_ganador": "Red Wings de Detroit",
+        "probabilidad": 0.5101,
+        "probabilidad_local": 0.4899,
         "nivel": "baja",
         "linea": "CBJ -130",
         "casa": "DraftKings",
@@ -307,12 +307,12 @@
           "partidos": 11
         },
         "portero_visita": {
-          "nombre": "John Gibson",
+          "nombre": "Daniil Tarasov",
           "estado": "expected",
-          "sv": 0.8621,
-          "tiros": 319,
-          "gsax": -13.06,
-          "partidos": 14
+          "sv": 0.9304,
+          "tiros": 273,
+          "gsax": 7.48,
+          "partidos": 11
         },
         "estado": "programado",
         "periodo": "",
