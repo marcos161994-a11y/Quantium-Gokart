@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-27T22:49:50.730926-04:00",
+  "actualizado": "2026-11-28T01:40:45.691865-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-27",
   "umbral_alta": 0.68,
@@ -1120,8 +1120,8 @@
         "nombre_visita": "Oilers de Edmonton",
         "ganador": "EDM",
         "nombre_ganador": "Oilers de Edmonton",
-        "probabilidad": 0.6207,
-        "probabilidad_local": 0.3793,
+        "probabilidad": 0.619,
+        "probabilidad_local": 0.381,
         "nivel": "media",
         "linea": "EDM -170",
         "casa": "DraftKings",
@@ -1131,10 +1131,10 @@
         "portero_local": {
           "nombre": "Joey Daccord",
           "estado": "expected",
-          "sv": 0.8776,
-          "tiros": 294,
-          "gsax": -7.48,
-          "partidos": 12
+          "sv": 0.8812,
+          "tiros": 303,
+          "gsax": -6.61,
+          "partidos": 13
         },
         "portero_visita": {
           "nombre": "Devon Levi",
