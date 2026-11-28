@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-27T16:23:14.216865-04:00",
+  "actualizado": "2026-11-27T22:49:50.730926-04:00",
   "zona": "America/Puerto_Rico",
   "fecha": "2026-11-27",
   "umbral_alta": 0.68,
@@ -646,7 +646,7 @@
         },
         "portero_visita": {
           "nombre": "Jakub Dobes",
-          "estado": "expected",
+          "estado": "confirmed",
           "sv": 0.8682,
           "tiros": 258,
           "gsax": -8.97,
@@ -710,21 +710,21 @@
         "nombre_visita": "Predators de Nashville",
         "ganador": "NSH",
         "nombre_ganador": "Predators de Nashville",
-        "probabilidad": 0.5553,
-        "probabilidad_local": 0.4447,
-        "nivel": "media",
+        "probabilidad": 0.5169,
+        "probabilidad_local": 0.4831,
+        "nivel": "baja",
         "linea": "DET -112",
         "casa": "DraftKings",
         "cuota_local": -112,
         "cuota_visita": -108,
         "prob_mercado_local": 0.5043,
         "portero_local": {
-          "nombre": "John Gibson",
+          "nombre": "Daniil Tarasov",
           "estado": "expected",
-          "sv": 0.8621,
-          "tiros": 319,
-          "gsax": -13.06,
-          "partidos": 14
+          "sv": 0.9304,
+          "tiros": 273,
+          "gsax": 7.48,
+          "partidos": 11
         },
         "portero_visita": {
           "nombre": "Justus Annunen",
@@ -736,7 +736,11 @@
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5553,
+        "portero_local_anterior": "John Gibson",
+        "portero_visita_anterior": "Justus Annunen"
       },
       {
         "id": "2026020418",
@@ -788,8 +792,8 @@
         "nombre_visita": "Flames de Calgary",
         "ganador": "NYR",
         "nombre_ganador": "Rangers de Nueva York",
-        "probabilidad": 0.5738,
-        "probabilidad_local": 0.5738,
+        "probabilidad": 0.5934,
+        "probabilidad_local": 0.5934,
         "nivel": "media",
         "linea": "NYR -185",
         "casa": "DraftKings",
@@ -805,16 +809,20 @@
           "partidos": 4
         },
         "portero_visita": {
-          "nombre": "Devin Cooley",
+          "nombre": "Dustin Wolf",
           "estado": "expected",
-          "sv": 0.9091,
-          "tiros": 319,
-          "gsax": 1.94,
-          "partidos": 11
+          "sv": 0.8778,
+          "tiros": 409,
+          "gsax": -10.33,
+          "partidos": 15
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.5738,
+        "portero_local_anterior": "Joonas Korpisalo",
+        "portero_visita_anterior": "Devin Cooley"
       },
       {
         "id": "2026020420",
@@ -1069,8 +1077,8 @@
         "nombre_visita": "Ducks de Anaheim",
         "ganador": "LAK",
         "nombre_ganador": "Kings de Los Ángeles",
-        "probabilidad": 0.537,
-        "probabilidad_local": 0.537,
+        "probabilidad": 0.5435,
+        "probabilidad_local": 0.5435,
         "nivel": "baja",
         "linea": "LAK -142",
         "casa": "DraftKings",
@@ -1086,16 +1094,20 @@
           "partidos": 9
         },
         "portero_visita": {
-          "nombre": "Ville Husso",
-          "estado": "expected",
-          "sv": 0.8541,
-          "tiros": 185,
-          "gsax": -9.06,
-          "partidos": 9
+          "nombre": "Lukas Dostal",
+          "estado": "confirmed",
+          "sv": 0.8571,
+          "tiros": 329,
+          "gsax": -15.09,
+          "partidos": 14
         },
         "estado": "programado",
         "periodo": "",
-        "acierto": null
+        "acierto": null,
+        "portero_cambiado": true,
+        "probabilidad_anterior": 0.537,
+        "portero_local_anterior": "Anton Forsberg",
+        "portero_visita_anterior": "Ville Husso"
       },
       {
         "id": "2026020427",
